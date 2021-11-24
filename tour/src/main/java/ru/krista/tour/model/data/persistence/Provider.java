@@ -15,9 +15,10 @@ import java.util.List;
 
 public class Provider implements IProvider {
     @PersistenceContext(name="tour")
-    private EntityManager entityManager;
+    public EntityManager entityManager;
     @Resource
-    private UserTransaction userTransaction;
+    public UserTransaction userTransaction;
+
 
     @Override
     public void open() {
@@ -100,7 +101,9 @@ public class Provider implements IProvider {
     @Override
     public <TEntity> List<TEntity> readAll(Class<TEntity> cls) {
         try {
-            return entityManager.createQuery(String.format("FROM %s", cls.getName())).getResultList();
+            String query = String.format("FROM %s", cls.getName());
+            List<TEntity> resultList = entityManager.createQuery(query).getResultList();
+            return resultList;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;

@@ -2,7 +2,7 @@ package ru.krista.tour.model;
 
 import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.model.data.IProvider;
-import ru.krista.tour.model.data.dataAccessObjects.TourDao;
+import ru.krista.tour.model.data.dao.TourDao;
 
 
 public class Model implements IModal {

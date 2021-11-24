@@ -10,7 +10,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="" />
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataAccessObjects/TourDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataAccessObjects/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/tour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/tour.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -114,6 +125,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -133,7 +147,7 @@
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectId" id="1hadHAsNWgL0s6EcbjJqrgCWfI6" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -151,17 +165,18 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/test/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15423901" />
     <property name="rest.client.default.execution.environment" value="dev" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\test\resources" />
       <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax\presenter\creator" />
       <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\controller" />
       <recent name="C:\workspace\tour-server\provider\src\main\java\META-INF" />
@@ -308,7 +323,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JBoss/WildFly Server.JBoss 16.2.1.krista23">
+  <component name="RunManager" selected="JUnit.ProviderTest.readingTest">
     <configuration name="tour" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.krista.tour" />
       <module name="tour" />
@@ -333,16 +348,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
-      <method v="2" />
-    </configuration>
     <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -482,6 +488,53 @@
         <option name="DEBUG_PORT" value="63617" />
         <option name="LOCAL" value="false" />
       </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.jre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.jre" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.jre.ProviderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest.readingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.jre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.jre" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.jre.ProviderTest" />
+      <option name="METHOD_NAME" value="readingTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Provider.readingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.jre.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.jre" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.jre.Provider" />
+      <option name="METHOD_NAME" value="readingTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -639,21 +692,21 @@
     </configuration>
     <list>
       <item itemvalue="Application.tour" />
-      <item itemvalue="HTTP Request.generated-requests#1" />
-      <item itemvalue="HTTP Request.All in generated-requests" />
       <item itemvalue="HTTP Request.generated-requests#2" />
-      <item itemvalue="HTTP Request.generated-requests#3" />
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
       <item itemvalue="Remote JVM Debug.attach" />
       <item itemvalue="Tomcat Server.local" />
+      <item itemvalue="JUnit.Provider.readingTest" />
+      <item itemvalue="JUnit.ProviderTest.readingTest" />
+      <item itemvalue="JUnit.ProviderTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProviderTest.readingTest" />
+        <item itemvalue="JUnit.ProviderTest" />
+        <item itemvalue="JUnit.Provider.readingTest" />
         <item itemvalue="HTTP Request.generated-requests#2" />
         <item itemvalue="Application.tour" />
-        <item itemvalue="HTTP Request.generated-requests#3" />
-        <item itemvalue="HTTP Request.generated-requests#1" />
-        <item itemvalue="HTTP Request.All in generated-requests" />
       </list>
     </recent_temporary>
   </component>
@@ -773,7 +826,7 @@
       <workItem from="1635939944128" duration="8607000" />
       <workItem from="1637754469352" duration="421000" />
       <workItem from="1637754917219" duration="55000" />
-      <workItem from="1637755176533" duration="398000" />
+      <workItem from="1637755176533" duration="7536000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -885,6 +938,29 @@
     <option name="LAST_COMMIT_MESSAGE" value="fix: maven" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="transaction" language="JAVA" />
@@ -892,6 +968,10 @@
         <watch expression="st" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="hg4idea.settings">
     <option name="CHECK_INCOMING_OUTGOING" value="false" />

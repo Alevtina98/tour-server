@@ -15,6 +15,7 @@ public class SessionBo {
     public StatusVariant status;
 
     public enum StatusVariant {
+        APPOINTED ("назначен"),
         DELAYED ("отложен"),
         INTERRUPTED("прерван"),
         PASSED("пройден");

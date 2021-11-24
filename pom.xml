@@ -186,9 +186,9 @@
                 <version>3.0.0.krista1</version>
                 <executions>
                     <execution>
-                        <goals>
+                       <!-- <goals>
                             <goal>hgchangeset</goal>
-                        </goals>
+                        </goals>-->
                         <phase>initialize</phase>
                     </execution>
                 </executions>
