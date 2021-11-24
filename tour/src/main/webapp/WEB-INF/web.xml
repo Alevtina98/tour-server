@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <display-name>tour-server</display-name>
+    <servlet-mapping>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <!--Prefix for endpoint-->
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>resteasy.servlet.mapping.prefix</param-name>
+        <!--Prefix for the endpoints-->
+        <param-value>/rest</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>resteasy.scan</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>resteasy.role.based.security</param-name>
+        <param-value>true</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>
+            org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+        </listener-class>
+    </listener>
+
+
+<!--    <context-param>-->
+<!--        <param-name>resteasy.resources</param-name>-->
+<!--        <param-value>TourCreatorRest</param-value>-->
+<!--    </context-param>-->
+
+    <servlet>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <servlet-class>
+            org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+        </servlet-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>ru.krista.tour.view.presentation.rest.jax.resteasy.View</param-value>
+        </init-param>
+    </servlet>
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>/WEB-INF/log4j.xml</param-value>
+    </context-param>
+
+
+</web-app>

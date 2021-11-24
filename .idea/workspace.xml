@@ -1,0 +1,900 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="tour" />
+      <artifact name="tour: exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tour: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="user_tour: table" type="69fad909:PgImplModel$LocalTable" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="TourCreator: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="routines" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="TourCreator@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="HTML File" />
+        <option value="HTTP Public Environment File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_DEBUG" value="false" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+  </component>
+  <component name="ProjectId" id="1hadHAsNWgL0s6EcbjJqrgCWfI6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="ToolWindowSQL Generator.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.15423901" />
+    <property name="rest.client.default.execution.environment" value="dev" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="sql.rename.search.for.storage.occurrences" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax\presenter\creator" />
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\controller" />
+      <recent name="C:\workspace\tour-server\provider\src\main\java\META-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\main\java\ru\krista\tour\view" />
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax\resteasy" />
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view" />
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax\presenter" />
+      <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.krista.tour.controller.domain.tour" />
+      <recent name="ru.krista.model" />
+      <recent name="ru.krista.rest" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.krista.tour.view.presentation.rest.jax.clients.creator" />
+      <recent name="ru.krista.tour.controller.Tour" />
+      <recent name="ru.krista.rest" />
+      <recent name="ru.krista.models" />
+    </key>
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/userTour/1" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/userTour/system/назначен" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/userTour/system" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/userTour/generalUser" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="DELETE" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/tour/685" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/tour" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/tour" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="PUT http" />
+                <option name="value" value="" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;id&quot;" />
+                <option name="value" value="686," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;name&quot;" />
+                <option name="value" value="&quot;Unnamvek&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;desc&quot;" />
+                <option name="value" value="null," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;code&quot;" />
+                <option name="value" value="&quot;&lt;xml xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;block type=\&quot;controls_if\&quot; id=\&quot;FsXE}=4!|d)f]g4KW8T{\&quot; x=\&quot;290\&quot; y=\&quot;130\&quot;&gt;&lt;/block&gt;&lt;block type=\&quot;controls_if\&quot; id=\&quot;I-jJ:Np12pfw}e.jkewf\&quot; x=\&quot;490\&quot; y=\&quot;190\&quot;&gt;&lt;/block&gt;&lt;block type=\&quot;dark\&quot; id=\&quot;m{ipsFS@+/N}CjQ]z|Ak\&quot; x=\&quot;410\&quot; y=\&quot;330\&quot;&gt;&lt;value name=\&quot;selector\&quot;&gt;&lt;shadow type=\&quot;selector\&quot; id=\&quot;2a7be`czz$oF9_8lE=VM\&quot;&gt;&lt;field name=\&quot;NAME\&quot;&gt;&lt;/field&gt;&lt;/shadow&gt;&lt;/value&gt;&lt;next&gt;&lt;block type=\&quot;controls_repeat_ext\&quot; id=\&quot;t;AqHO+f-`$QGB-,1NcF\&quot;&gt;&lt;value name=\&quot;TIMES\&quot;&gt;&lt;shadow type=\&quot;math_number\&quot; id=\&quot;OTpM+^s+=87D:.AmrSBl\&quot;&gt;&lt;field name=\&quot;NUM\&quot;&gt;0&lt;/field&gt;&lt;/shadow&gt;&lt;/value&gt;&lt;/block&gt;&lt;/next&gt;&lt;/block&gt;&lt;/xml&gt;&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;codeJS&quot;" />
+                <option name="value" value="&quot;TourHelper.setNameTour('Unnamvek');\nTourHelper.setDescTour('');\n\nif (false) {\n}\n\nif (false) {\n}\n\n//! не задан аргумент\n TourHelper.blackout('','bXtpcHNGU0ArL059Q2pRXXp8QWs=');\nfor (var count = 0; count &lt; 0; count++) {\n}\n&quot;," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;dateCreate&quot;" />
+                <option name="value" value="1613046535234," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;dateChange&quot;" />
+                <option name="value" value="1613135770749," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;formName&quot;" />
+                <option name="value" value="null," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;formCaption&quot;" />
+                <option name="value" value="null," />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="    &quot;isGeneralUser&quot;" />
+                <option name="value" value="false" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="  }}" />
+                <option name="value" value="" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="&lt;&lt;&gt; 2021-02-12T182124.200.json" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="PUT" />
+          <option name="urlBase" value="http://localhost:8080/tour-server/rest/api/tour" />
+          <option name="urlPath" value="" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="excludedTypes">
+      <set>
+        <option value="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" />
+        <option value="JBossConfiguration" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="JBoss/WildFly Server.JBoss 16.2.1.krista23">
+    <configuration name="tour" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour" />
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.view.client.rest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="LOCAL" value="false" />
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="tour">
+          <settings DEPLOYMENT_METHOD="Staging" />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="credentialAlias" value="9528c124-287a-441d-86df-c2a67242ea76" />
+          <option name="managementPort" value="9990" />
+          <option name="stagingRemotePath" value="" />
+          <option name="transportStagingTarget">
+            <TransportTarget>
+              <option name="id" value="a2093eaf-33be-4e96-b724-9ae9c4adc6a4" />
+              <id>a2093eaf-33be-4e96-b724-9ae9c4adc6a4</id>
+            </TransportTarget>
+          </option>
+          <option name="username" value="admin" />
+          <username>admin</username>
+          <credential-alias>9528c124-287a-441d-86df-c2a67242ea76</credential-alias>
+          <management-port>9990</management-port>
+          <transport-target>
+            <TransportTarget>
+              <option name="id" value="a2093eaf-33be-4e96-b724-9ae9c4adc6a4" />
+              <id>a2093eaf-33be-4e96-b724-9ae9c4adc6a4</id>
+            </TransportTarget>
+          </transport-target>
+          <staging-path />
+        </data>
+      </server-settings>
+      <log_file alias="C:\workspace\servers\consolidation\jboss-bas-8.2.1.krista46\standalone\log\server.log" path="$PROJECT_DIR$/../servers/consolidation/jboss-bas-8.2.1.krista46/standalone/log/server.log" />
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tour" />
+          <artifact name="tour: exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" />
+        <option name="USERNAME" value="" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63559" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JBossConfiguration" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="stagingRemotePath" value="" />
+          <option name="transportHostId" />
+          <option name="transportStagingTarget">
+            <TransportTarget>
+              <option name="id" value="00521a89-df91-41cf-8f53-8d4566d61f36" />
+              <id>00521a89-df91-41cf-8f53-8d4566d61f36</id>
+            </TransportTarget>
+          </option>
+          <transport-target>
+            <TransportTarget>
+              <option name="id" value="00521a89-df91-41cf-8f53-8d4566d61f36" />
+              <id>00521a89-df91-41cf-8f53-8d4566d61f36</id>
+            </TransportTarget>
+          </transport-target>
+          <staging-path />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63617" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tour:war" />
+          <artifact name="tour:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="attach" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="9009" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="local" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.33" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/tour-server/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="tour:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/webapp_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_tour-server" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62434" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="tour:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.tour" />
+      <item itemvalue="HTTP Request.generated-requests#1" />
+      <item itemvalue="HTTP Request.All in generated-requests" />
+      <item itemvalue="HTTP Request.generated-requests#2" />
+      <item itemvalue="HTTP Request.generated-requests#3" />
+      <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
+      <item itemvalue="Remote JVM Debug.attach" />
+      <item itemvalue="Tomcat Server.local" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.generated-requests#2" />
+        <item itemvalue="Application.tour" />
+        <item itemvalue="HTTP Request.generated-requests#3" />
+        <item itemvalue="HTTP Request.generated-requests#1" />
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <option name="contentProportion" value="0.047457628" />
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="" />
+      <created>1600253046286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600253046286</updated>
+      <workItem from="1600253050975" duration="9065000" />
+      <workItem from="1601281941291" duration="8139000" />
+      <workItem from="1601368462904" duration="7727000" />
+      <workItem from="1601378502414" duration="64000" />
+      <workItem from="1601378601754" duration="2350000" />
+      <workItem from="1601380980617" duration="10006000" />
+      <workItem from="1601461411062" duration="21990000" />
+      <workItem from="1601547139178" duration="7468000" />
+      <workItem from="1601557421790" duration="4902000" />
+      <workItem from="1601624684661" duration="12898000" />
+      <workItem from="1601896333428" duration="2367000" />
+      <workItem from="1601960994915" duration="8354000" />
+      <workItem from="1601979551131" duration="2127000" />
+      <workItem from="1602064560341" duration="2519000" />
+      <workItem from="1602497770448" duration="1126000" />
+      <workItem from="1602506896021" duration="1515000" />
+      <workItem from="1602587563635" duration="1200000" />
+      <workItem from="1602670905173" duration="2682000" />
+      <workItem from="1603713168645" duration="1896000" />
+      <workItem from="1604062060684" duration="1450000" />
+      <workItem from="1604307441282" duration="10910000" />
+      <workItem from="1604390538055" duration="3089000" />
+      <workItem from="1604400208079" duration="538000" />
+      <workItem from="1604564315563" duration="37000" />
+      <workItem from="1604564897579" duration="124000" />
+      <workItem from="1604928161737" duration="624000" />
+      <workItem from="1605258655424" duration="1795000" />
+      <workItem from="1605704147076" duration="2616000" />
+      <workItem from="1605781448952" duration="8107000" />
+      <workItem from="1605861722550" duration="2073000" />
+      <workItem from="1607068040672" duration="17000" />
+      <workItem from="1607435575911" duration="650000" />
+      <workItem from="1607679035842" duration="599000" />
+      <workItem from="1608203381309" duration="732000" />
+      <workItem from="1608284766421" duration="319000" />
+      <workItem from="1608285108628" duration="161000" />
+      <workItem from="1608285305698" duration="4490000" />
+      <workItem from="1608543924538" duration="32000" />
+      <workItem from="1608543977428" duration="10668000" />
+      <workItem from="1608626830832" duration="9937000" />
+      <workItem from="1608641204270" duration="506000" />
+      <workItem from="1608977301431" duration="669000" />
+      <workItem from="1611231287371" duration="641000" />
+      <workItem from="1611572916202" duration="3428000" />
+      <workItem from="1611647766712" duration="68000" />
+      <workItem from="1611820833096" duration="2526000" />
+      <workItem from="1611926872490" duration="11862000" />
+      <workItem from="1611997977599" duration="4613000" />
+      <workItem from="1612162431556" duration="14735000" />
+      <workItem from="1612247236963" duration="15448000" />
+      <workItem from="1612336543432" duration="3862000" />
+      <workItem from="1612433506250" duration="9973000" />
+      <workItem from="1612779217273" duration="5771000" />
+      <workItem from="1612959666966" duration="665000" />
+      <workItem from="1613048886550" duration="723000" />
+      <workItem from="1613130700809" duration="7005000" />
+      <workItem from="1613197779670" duration="2189000" />
+      <workItem from="1613391493912" duration="773000" />
+      <workItem from="1613474273695" duration="3480000" />
+      <workItem from="1613554881327" duration="12875000" />
+      <workItem from="1613575450463" duration="3362000" />
+      <workItem from="1613640709534" duration="2023000" />
+      <workItem from="1613648329520" duration="3695000" />
+      <workItem from="1613653812008" duration="6229000" />
+      <workItem from="1613726618413" duration="9643000" />
+      <workItem from="1613737255703" duration="1530000" />
+      <workItem from="1613741116619" duration="8852000" />
+      <workItem from="1613804898594" duration="7796000" />
+      <workItem from="1614150170870" duration="13805000" />
+      <workItem from="1614240607735" duration="14536000" />
+      <workItem from="1614332463308" duration="6938000" />
+      <workItem from="1614673581084" duration="9694000" />
+      <workItem from="1614753145670" duration="3277000" />
+      <workItem from="1616756531851" duration="7000" />
+      <workItem from="1631185680756" duration="794000" />
+      <workItem from="1634560713333" duration="4643000" />
+      <workItem from="1634647684694" duration="2237000" />
+      <workItem from="1634721184277" duration="7965000" />
+      <workItem from="1634729190756" duration="7583000" />
+      <workItem from="1634814086856" duration="8960000" />
+      <workItem from="1635327905223" duration="18762000" />
+      <workItem from="1635417381997" duration="12747000" />
+      <workItem from="1635761768702" duration="17893000" />
+      <workItem from="1635851793363" duration="13814000" />
+      <workItem from="1635939944128" duration="8607000" />
+      <workItem from="1637754469352" duration="421000" />
+      <workItem from="1637754917219" duration="55000" />
+      <workItem from="1637755176533" duration="398000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
+      <created>1601563850684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601563850684</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: обрабатывать клиентские запросы на userTour api">
+      <created>1601971506572</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601971506572</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: добавить получение общепользовательских туров (+refactor)">
+      <created>1605789944125</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605789944125</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: добавить получение настроек через persistence">
+      <created>1611929421043</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1611929421043</updated>
+    </task>
+    <task id="LOCAL-00005" summary="refactor: завершение изменений, позволяющих запускать сервлет tour.war в контейнере приложения Кристы (consolidation)">
+      <created>1634737255554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634737255554</updated>
+    </task>
+    <task id="LOCAL-00006" summary="refactor: завершение изменений, позволяющих запускать сервлет tour.war в контейнере приложения Кристы (consolidation)">
+      <created>1634737529631</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634737529631</updated>
+    </task>
+    <task id="LOCAL-00007" summary="refactor: удалить дистрибутив">
+      <created>1634737801119</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634737801119</updated>
+    </task>
+    <task id="LOCAL-00008" summary="refactor: удалить лишние файлы">
+      <created>1634737868051</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634737868051</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: добавить версию">
+      <created>1634738420806</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1634738420806</updated>
+    </task>
+    <task id="LOCAL-00010" summary="refactor: добавить версию">
+      <created>1634826066811</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1634826066811</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix: maven">
+      <created>1634827233839</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1634827233839</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)" />
+    <MESSAGE value="feat: обрабатывать клиентские запросы на userTour api" />
+    <MESSAGE value="feat: добавить получение общепользовательских туров" />
+    <MESSAGE value="feat: добавить получение общепользовательских туров (+refactor)" />
+    <MESSAGE value="feat: добавить получение настроек через persistence" />
+    <MESSAGE value="refactor: завершение изменений, позволяющих запускать сервлет tour.war в контейнере приложения Кристы (consolidation)" />
+    <MESSAGE value="refactor: удалить дистрибутив" />
+    <MESSAGE value="refactor: удалить лишние файлы" />
+    <MESSAGE value="refactor: добавить версию" />
+    <MESSAGE value="fix: maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: maven" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="transaction" language="JAVA" />
+        <watch expression="((TransactionImpl)transaction).session" custom="org.hibernate.engine.transaction.internal.TransactionImpl" />
+        <watch expression="st" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="hg4idea.settings">
+    <option name="CHECK_INCOMING_OUTGOING" value="false" />
+    <option name="RECENT_HG_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+</project>
