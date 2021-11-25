@@ -10,17 +10,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="feature: добавить файлы для тестирования">
+      <change afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/resources/import.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataAccessObjects/TourDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataAccessObjects/UserDao.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/tour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/tour.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour/UserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour/UserTourKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTourKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour/filtration/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour/filtration/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByTourId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour/filtration/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +170,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ntp-hg.krista.ru/Infrastructure/Tools/tour-server" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -694,11 +699,11 @@
       <item itemvalue="Application.tour" />
       <item itemvalue="HTTP Request.generated-requests#2" />
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
-      <item itemvalue="Remote JVM Debug.attach" />
-      <item itemvalue="Tomcat Server.local" />
       <item itemvalue="JUnit.Provider.readingTest" />
       <item itemvalue="JUnit.ProviderTest.readingTest" />
       <item itemvalue="JUnit.ProviderTest" />
+      <item itemvalue="Remote JVM Debug.attach" />
+      <item itemvalue="Tomcat Server.local" />
     </list>
     <recent_temporary>
       <list>
@@ -826,7 +831,9 @@
       <workItem from="1635939944128" duration="8607000" />
       <workItem from="1637754469352" duration="421000" />
       <workItem from="1637754917219" duration="55000" />
-      <workItem from="1637755176533" duration="7536000" />
+      <workItem from="1637755176533" duration="7823000" />
+      <workItem from="1637835024537" duration="13047000" />
+      <workItem from="1637850162779" duration="989000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -905,7 +912,14 @@
       <option name="project" value="LOCAL" />
       <updated>1634827233839</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feature: добавить файлы для тестирования">
+      <created>1637762990326</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1637762990326</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -935,26 +949,12 @@
     <MESSAGE value="refactor: удалить лишние файлы" />
     <MESSAGE value="refactor: добавить версию" />
     <MESSAGE value="fix: maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: maven" />
+    <MESSAGE value="feature: добавить файлы для тестирования" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: добавить файлы для тестирования" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
-          <line>28</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/jre/ProviderTest.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="7" />

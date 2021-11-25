@@ -1,4 +1,4 @@
-package ru.krista.tour.model.data.persistence.entities.Tour;
+package ru.krista.tour.model.data.persistence.entities;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -40,4 +40,12 @@ public class Tour extends RootKey implements Serializable {
     @Column(name = "\"is_general_user\"")
     private boolean isGeneralUser;
 
+    public Tour (String name, String desc) {
+        this.name = name;
+        this.desc = desc;
+    }
+
+    public Tour() {
+
+    }
 }

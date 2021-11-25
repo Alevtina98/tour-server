@@ -1,8 +1,8 @@
-package ru.krista.tour.model.data.persistence.entities.UserTour;
+package ru.krista.tour.model.data.persistence.entities.userTour;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import ru.krista.tour.model.data.persistence.entities.RootKey;
-import ru.krista.tour.model.data.persistence.entities.Tour.Tour;
+import ru.krista.tour.model.data.persistence.entities.Tour;
 
 import javax.persistence.*;
 import java.io.Serializable;

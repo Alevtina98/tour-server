@@ -14,7 +14,7 @@ import javax.transaction.*;
 import java.util.List;
 
 public class Provider implements IProvider {
-    @PersistenceContext(name="tour")
+    @PersistenceContext(name = "tour")
     public EntityManager entityManager;
     @Resource
     public UserTransaction userTransaction;
@@ -62,10 +62,12 @@ public class Provider implements IProvider {
             return e.getMessage();
         }
     }
+
     @Transactional
     public <TEntity> TEntity save(TEntity object) {
         try {
             TEntity entity = entityManager.merge(object);
+            System.out.println(entity);
             entityManager.flush();
             entityManager.refresh(entity);
             return entity;
@@ -87,6 +89,7 @@ public class Provider implements IProvider {
         }
 
     }
+
     @Override
     @Transactional
     public <TEntity> TEntity update(TEntity object) {
@@ -98,8 +101,13 @@ public class Provider implements IProvider {
         }
 
     }
+
     @Override
     public <TEntity> List<TEntity> readAll(Class<TEntity> cls) {
+        if (entityManager == null) {
+            System.err.println("entity manager is null");
+            return null;
+        }
         try {
             String query = String.format("FROM %s", cls.getName());
             List<TEntity> resultList = entityManager.createQuery(query).getResultList();
@@ -109,6 +117,7 @@ public class Provider implements IProvider {
             return null;
         }
     }
+
     @Override
     public <T> T readById(Class<T> cls, Long id) {
         try {
@@ -118,6 +127,7 @@ public class Provider implements IProvider {
             return null;
         }
     }
+
     @Override
     public <TFromEntity, TResultItem> List<TResultItem> readWithFlagFilter(IQueryParams<TFromEntity, TResultItem> queryParams, IColumnFlagFilter<TFromEntity> flagFilter) {
         try {
@@ -132,6 +142,7 @@ public class Provider implements IProvider {
             return null;
         }
     }
+
     @Override
     public <TFromEntity, TResultItem> List<TResultItem> readWithValueFilter(IQueryParams<TFromEntity, TResultItem> queryParams, List<IColumnFilter<TFromEntity>> valueFilterList) {
         try {
