@@ -1,38 +1,34 @@
-package ru.krista.tour.jre;
+package ru.krista.tour.persistence;
 
-import org.junit.*;
-import ru.krista.tour.model.data.persistence.Provider;
-import ru.krista.tour.model.data.persistence.entities.Tour;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 import javax.annotation.Resource;
-import javax.inject.Inject;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.transaction.UserTransaction;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Named("test")
-public class ProviderTest {
-    @Inject
-    private Provider provider;
-
+public class HibernateTest {
     protected static EntityManagerFactory factory;
-    public EntityManager manager;
+    public EntityManager testManager;
 
     @Resource
-    public UserTransaction userTransaction;
-   @BeforeClass
+    public UserTransaction testUserTransaction;
+
+    @BeforeClass
     public static void createEntityManagerFactory() {
         Map<String, String> connectionProperties = new HashMap<>();
         connectionProperties.put("javax.persistence.jdbc.url", "jdbc:postgresql://localhost:5433/test");
         connectionProperties.put("javax.persistence.jdbc.user", "postgres");
         connectionProperties.put("javax.persistence.jdbc.password","postgre");
-        connectionProperties.put("hibernate.default_schema", "Tour");
-       factory = Persistence.createEntityManagerFactory("tour", connectionProperties);
+        connectionProperties.put("hibernate.default_schema", "public");
+        factory = Persistence.createEntityManagerFactory("tour-test", connectionProperties);
     }
     @AfterClass
     public static void closeEntityManagerFactory() {
@@ -40,7 +36,7 @@ public class ProviderTest {
     }
     @Before
     public void beginTransaction() {
-        manager = factory.createEntityManager();
+        testManager = factory.createEntityManager();
         //em.getTransaction().begin();
     }
    /* @After
@@ -53,22 +49,5 @@ public class ProviderTest {
             em.close();
         }
     }*/
-
-
-    @Test
-   public void readingTest () {
-        provider = new Provider();
-        provider.entityManager = manager;
-       // List<Tour> testTourList = new ArrayList<Tour>();
-        Tour newTour = new Tour("Тестовый", "Какое-то описание");
-        Tour tour = provider.create(newTour);
-     //   Assert.assertNotNull(tour);
-
-        List<Tour> result = provider.readAll(Tour.class);
-        System.out.println(result);
-        Assert.assertNotNull(result);
-   }
-
-
 
 }

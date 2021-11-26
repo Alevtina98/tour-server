@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @Embeddable
 public class UserTourKey implements Serializable {
-    @JoinColumn(referencedColumnName = "\"user_id\"")
+    @JoinColumn(referencedColumnName = "user_id")
     @ManyToOne(optional = false)
     private String userId;
     @JoinColumn(referencedColumnName = "tour")

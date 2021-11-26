@@ -1,6 +1,7 @@
 package ru.krista.tour.model.data.persistence.entities.userTour;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.hibernate.annotations.Proxy;
 import ru.krista.tour.model.data.persistence.entities.RootKey;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 
@@ -9,7 +10,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "\"user_tour\"")
+@Proxy(lazy = true)
+@Table(name = "user_tour")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class UserTour extends RootKey implements Serializable {
    /* @EmbeddedId
@@ -20,16 +22,16 @@ public class UserTour extends RootKey implements Serializable {
                     column=@Column(name="tour"))
     })
     private UserTourKey id;*/
-    @JoinColumn( name="\"tour_id\"", referencedColumnName="id")
-    @ManyToOne(optional = false)
+   @ManyToOne(optional = false, fetch = FetchType.LAZY)
+   @JoinColumn( name="tour_id", referencedColumnName="id")
     private Tour tour;
 
-    @Column(name= "\"user_id\"")
+    @Column(name= "user_id")
     private String userId;
-    @Column(name= "\"status\"")
+    @Column(name= "status")
     private String status;
 
-    @Column(name= "\"change_date\"",insertable = false, updatable = false)
+    @Column(name= "change_date",insertable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateChange;
 
