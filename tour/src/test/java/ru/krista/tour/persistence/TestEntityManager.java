@@ -1,5 +1,6 @@
 package ru.krista.tour.persistence;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -14,12 +15,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Named("test")
-public class HibernateTest {
+public class TestEntityManager {
+    // entity manager, управляемый приложением
+    public static EntityManager testEntityManager;
     protected static EntityManagerFactory factory;
-    public EntityManager testManager;
-
-    @Resource
-    public UserTransaction testUserTransaction;
 
     @BeforeClass
     public static void createEntityManagerFactory() {
@@ -29,25 +28,25 @@ public class HibernateTest {
         connectionProperties.put("javax.persistence.jdbc.password","postgre");
         connectionProperties.put("hibernate.default_schema", "public");
         factory = Persistence.createEntityManagerFactory("tour-test", connectionProperties);
+        testEntityManager = factory.createEntityManager();
     }
     @AfterClass
     public static void closeEntityManagerFactory() {
         factory.close();
     }
-    @Before
+  /*  @Before
     public void beginTransaction() {
-        testManager = factory.createEntityManager();
-        //em.getTransaction().begin();
-    }
-   /* @After
+        testEntityManager.getTransaction().begin();
+    }*/
+    @After
     public void rollbackTransaction() {
-        if (em.getTransaction().isActive()) {
-            em.getTransaction().rollback();
+        if (testEntityManager.getTransaction().isActive()) {
+            testEntityManager.getTransaction().rollback();
         }
 
-        if (em.isOpen()) {
-            em.close();
+        if (testEntityManager.isOpen()) {
+            testEntityManager.close();
         }
-    }*/
+    }
 
 }

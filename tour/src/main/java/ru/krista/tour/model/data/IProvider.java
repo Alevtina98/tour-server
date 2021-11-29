@@ -13,8 +13,6 @@ public interface IProvider {
         String columnName;
         String columnValue;
     }
-    public void open() ;
-    public void close() ;
 
     public <T> T create(T object);
     public <T> T update(T object);

@@ -1,6 +1,7 @@
 package ru.krista.tour.model.data.persistence;
 
 import ru.krista.tour.model.data.IProvider;
+import ru.krista.tour.model.data.persistence.entities.RootKey;
 import ru.krista.tour.model.data.persistence.utils.IColumnFilter;
 import ru.krista.tour.model.data.persistence.utils.IColumnFlagFilter;
 import ru.krista.tour.model.data.persistence.utils.IQueryParams;
@@ -14,48 +15,23 @@ import javax.transaction.*;
 import java.util.List;
 
 public class Provider implements IProvider {
-    @PersistenceContext(name = "tour")
     public EntityManager entityManager;
-    @Resource
-    public UserTransaction userTransaction;
 
-
-    @Override
-    public void open() {
-        try {
-            userTransaction.begin();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
-        }
+    public Provider(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     @Override
-    public void close() {
-        try {
-            userTransaction.commit();
-        } catch (HeuristicRollbackException e) {
-            e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Override
+    @Transactional
     public <TEntity> Object delete(Class<TEntity> entityClass, Long id) {
         try {
-            userTransaction.begin();
+            // userTransaction.begin();
             TEntity entity = readById(entityClass, id);
             if (entity != null) {
                 entityManager.remove(entity);
             }
             entityManager.flush();
-            userTransaction.commit();
+            // userTransaction.commit();
             return null;
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -63,26 +39,12 @@ public class Provider implements IProvider {
         }
     }
 
-    @Transactional
-    public <TEntity> TEntity save(TEntity object) {
-        try {
-            TEntity entity = entityManager.merge(object);
-            System.out.println(entity);
-            entityManager.flush();
-            entityManager.refresh(entity);
-            return entity;
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
-
-    }
-
     @Override
     @Transactional
     public <TEntity> TEntity create(TEntity object) {
         try {
-            return this.save(object);
+            entityManager.persist(object);
+            return object;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
@@ -94,7 +56,9 @@ public class Provider implements IProvider {
     @Transactional
     public <TEntity> TEntity update(TEntity object) {
         try {
-            return this.save(object);
+            TEntity entity = entityManager.merge(object);
+            entityManager.persist(entity);
+            return entity;
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;
@@ -110,8 +74,7 @@ public class Provider implements IProvider {
         }
         try {
             String query = String.format("FROM %s", cls.getName());
-            List<TEntity> resultList = entityManager.createQuery(query).getResultList();
-            return resultList;
+            return (List<TEntity>) entityManager.createQuery(query).getResultList();
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;

@@ -3,19 +3,57 @@ package ru.krista.tour.model;
 import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.model.data.IProvider;
 import ru.krista.tour.model.data.dao.TourDao;
+import ru.krista.tour.model.data.dao.UserDao;
 
+import javax.annotation.Resource;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.transaction.*;
 
+/*
+ ** отвечает за соединение с БД и транзакции
+ */
 public class Model implements IModal {
+    // entity manager, управляемый контейнером
+    @PersistenceContext(name = "tour-integration")
+    public EntityManager entityManager;
+    @Resource
+    public UserTransaction userTransaction;
+
     IProvider provider;
 
-    public Model() {
-
+    // перенести в dao
+    @Override
+    public boolean openGateway() {
+        try {
+            userTransaction.begin();
+            return true;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return false;
+        } catch (NotSupportedException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
-    public void start (){
 
-    }
-    public void finish () {
-
+    public boolean closeGateway() {
+        try {
+            userTransaction.commit();
+            return true;
+        } catch (HeuristicRollbackException e) {
+            e.printStackTrace();
+            return false;
+        } catch (SystemException e) {
+            e.printStackTrace();
+            return false;
+        } catch (HeuristicMixedException e) {
+            e.printStackTrace();
+            return false;
+        } catch (RollbackException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
  /*   public CourseDao getTourDao (TourDo tourDo) {
@@ -42,18 +80,8 @@ public class Model implements IModal {
 
 
     @Override
-    public void openGateway() {
-
-    }
-
-    @Override
-    public void closeGateway() {
-
-    }
-
-    @Override
-    public void getUserTourDao() {
-
+    public UserDao getUserTourDao() {
+        return null;
     }
 
     @Override

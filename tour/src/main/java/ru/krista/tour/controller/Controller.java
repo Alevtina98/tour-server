@@ -1,6 +1,8 @@
 package ru.krista.tour.controller;
 
 import ru.krista.tour.Dto;
+import ru.krista.tour.controller.domains.IModal;
+import ru.krista.tour.model.Model;
 import ru.krista.tour.view.resources.IController;
 import ru.krista.tour.controller.domains.webApp.user.UserBo;
 import ru.krista.tour.controller.domains.webApp.user.UserService;
@@ -17,13 +19,31 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+// контролирует открытие и закрытие области персистенции
+// запрашивает dao для сервисов
 public class Controller  implements IController {
+    @Inject
+    IModal modal;
     @Inject
     UserService userService;
     @Inject
     SessionService sessionService;
     @Inject
     TourService tourService;
+
+    private boolean persistenceConnection() {
+        modal = new Model();
+        if (modal == null) {
+            return false;
+        }
+        return true;
+    }
+    private boolean openPersistence () {
+        return modal.openGateway();
+    }
+    private boolean closePersistence () {
+        return  modal.closeGateway();
+    }
 
     private <TServiceData, TPresentationData> Dto<TPresentationData> buildPresentationDto(Dto<TServiceData> serviceDto, Function<TServiceData, TPresentationData> builder){
         if (serviceDto.status.equals(Dto.Status.error))  {
