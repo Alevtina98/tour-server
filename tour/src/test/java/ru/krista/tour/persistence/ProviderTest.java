@@ -4,10 +4,10 @@ import org.junit.*;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.FilterByGeneral;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.SelectAllFromTour;
-import ru.krista.tour.model.data.dao.userDao.queryUtils.*;
+import ru.krista.tour.model.data.dao.sessionDao.queryUtils.*;
 import ru.krista.tour.model.data.persistence.Provider;
+import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
-import ru.krista.tour.model.data.persistence.entities.UserTour;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 
 import javax.inject.Named;
@@ -89,32 +89,32 @@ public class ProviderTest extends TestEntityManager {
         Tour pTour2 = provider.create(tour2);
         testEntityManager.getTransaction().commit();
 
-        UserTour userTour1 = new UserTour();
-        userTour1.setUserId("user1");
-        userTour1.setTour(pTour1);
-        userTour1.setStatus(SessionBo.StatusVariant.DELAYED.toString());
-        UserTour userTour2 = new UserTour();
-        userTour2.setUserId("user2");
-        userTour2.setTour(pTour1);
-        userTour2.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
-        UserTour userTour3 = new UserTour();
-        userTour3.setUserId("user1");
-        userTour3.setTour(pTour2);
-        userTour3.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
+        Session session1 = new Session();
+        session1.setUserId("user1");
+        session1.setTour(pTour1);
+        session1.setStatus(SessionBo.StatusVariant.DELAYED.toString());
+        Session session2 = new Session();
+        session2.setUserId("user2");
+        session2.setTour(pTour1);
+        session2.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
+        Session session3 = new Session();
+        session3.setUserId("user1");
+        session3.setTour(pTour2);
+        session3.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
 
         testEntityManager.getTransaction().begin();
-        UserTour pUserTour1 = provider.create(userTour1);
-        UserTour pUserTour2 = provider.create(userTour2);
-        UserTour pUserTour3 = provider.create(userTour3);
+        Session pSession1 = provider.create(session1);
+        Session pSession2 = provider.create(session2);
+        Session pSession3 = provider.create(session3);
         testEntityManager.getTransaction().commit();
 
         // READ ALL
 
         List<Tour> tourList = provider.readAll(Tour.class);
-        List<UserTour> userTourList = provider.readAll(UserTour.class);
+        List<Session> sessionList = provider.readAll(Session.class);
 
         Assert.assertEquals(tourList.size(), 2);
-        Assert.assertEquals(userTourList.size(), 3);
+        Assert.assertEquals(sessionList.size(), 3);
 
         // READ BY FLAG
 
@@ -138,7 +138,7 @@ public class ProviderTest extends TestEntityManager {
 
         // READ BY COLUMN LIST
 
-        List<IColumnFilter<UserTour>> filterList = new ArrayList<IColumnFilter<UserTour>>();
+        List<IColumnFilter<Session>> filterList = new ArrayList<IColumnFilter<Session>>();
         filterByUserId  = new FilterByUserId("user1");
         FilterByStatus filterByStatus = new FilterByStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
         filterList.add(filterByUserId);
@@ -152,22 +152,22 @@ public class ProviderTest extends TestEntityManager {
         // READ BY KEY AS COLUMN LIST
 
         SelectAllFromUserTour selectAllFromUserTour = new SelectAllFromUserTour();
-        filterList = new ArrayList<IColumnFilter<UserTour>>();
+        filterList = new ArrayList<IColumnFilter<Session>>();
         filterByUserId  = new FilterByUserId("user1");
         FilterByTourId filterByTourId = new FilterByTourId(pTour1.getId());
         filterList.add(filterByUserId);
         filterList.add(filterByTourId);
 
-        userTourList = provider.readWithValueFilter(selectAllFromUserTour, filterList);
+        sessionList = provider.readWithValueFilter(selectAllFromUserTour, filterList);
 
-        Assert.assertEquals(userTourList.size(), 1);
-        Assert.assertEquals(userTourList.get(0).getId(), pUserTour1.getId());
+        Assert.assertEquals(sessionList.size(), 1);
+        Assert.assertEquals(sessionList.get(0).getId(), pSession1.getId());
 
 
         testEntityManager.getTransaction().begin();
-        provider.delete(UserTour.class, pUserTour1.getId());
-        provider.delete(UserTour.class, pUserTour2.getId());
-        provider.delete(UserTour.class, pUserTour3.getId());
+        provider.delete(Session.class, pSession1.getId());
+        provider.delete(Session.class, pSession2.getId());
+        provider.delete(Session.class, pSession3.getId());
         provider.delete(Tour.class, pTour1.getId());
         provider.delete(Tour.class, pTour2.getId());
         testEntityManager.getTransaction().commit();

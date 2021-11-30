@@ -11,9 +11,9 @@ import java.util.Date;
 
 @Entity
 @Proxy(lazy = true)
-@Table(name = "user_tour")
+@Table(name = "session")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
-public class UserTour extends RootKey implements Serializable {
+public class Session extends RootKey implements Serializable {
    /* @EmbeddedId
     @AttributeOverrides({
             @AttributeOverride(name="userId",
@@ -35,12 +35,12 @@ public class UserTour extends RootKey implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date dateChange;
 
-    public UserTour(String user, Tour tour, String status){
+    public Session(String user, Tour tour, String status){
         this.userId = user;
         this.tour = tour;
         this.status = status;
     }
-    public UserTour(){ }
+    public Session(){ }
     public String getStatus() {
         return status;
     }

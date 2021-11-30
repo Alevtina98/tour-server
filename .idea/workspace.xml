@@ -10,29 +10,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="test: добавить CRUD-тесты для Provider">
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/FilterByGeneral.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/SelectAllFromTour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromUserTour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromUserTour.java" afterDir="false" />
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ISessionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ITourDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/SelectAllFromUserTour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/IProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/IProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTourKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTourKey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IColumnFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/IColumnFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IColumnFlagFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/IColumnFlagFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IQueryParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/ISelectParams.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/restApi/Creation.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/restApi/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByTourId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromUserTour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromUserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/SelectTourFromUserTour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
     </list>
@@ -136,6 +128,7 @@
         <option value="HTML File" />
         <option value="HTTP Public Environment File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -339,7 +332,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProviderTest.readListTest">
+  <component name="RunManager" selected="JUnit.ProviderTest">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -734,11 +727,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProviderTest" />
         <item itemvalue="JUnit.ProviderTest.readListTest" />
         <item itemvalue="JUnit.ProviderTest.readListByFilterTest" />
         <item itemvalue="JUnit.ProviderTest.readListByColumnTest" />
         <item itemvalue="JUnit.ProviderTest.crudTest" />
-        <item itemvalue="JUnit.ProviderTest" />
       </list>
     </recent_temporary>
   </component>
@@ -863,7 +856,7 @@
       <workItem from="1637850162779" duration="1298000" />
       <workItem from="1637923791888" duration="10783000" />
       <workItem from="1638179716723" duration="15141000" />
-      <workItem from="1638274176702" duration="9543000" />
+      <workItem from="1638274176702" duration="11906000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -977,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638195075375</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fix: поправить запросы с фильтрацией + тесты">
+      <created>1638283775968</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638283775968</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1012,7 +1012,8 @@
     <MESSAGE value="fix: инициализировать log4j" />
     <MESSAGE value="test: настроена тестовая среда персистенции" />
     <MESSAGE value="test: добавить CRUD-тесты для Provider" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: добавить CRUD-тесты для Provider" />
+    <MESSAGE value="fix: поправить запросы с фильтрацией + тесты" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: поправить запросы с фильтрацией + тесты" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

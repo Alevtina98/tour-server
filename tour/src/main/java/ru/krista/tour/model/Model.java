@@ -3,7 +3,7 @@ package ru.krista.tour.model;
 import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
-import ru.krista.tour.model.data.dao.userDao.UserDao;
+import ru.krista.tour.model.data.dao.sessionDao.SessionDao;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
@@ -80,7 +80,7 @@ public class Model implements IModal {
 
 
     @Override
-    public UserDao getUserTourDao() {
+    public SessionDao getUserTourDao() {
         return null;
     }
 

@@ -38,7 +38,7 @@ public class TestEntityManager {
     public void beginTransaction() {
         testEntityManager.getTransaction().begin();
     }*/
-    @After
+    /*@After
     public void rollbackTransaction() {
         if (testEntityManager.getTransaction().isActive()) {
             testEntityManager.getTransaction().rollback();
@@ -47,6 +47,6 @@ public class TestEntityManager {
         if (testEntityManager.isOpen()) {
             testEntityManager.close();
         }
-    }
+    }*/
 
 }

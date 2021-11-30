@@ -1,14 +1,14 @@
-package ru.krista.tour.model.data.dao.userDao.queryUtils;
+package ru.krista.tour.model.data.dao.sessionDao.queryUtils;
 
-import ru.krista.tour.model.data.persistence.entities.UserTour;
+import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
-public class FilterByUserId implements IColumnFilter<UserTour> {
+public class FilterByUserId implements IColumnFilter<Session> {
     public String targetValue;
-    public Path<Object> rootColumnValue (Root<UserTour> rootEntity) {
+    public Path<Object> rootColumnValue (Root<Session> rootEntity) {
         return rootEntity.get("userId");
     }
     public Object targetColumnValue () {

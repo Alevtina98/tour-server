@@ -10,7 +10,7 @@
         <jta-data-source>java:/jdbc/dataaccess</jta-data-source>
 
         <class>ru.krista.tour.model.data.persistence.entities.Tour</class>
-        <class>ru.krista.tour.model.data.persistence.entities.UserTour</class>
+        <class>ru.krista.tour.model.data.persistence.entities.Session</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" /> <!-- DB Driver -->

@@ -1,11 +1,11 @@
 package ru.krista.tour.controller.domains;
 
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
-import ru.krista.tour.model.data.dao.userDao.UserDao;
+import ru.krista.tour.model.data.dao.sessionDao.SessionDao;
 
 public interface IModal {
     public boolean openGateway () ;
     public boolean closeGateway();
-    public UserDao getUserTourDao();
+    public SessionDao getUserTourDao();
     public TourDao getTouDao ();
 }
