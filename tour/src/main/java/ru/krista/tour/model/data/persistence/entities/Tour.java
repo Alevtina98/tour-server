@@ -87,6 +87,10 @@ public class Tour extends RootKey implements Serializable {
         return name;
     }
 
+    public boolean isGeneralUser() {
+        return isGeneralUser;
+    }
+
     @Override
     public void setId(Long key) {
         super.setId(key);

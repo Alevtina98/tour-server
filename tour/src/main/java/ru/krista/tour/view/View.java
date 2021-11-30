@@ -1,7 +1,7 @@
 package ru.krista.tour.view;
 
-import ru.krista.tour.view.resources.restApi.Creation;
-import ru.krista.tour.view.resources.restApi.Education;
+import ru.krista.tour.view.resources.Creation;
+import ru.krista.tour.view.resources.Education;
 
 import javax.ws.rs.core.Application;
 import java.util.HashSet;

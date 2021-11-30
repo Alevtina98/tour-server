@@ -1,6 +1,4 @@
-package ru.krista.tour.model.data.persistence.entities.userTour;
-
-import ru.krista.tour.model.data.persistence.entities.Tour;
+package ru.krista.tour.model.data.persistence.entities;
 
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;

@@ -1,9 +1,9 @@
 package ru.krista.tour.model;
 
 import ru.krista.tour.controller.domains.IModal;
-import ru.krista.tour.model.data.IProvider;
-import ru.krista.tour.model.data.dao.TourDao;
-import ru.krista.tour.model.data.dao.UserDao;
+import ru.krista.tour.model.data.dao.IProvider;
+import ru.krista.tour.model.data.dao.tourDao.TourDao;
+import ru.krista.tour.model.data.dao.userDao.UserDao;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;

@@ -10,18 +10,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="test: настроена тестовая среда персистенции">
-      <change afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="test: добавить CRUD-тесты для Provider">
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/FilterByGeneral.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/SelectAllFromTour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromUserTour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromUserTour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/IProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/IProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/IProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/IProvider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/HibernateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/UserTourKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTourKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/userTour/filtration/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IColumnFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/IColumnFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IColumnFlagFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/IColumnFlagFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/utils/IQueryParams.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/queryUtils/ISelectParams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/restApi/Creation.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/restApi/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,15 +203,17 @@
       <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.krista.tour.model.data.persistence" />
       <recent name="ru.krista.tour.controller.domain.tour" />
       <recent name="ru.krista.model" />
       <recent name="ru.krista.rest" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.krista.tour.model.data.dao.userDao.queryUtils" />
+      <recent name="ru.krista.tour.model.data.dao.tourDao.queryUtils" />
       <recent name="ru.krista.tour.view.presentation.rest.jax.clients.creator" />
       <recent name="ru.krista.tour.controller.Tour" />
       <recent name="ru.krista.rest" />
-      <recent name="ru.krista.models" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -324,22 +339,17 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProviderTest.crudTest">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProviderTest.readListTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="generated-requests#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="2" runType="Run single request">
-      <method v="2" />
     </configuration>
     <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="LOCAL" value="false" />
@@ -513,7 +523,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderTest.readingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderTest.readListByColumnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
@@ -523,13 +533,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
       <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
-      <option name="METHOD_NAME" value="readingTest" />
+      <option name="METHOD_NAME" value="readListByColumnTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Provider.readingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderTest.readListByFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
@@ -537,9 +547,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.jre" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.jre.Provider" />
-      <option name="METHOD_NAME" value="readingTest" />
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
+      <option name="METHOD_NAME" value="readListByFilterTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest.readListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
+      <option name="METHOD_NAME" value="readListTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -697,22 +723,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.generated-requests#2" />
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
       <item itemvalue="JUnit.ProviderTest" />
-      <item itemvalue="JUnit.ProviderTest.readingTest" />
-      <item itemvalue="JUnit.Provider.readingTest" />
+      <item itemvalue="JUnit.ProviderTest.crudTest" />
+      <item itemvalue="JUnit.ProviderTest.readListTest" />
       <item itemvalue="Remote JVM Debug.attach" />
       <item itemvalue="Tomcat Server.local" />
-      <item itemvalue="JUnit.ProviderTest.crudTest" />
+      <item itemvalue="JUnit.ProviderTest.readListByColumnTest" />
+      <item itemvalue="JUnit.ProviderTest.readListByFilterTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProviderTest.readListTest" />
+        <item itemvalue="JUnit.ProviderTest.readListByFilterTest" />
+        <item itemvalue="JUnit.ProviderTest.readListByColumnTest" />
         <item itemvalue="JUnit.ProviderTest.crudTest" />
         <item itemvalue="JUnit.ProviderTest" />
-        <item itemvalue="JUnit.Provider.readingTest" />
-        <item itemvalue="JUnit.ProviderTest.readingTest" />
-        <item itemvalue="HTTP Request.generated-requests#2" />
       </list>
     </recent_temporary>
   </component>
@@ -836,7 +862,8 @@
       <workItem from="1637835024537" duration="13047000" />
       <workItem from="1637850162779" duration="1298000" />
       <workItem from="1637923791888" duration="10783000" />
-      <workItem from="1638179716723" duration="14075000" />
+      <workItem from="1638179716723" duration="15141000" />
+      <workItem from="1638274176702" duration="9543000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -943,7 +970,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637935616561</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="test: добавить CRUD-тесты для Provider">
+      <created>1638195075375</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1638195075375</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -977,7 +1011,8 @@
     <MESSAGE value="feature: настроить среду для тестирования" />
     <MESSAGE value="fix: инициализировать log4j" />
     <MESSAGE value="test: настроена тестовая среда персистенции" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: настроена тестовая среда персистенции" />
+    <MESSAGE value="test: добавить CRUD-тесты для Provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: добавить CRUD-тесты для Provider" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

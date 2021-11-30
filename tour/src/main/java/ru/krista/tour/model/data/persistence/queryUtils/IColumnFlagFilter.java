@@ -1,4 +1,4 @@
-package ru.krista.tour.model.data.persistence.utils;
+package ru.krista.tour.model.data.persistence.queryUtils;
 
 import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Root;

@@ -1,4 +1,4 @@
-package ru.krista.tour.model.data.persistence.entities.userTour;
+package ru.krista.tour.model.data.persistence.entities;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hibernate.annotations.Proxy;

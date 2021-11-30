@@ -1,8 +1,7 @@
-package ru.krista.tour.view.resources.restApi;
+package ru.krista.tour.view.resources;
 
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.view.resources.IController;
 import ru.krista.tour.view.resources.presentations.Presenter;
 import ru.krista.tour.view.resources.presentations.informationObjects.UserSessionIo;
 import ru.krista.tour.view.resources.presentations.informationObjects.StatusAndUserIo;

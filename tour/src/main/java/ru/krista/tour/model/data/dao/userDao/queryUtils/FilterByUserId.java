@@ -1,7 +1,7 @@
-package ru.krista.tour.model.data.persistence.entities.userTour.filtration;
+package ru.krista.tour.model.data.dao.userDao.queryUtils;
 
-import ru.krista.tour.model.data.persistence.entities.userTour.UserTour;
-import ru.krista.tour.model.data.persistence.utils.IColumnFilter;
+import ru.krista.tour.model.data.persistence.entities.UserTour;
+import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
@@ -13,5 +13,9 @@ public class FilterByUserId implements IColumnFilter<UserTour> {
     }
     public Object targetColumnValue () {
         return targetValue;
+    }
+
+    public FilterByUserId (String targetValue) {
+        this.targetValue = targetValue;
     }
 }

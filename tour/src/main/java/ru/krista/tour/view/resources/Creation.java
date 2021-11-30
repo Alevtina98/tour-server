@@ -1,8 +1,6 @@
-package ru.krista.tour.view.resources.restApi;
+package ru.krista.tour.view.resources;
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.view.resources.IController;
-import ru.krista.tour.view.resources.IPresenter;
 import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
 import javax.inject.Inject;
