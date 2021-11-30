@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ITourDao {
     public Dto<Tour> createTour(Tour tour);
-    public Dto<Tour> readTour(Number id);
+    public Dto<Tour> readTour(Long id);
     public Dto<Tour> updateTour(Tour tour);
     public Dto<Tour> deleteTour (Tour tour);
 

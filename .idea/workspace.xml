@@ -11,22 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ISessionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ITourDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/SelectAllFromUserTour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByTourId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/FilterByUserId.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromUserTour.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromUserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/queryUtils/SelectTourFromUserTour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ITourDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ITourDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -856,7 +841,7 @@
       <workItem from="1637850162779" duration="1298000" />
       <workItem from="1637923791888" duration="10783000" />
       <workItem from="1638179716723" duration="15141000" />
-      <workItem from="1638274176702" duration="11906000" />
+      <workItem from="1638274176702" duration="11976000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -977,7 +962,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638283775968</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="feature: подготовить Dao-интерфейсы">
+      <created>1638286147740</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1638286147740</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1013,7 +1005,8 @@
     <MESSAGE value="test: настроена тестовая среда персистенции" />
     <MESSAGE value="test: добавить CRUD-тесты для Provider" />
     <MESSAGE value="fix: поправить запросы с фильтрацией + тесты" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: поправить запросы с фильтрацией + тесты" />
+    <MESSAGE value="feature: подготовить Dao-интерфейсы" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: подготовить Dao-интерфейсы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
