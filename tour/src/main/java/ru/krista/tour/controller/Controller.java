@@ -2,11 +2,10 @@ package ru.krista.tour.controller;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.IModal;
+import ru.krista.tour.controller.domains.webApp.user.UserService;
+import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
 import ru.krista.tour.model.Model;
 import ru.krista.tour.view.resources.IController;
-import ru.krista.tour.controller.domains.webApp.user.UserBo;
-import ru.krista.tour.controller.domains.webApp.user.UserService;
-import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourBo;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourService;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.program.LearningProgramBo;
@@ -16,62 +15,71 @@ import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
-// контролирует открытие и закрытие области персистенции
-// запрашивает dao для сервисов
-public class Controller  implements IController {
+
+
+/*
+* Работает с моделью - открывает и закрывает область персистенции
+*
+* Работает с сервисами:
+*
+* - предоставляет сервисам доступ к данным
+* - передает сервисам клиентскую информацию
+* - оценивает результаты работы сервисов
+*
+* Работает с представлением - распаковывает и упаковывает клиентскую информацию
+* */
+
+public class Controller implements IController {
     @Inject
     IModal modal;
-    @Inject
-    UserService userService;
-    @Inject
-    SessionService sessionService;
-    @Inject
-    TourService tourService;
 
-    private boolean persistenceConnection() {
+    private void openPersistence() {
         modal = new Model();
-        if (modal == null) {
-            return false;
-        }
-        return true;
+        modal.openGateway();
     }
-    private boolean openPersistence () {
-        return modal.openGateway();
-    }
-    private boolean closePersistence () {
-        return  modal.closeGateway();
+    private void closePersistence() {
+        modal.closeGateway();
     }
 
-    private <TServiceData, TPresentationData> Dto<TPresentationData> buildPresentationDto(Dto<TServiceData> serviceDto, Function<TServiceData, TPresentationData> builder){
-        if (serviceDto.status.equals(Dto.Status.error))  {
-            //ErrorIo errorIo = new ErrorIo("");
-            return  new Dto<>(null, Dto.Status.error, "");
-        }
-        return new Dto<>(builder.apply(serviceDto.data));
-    };;
-    private TargetBo buildTargetBo(TourIo tourIo){
+
+    /*
+    * Перенесение данных из информационных объектов в домены
+    * */
+
+    private TargetBo convertTargetIo(TourIo tourIo) {
         return new TargetBo(tourIo.formName, tourIo.formCaption);
-    };
-    private FocusBo buildFocusBo(TourIo tourIo){
-        return new FocusBo(tourIo.isGeneralUser, buildTargetBo(tourIo));
-    };
-    private LearningProgramBo buildLearningProgramBo(TourIo tourIo){
-        return new LearningProgramBo(tourIo.code, tourIo.codeJS, buildFocusBo(tourIo));
-    };
-    private TourBo buildTourBo(TourIo tourIo){
+    }
+    private FocusBo convertFocusIo(TourIo tourIo) {
+        return new FocusBo(tourIo.isGeneralUser, convertTargetIo(tourIo));
+    }
+    private LearningProgramBo convertLearningProgramIo(TourIo tourIo) {
+        return new LearningProgramBo(tourIo.code, tourIo.codeJS, convertFocusIo(tourIo));
+    }
+    private TourBo convertTourIo(TourIo tourIo) {
         TourBo tourBo = new TourBo();
         tourBo.id = tourIo.id;
         tourBo.name = tourIo.name;
         tourBo.desc = tourIo.desc;
         tourBo.dateCreate = tourIo.dateCreate;
         tourBo.dateChange = tourIo.dateChange;
-        tourBo.learningProgram = buildLearningProgramBo(tourIo);
+        tourBo.learningProgram = convertLearningProgramIo(tourIo);
         return tourBo;
-    };
-    private TourIo buildTourIo(TourBo tourBo){
+    }
+    private SessionBo convertUserSessionIo(UserSessionIo userSessionIo) {
+        SessionBo sessionBo = new SessionBo();
+         sessionBo.tour = convertTourIo(userSessionIo.tour);
+         sessionBo.dateChange = userSessionIo.dateChange;
+         sessionBo.status = userSessionIo.status;
+        return sessionBo;
+    }
+
+    /*
+     * Перенесение данных из доменов в информационные объекты
+     * */
+
+    private TourIo convertTourBo(TourBo tourBo) {
         TourIo tourIo = new TourIo();
         tourIo.id = tourBo.id;
         tourIo.name = tourBo.name;
@@ -84,113 +92,203 @@ public class Controller  implements IController {
             tourIo.formCaption = tourBo.learningProgram.focus.target.formCaption;
         }
         return tourIo;
-    };
-    private UserBo buildUserBo(UserSessionIo userSessionIo){
-        /*LessonBo lessonBo = new LessonBo();
-        UserBo userBo = new UserBo();
-        businessObject.status = lessonIo.name;
-        businessObject.startDate = lessonIo.desc;
-        businessObject.finishDate = lessonIo.code;
-
-        return lessonIo;*/
+    }
+    private SessionIo convertSessionBo(SessionBo sessionBo) {
+        SessionIo sessionIo = new SessionIo();
+        sessionIo.tour = convertTourBo(sessionBo.tour);
+        sessionIo.id = sessionBo.id;
+        sessionIo.dateChange = sessionBo.dateChange;
+        sessionIo.status = sessionBo.status;
         return null;
-    };
+    }
 
+    /*
+     * Упаковка готовых доменов в DTO
+     * */
 
-    @Override
-    public Dto<List<TourIo>> getTours() {
-        Dto<List<TourBo>> serviceDto = tourService.getAllTours();
-      //  buildPresentationDto<List<TourBo>, List<TourIo>>(serviceDto,);
-        List<TourIo> tourIoList = serviceDto.data.stream().map(this::buildTourIo).collect(Collectors.toList());
+    private Dto<List<TourIo>> wrapTourList(List<TourBo> tourBoList) {
+        List<TourIo> tourIoList = tourBoList.stream().map(this::convertTourBo).collect(Collectors.toList());
         return new Dto<>(tourIoList);
-    };
-    @Override
-    public Dto<TourIo> getTour (TourIdIo info){
-        Dto<TourBo> serviceDto = tourService.getTour(info.id);
-        TourIo tourIo = buildTourIo(serviceDto.data);
+    }
+    private Dto<TourIo> wrapTour(TourBo tourBo) {
+        TourIo tourIo = convertTourBo(tourBo);
         return new Dto<>(tourIo);
-    };
+    }
+    private Dto<List<SessionIo>> wrapSessionList(List<SessionBo> sessionBoList) {
+        List<SessionIo> sessionIoList = sessionBoList.stream().map(this::convertSessionBo).collect(Collectors.toList());
+        return new Dto<>(sessionIoList);
+    }
+    private Dto<SessionIo> wrapUserSession(SessionBo sessionBo) {
+        SessionIo sessionIo = convertSessionBo(sessionBo);
+        return new Dto<>(sessionIo);
+    }
+
+
+    /*
+     * Работа с сервисом, отвечающим за туры
+     * */
+
     @Override
-    public Dto<TourIo> createTour(TourIo info){
-        TourBo tourBo = buildTourBo(info);
-        Dto<TourBo> serviceDto = tourService.createTour(tourBo);
-        TourIo tourIo = buildTourIo(serviceDto.data);
-        return  new Dto<>(tourIo);
-    };
-    @Override
-    public Dto<TourIo> changeTour(TourIo info){
-        TourBo tourBo = buildTourBo(info);
-        Dto<TourBo> serviceDto = tourService.changeTour(tourBo);
-        if (serviceDto.status.equals(Dto.Status.error))  {
-            ErrorIo errorIo = new ErrorIo("");
-            return  new Dto<>(null, Dto.Status.error, "");
+    public Dto<TourIo> createTour(TourIo info) {
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<TourBo> tourServiceDto = tourService.createTour(convertTourIo(info));
+        closePersistence();
+
+        Dto<TourIo> result =  wrapTour(tourServiceDto.data);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при создании тура");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
         }
-        TourIo tourIo = buildTourIo(serviceDto.data);
-        return  new Dto<>(tourIo);
+        return result;
+    }
+
+    @Override
+    public Dto<TourIo> changeTour(TourIo info) {
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<TourBo> tourServiceDto = tourService.changeTour(convertTourIo(info));
+        closePersistence();
+
+        Dto<TourIo> result =  wrapTour(tourServiceDto.data);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при изменении тура");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
     }
 
     @Override
     public Dto<EmptyIo> deleteTour(TourIdIo info) {
-        Dto<Object> serviceDto = tourService.deleteTour(info.id);
-        if (serviceDto.status.equals(Dto.Status.error))  {
-            ErrorIo errorIo = new ErrorIo("");
-            return  new Dto<>(null, Dto.Status.error, "");
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<Object> tourServiceDto = tourService.deleteTour(info.id);
+        closePersistence();
+
+        Dto<EmptyIo> result =  new Dto<>(null);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при удалении тура");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
         }
-        return new Dto<EmptyIo>(null);
+        return result;
     }
 
-    ;
     @Override
-    public Dto<List<TourIo>> getToursWithGeneralFocus(){
-        Dto<List<TourBo>> serviceDto = tourService.getGeneralTours();
-        List<TourIo> tourIoList = serviceDto.data.stream().map(this::buildTourIo).collect(Collectors.toList());
-        return  new Dto<>(tourIoList);
-    };
-    @Override
-    public Dto<List<TourIo>> getToursFromUserSessionWithStatus(StatusAndUserIo info){
-        //Dto<List<TourBo>> serviceDto = sessionService.;
-        //List<TourIo> tourIoList = serviceDto.data.stream().map(this::buildTourIo).collect(Collectors.toList());
-        return null;
-    };
-    @Override
-    public Dto<List<UserSessionIo>> getUserSessions(UserIdIo info){
-        return null;
-    };
-    @Override
-    public Dto<UserSessionIo> createUserSession(UserSessionIo info){
-       /* Long tourId = lesson.tour.id;
-        List<LessonIo> sameEntity = findUserTour(lesson.getUserId(), tourId);
-        if (!sameEntity.isEmpty()) {
-            return response(500, "Данная связь уже существует");
+    public Dto<TourIo> getTour(TourIdIo info) {
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<TourBo> tourServiceDto = tourService.getTour(info.id);
+        closePersistence();
+
+        Dto<TourIo> result =  wrapTour(tourServiceDto.data);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при получении тура");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
         }
-        TourIo tour = findById(TourIo.class, tourId);
-        if (tour==null) {
-            return response(500, "Назначаемого тура не существует");
-        }
-        LessonIo insertedUserTour = save(lesson);
-        if (insertedUserTour != null){
-            return response(200, insertedUserTour);
-        }else {
-            return response(500);
-        }*/
-        return new Dto<UserSessionIo>(new UserSessionIo());
-    };
+        return result;
+    }
+
     @Override
-    public Dto<UserSessionIo> updateUserSession(UserSessionIo info){
-        /*Long tourId = userTour.getTour().getId();
-        List<LessonIo> sameEntity = findUserTour(userTour.getUserId(), tourId);
-        if (sameEntity != null) {
-            if (sameEntity.size() != 1) {
-                return response(418);
-            }
-            userTour.setId(sameEntity.get(0).getId());
+    public Dto<List<TourIo>> getAllTours() {
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<List<TourBo>> tourServiceDto = tourService.getAllTours();
+        closePersistence();
+
+        Dto<List<TourIo>> result = wrapTourList(tourServiceDto.data);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при получении списка всех туров");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
         }
-        LessonIo updatedUserTour = save(userTour);
-        if (updatedUserTour != null){
-            return response(200, updatedUserTour);
-        }else {
-            return response(500);
-        }*/
-        return new Dto<UserSessionIo>(new UserSessionIo());
-    };
+        return result;
+    }
+
+    @Override
+    public Dto<List<TourIo>> getToursWithGeneralFocus() {
+
+        openPersistence();
+        TourService tourService = new TourService(modal.getTouDao());
+        Dto<List<TourBo>> tourServiceDto = tourService.getGeneralTours();
+        closePersistence();
+
+        Dto<List<TourIo>> result = wrapTourList(tourServiceDto.data);
+        if (tourServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при получении списка общепользовательских туров");
+            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
+    }
+
+    /*
+     * Работа с сервисом, отвечающим за сессии пользователя
+     * */
+
+    @Override
+    public Dto<List<TourIo>> getToursFromUserSessionWithStatus(StatusAndUserIo info) {
+
+        openPersistence();
+        UserService userService = new UserService(modal.getUserDao());
+        Dto<List<TourBo>> userServiceDto = userService.getToursFromSessionsWithStatus(info.userId, info.status);
+        closePersistence();
+
+        Dto<List<TourIo>> result = wrapTourList(userServiceDto.data);
+        if (userServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при получении туров из пользовательских сессий с указанным статусом");
+            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
+    }
+
+    @Override
+    public Dto<List<SessionIo>> getAllUserSessions(UserIdIo info) {
+
+        openPersistence();
+        UserService userService = new UserService(modal.getUserDao());
+        Dto<List<SessionBo>> userServiceDto = userService.getSessionList(info.key);
+        closePersistence();
+
+        Dto<List<SessionIo>> result = wrapSessionList(userServiceDto.data);
+        if (userServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при получении туров из всех пользовательскитх сессий");
+            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
+    }
+
+    @Override
+    public Dto<SessionIo> createUserSession(UserSessionIo info) {
+
+        openPersistence();
+        UserService userService = new UserService(modal.getUserDao());
+        Dto<SessionBo> userServiceDto = userService.addUserSession(info.userId, convertUserSessionIo(info));
+        closePersistence();
+
+        Dto<SessionIo> result = wrapUserSession(userServiceDto.data);
+        if (userServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при создании пользовательской сессии");
+            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
+    }
+
+    @Override
+    public Dto<SessionIo> updateUserSession(UserSessionIo info) {
+
+        openPersistence();
+        UserService userService = new UserService(modal.getUserDao());
+        Dto<SessionBo> userServiceDto = userService.updateSession(info.userId, convertUserSessionIo(info));
+        closePersistence();
+
+        Dto<SessionIo> result = wrapUserSession(userServiceDto.data);
+        if (userServiceDto.status == Dto.Status.error) {
+            result.setError("Controller: Ошибка при изменении пользовательской сессии");
+            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+        }
+        return result;
+    }
 }

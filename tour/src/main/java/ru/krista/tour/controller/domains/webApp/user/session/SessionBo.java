@@ -9,30 +9,16 @@ import java.util.Date;
  */
 
 public class SessionBo {
+    public Long id;
     public TourBo tour;
-    public Date startDate;
-    public Date finishDate;
-    public StatusVariant status;
+    public Date dateChange;
+    public String status;
 
-    public enum StatusVariant {
-        APPOINTED ("назначен"),
-        DELAYED ("отложен"),
-        INTERRUPTED("прерван"),
-        PASSED("пройден");
-
-        private final String title;
-        StatusVariant(String title) {
-            this.title = title;
-        }
-        public String getTitle() {
-            return title;
-        }
-    }
-
-    public SessionBo ( TourBo tour, StatusVariant status, Date startDate, Date finishDate) {
+    public SessionBo (TourBo tour, String status, Date date) {
         this.tour = tour;
         this.status = status;
-        this.startDate = startDate;
-        this.finishDate = finishDate;
+       this.dateChange = date;
+    }
+    public SessionBo () {
     }
 }

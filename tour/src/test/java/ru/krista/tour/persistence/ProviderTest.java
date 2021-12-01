@@ -1,7 +1,7 @@
 package ru.krista.tour.persistence;
 
 import org.junit.*;
-import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
+import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.FilterByGeneral;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.SelectAllFromTour;
 import ru.krista.tour.model.data.dao.sessionDao.queryUtils.*;
@@ -92,15 +92,15 @@ public class ProviderTest extends TestEntityManager {
         Session session1 = new Session();
         session1.setUserId("user1");
         session1.setTour(pTour1);
-        session1.setStatus(SessionBo.StatusVariant.DELAYED.toString());
+        session1.setStatus(SessionService.StatusVariant.DELAYED.toString());
         Session session2 = new Session();
         session2.setUserId("user2");
         session2.setTour(pTour1);
-        session2.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
+        session2.setStatus(SessionService.StatusVariant.INTERRUPTED.toString());
         Session session3 = new Session();
         session3.setUserId("user1");
         session3.setTour(pTour2);
-        session3.setStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
+        session3.setStatus(SessionService.StatusVariant.INTERRUPTED.toString());
 
         testEntityManager.getTransaction().begin();
         Session pSession1 = provider.create(session1);
@@ -140,7 +140,7 @@ public class ProviderTest extends TestEntityManager {
 
         List<IColumnFilter<Session>> filterList = new ArrayList<IColumnFilter<Session>>();
         filterByUserId  = new FilterByUserId("user1");
-        FilterByStatus filterByStatus = new FilterByStatus(SessionBo.StatusVariant.INTERRUPTED.toString());
+        FilterByStatus filterByStatus = new FilterByStatus(SessionService.StatusVariant.INTERRUPTED.toString());
         filterList.add(filterByUserId);
         filterList.add(filterByStatus);
 

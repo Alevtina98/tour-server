@@ -3,10 +3,7 @@ package ru.krista.tour.view.resources;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.view.resources.presentations.Presenter;
-import ru.krista.tour.view.resources.presentations.informationObjects.UserSessionIo;
-import ru.krista.tour.view.resources.presentations.informationObjects.StatusAndUserIo;
-import ru.krista.tour.view.resources.presentations.informationObjects.TourIo;
-import ru.krista.tour.view.resources.presentations.informationObjects.UserIdIo;
+import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
@@ -28,7 +25,7 @@ public class Education {
     @Consumes("application/json")
     @Produces("application/json")
     public Response getNewLesson(UserSessionIo informationObject) {
-        Dto<UserSessionIo> dto = controller.createUserSession(informationObject);
+        Dto<SessionIo> dto = controller.createUserSession(informationObject);
         return presenter.response(dto);
     }
 
@@ -41,7 +38,7 @@ public class Education {
     @Consumes("application/json")
     @Produces("application/json")
     public Response getChangedLesson(UserSessionIo informationObject) {
-        Dto<UserSessionIo> dto = controller.updateUserSession(informationObject);
+        Dto<SessionIo> dto = controller.updateUserSession(informationObject);
         return presenter.response(dto);
     }
     /**
@@ -64,7 +61,7 @@ public class Education {
     @Produces("application/json")
     public Response getLessonList(@PathParam("userId") String userId) {
         UserIdIo informationObject = new UserIdIo(userId);
-        Dto<List<UserSessionIo>> dto = controller.getUserSessions(informationObject);
+        Dto<List<SessionIo>> dto = controller.getAllUserSessions(informationObject);
         return presenter.response(dto);
     }
 /**

@@ -22,7 +22,7 @@ public class Creation {
     @GET
     @Produces("application/json")
     public Response getTourList() {
-        Dto<List<TourIo>> dto = controller.getTours();
+        Dto<List<TourIo>> dto = controller.getAllTours();
         return presenter.response(dto);
     }
     /**

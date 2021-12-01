@@ -6,13 +6,13 @@ import ru.krista.tour.view.resources.presentations.informationObjects.*;
 import java.util.List;
 
 public interface IController {
-    public Dto<UserSessionIo> createUserSession(UserSessionIo info);
-    public Dto<UserSessionIo> updateUserSession(UserSessionIo info);
-    public Dto<List<UserSessionIo>> getUserSessions(UserIdIo info);
+    public Dto<SessionIo> createUserSession(UserSessionIo info);
+    public Dto<SessionIo> updateUserSession(UserSessionIo info);
+    public Dto<List<SessionIo>> getAllUserSessions(UserIdIo info);
     public Dto<List<TourIo>> getToursFromUserSessionWithStatus(StatusAndUserIo info);
 
     public Dto<List<TourIo>> getToursWithGeneralFocus();
-    public Dto<List<TourIo>> getTours();
+    public Dto<List<TourIo>> getAllTours();
     public Dto<TourIo> getTour (TourIdIo info);
     public Dto<TourIo> createTour(TourIo info);
     public Dto<TourIo> changeTour(TourIo info);

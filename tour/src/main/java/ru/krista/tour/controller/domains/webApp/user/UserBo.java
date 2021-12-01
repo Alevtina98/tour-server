@@ -8,8 +8,8 @@ import java.util.List;
 ** ОБУЧАЮЩИЙСЯ (пользователь приложения)
  */
 public class UserBo {
-    String id;
-    List<SessionBo> sessionList;
+    public String id;
+    public List<SessionBo> sessionList;
     // агрегирует объекты сессий (уроки)
     public UserBo (List<SessionBo> sessionList, String id) {
         this.sessionList = sessionList;

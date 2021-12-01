@@ -3,7 +3,7 @@ package ru.krista.tour.model;
 import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
-import ru.krista.tour.model.data.dao.sessionDao.SessionDao;
+import ru.krista.tour.model.data.dao.sessionDao.UserDao;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
@@ -24,36 +24,38 @@ public class Model implements IModal {
 
     // перенести в dao
     @Override
-    public boolean openGateway() {
+    public void openGateway() {
         try {
             userTransaction.begin();
-            return true;
         } catch (SystemException e) {
             e.printStackTrace();
-            return false;
         } catch (NotSupportedException e) {
             e.printStackTrace();
-            return false;
         }
     }
 
-    public boolean closeGateway() {
+    public void closeGateway() {
         try {
             userTransaction.commit();
-            return true;
         } catch (HeuristicRollbackException e) {
             e.printStackTrace();
-            return false;
         } catch (SystemException e) {
             e.printStackTrace();
-            return false;
         } catch (HeuristicMixedException e) {
             e.printStackTrace();
-            return false;
         } catch (RollbackException e) {
             e.printStackTrace();
-            return false;
         }
+    }
+
+    @Override
+    public UserDao getUserDao() {
+        return null;
+    }
+
+    @Override
+    public TourDao getTouDao() {
+        return null;
     }
 
  /*   public CourseDao getTourDao (TourDo tourDo) {
@@ -79,13 +81,5 @@ public class Model implements IModal {
    }*/
 
 
-    @Override
-    public SessionDao getUserTourDao() {
-        return null;
-    }
 
-    @Override
-    public TourDao getTouDao() {
-        return null;
-    }
 }

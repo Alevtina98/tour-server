@@ -2,24 +2,19 @@ package ru.krista.tour.model.data.dao.sessionDao;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
-import ru.krista.tour.controller.services.ISessionDao;
+import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
+import ru.krista.tour.controller.services.IUserDao;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 import ru.krista.tour.model.data.persistence.entities.UserTourKey;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Root;
 import java.util.List;
 
-public class SessionDao implements ISessionDao {
+public class UserDao implements IUserDao {
     IProvider provider;
 
-    public SessionDao (IProvider provider) {
+    public UserDao(IProvider provider) {
         this.provider = provider;
     }
 
@@ -36,10 +31,10 @@ public class SessionDao implements ISessionDao {
         return null;
     };
 
-    public Dto<List<Session>> readUserSessionListWithStatus(String userId, SessionBo.StatusVariant status){
+    public Dto<List<Session>> readUserSessionListWithStatus(String userId, SessionService.StatusVariant status){
         return null;
     };
-    public Dto<List<Tour>> readUserTourListWithSessionStatus(String userId, SessionBo.StatusVariant status){
+    public Dto<List<Tour>> readUserTourListWithSessionStatus(String userId, SessionService.StatusVariant status){
         return null;
     };
     public Dto<List<Tour>> readUserTourList(String userId){
