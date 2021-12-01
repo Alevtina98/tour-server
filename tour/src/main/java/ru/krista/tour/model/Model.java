@@ -4,6 +4,7 @@ import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
 import ru.krista.tour.model.data.dao.sessionDao.UserDao;
+import ru.krista.tour.model.data.persistence.Provider;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
@@ -21,6 +22,10 @@ public class Model implements IModal {
     public UserTransaction userTransaction;
 
     IProvider provider;
+
+    public Model () {
+        provider = new Provider(entityManager);
+    }
 
     // перенести в dao
     @Override
@@ -50,36 +55,12 @@ public class Model implements IModal {
 
     @Override
     public UserDao getUserDao() {
-        return null;
+        return new UserDao(provider);
     }
 
     @Override
     public TourDao getTouDao() {
-        return null;
+        return new TourDao(provider);
     }
-
- /*   public CourseDao getTourDao (TourDo tourDo) {
-        return new CourseDao<TourDo, Tour, HibernateGateway>(tourDo, new HibernateGateway());
-    }
-    public CourseDao getUserTourDao (UserTourDo userTourDo) {
-        return new CourseDao(userTourDo, new HibernateGateway(), this.tourEntityName, );
-    }*/
-
-
-
-    /* public List<UserTour> findByRelationType(String userId,  String relationType) {
-       try {
-           CriteriaBuilder criteriaBuilder = manager.getCriteriaBuilder();
-           CriteriaQuery<Tour> query = criteriaBuilder.createQuery(Tour.class);
-           Root<Tour> root = query.from(Tour.class);
-           query.where(criteriaBuilder.isTrue(root.get("userId")));
-           return manager.createQuery(query).getResultList();
-       } catch (Exception e) {
-           System.out.println(e.getMessage());
-           return null;
-       }
-   }*/
-
-
 
 }

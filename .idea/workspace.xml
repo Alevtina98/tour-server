@@ -11,27 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/SessionIo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/ISessionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/services/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/SessionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/sessionDao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/IController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/StatusAndUserIo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/StatusAndUserIo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/UserIdIo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/UserIdIo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -867,7 +847,7 @@
       <workItem from="1637923791888" duration="10783000" />
       <workItem from="1638179716723" duration="15141000" />
       <workItem from="1638274176702" duration="12522000" />
-      <workItem from="1638353948527" duration="12070000" />
+      <workItem from="1638353948527" duration="12552000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -1009,7 +989,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638286392185</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="feature: подготовить Controller">
+      <created>1638366296912</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1638366296912</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1048,7 +1035,8 @@
     <MESSAGE value="feature: подготовить Dao-интерфейсы" />
     <MESSAGE value="fix: заменить тип ключа, передаваемый в TourDao" />
     <MESSAGE value="fix: убрать из git папку .idea" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: убрать из git папку .idea" />
+    <MESSAGE value="feature: подготовить Controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: подготовить Controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
