@@ -14,14 +14,6 @@ import java.util.Date;
 @Table(name = "session")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Session extends RootKey implements Serializable {
-   /* @EmbeddedId
-    @AttributeOverrides({
-            @AttributeOverride(name="userId",
-                    column=@Column(name="user_id")),
-            @AttributeOverride(name="tour",
-                    column=@Column(name="tour"))
-    })
-    private UserTourKey id;*/
    @ManyToOne(optional = false, fetch = FetchType.LAZY)
    @JoinColumn( name="tour_id", referencedColumnName="id")
     private Tour tour;

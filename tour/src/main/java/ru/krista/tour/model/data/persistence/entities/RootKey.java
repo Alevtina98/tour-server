@@ -11,7 +11,7 @@ public abstract class RootKey implements Serializable {
     @Column(name="id")
     protected Long id;
     public Long getId() {return id;}
-    // public void setId (Long key) {this.id = key;}
+    public void setId (Long key) {this.id = key;}
 
     @Override
     public int hashCode() {

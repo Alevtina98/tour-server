@@ -4,7 +4,7 @@ import org.junit.*;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.FilterByGeneral;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.SelectAllFromTour;
-import ru.krista.tour.model.data.dao.sessionDao.queryUtils.*;
+import ru.krista.tour.model.data.dao.userDao.queryUtils.*;
 import ru.krista.tour.model.data.persistence.Provider;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
@@ -120,17 +120,17 @@ public class ProviderTest extends TestEntityManager {
         SelectAllFromTour params = new SelectAllFromTour();
         FilterByGeneral filterByGeneral = new FilterByGeneral();
 
-        tourList = provider.readWithFlagFilter(params, filterByGeneral).data;
+        tourList = provider.readByFlagFilter(params, filterByGeneral).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertTrue(tourList.get(0).getIsGeneral());
 
         // READ BY COLUMN
 
-        SelectTourFromUserTour selectTourFromUserTour = new SelectTourFromUserTour();
+        SelectTourFromSession selectTourFromSession = new SelectTourFromSession();
         FilterByUserId filterByUserId = new FilterByUserId("user2");
 
-        tourList = provider.readWithValueFilter(selectTourFromUserTour,filterByUserId).data;
+        tourList = provider.readWithValueFilter(selectTourFromSession,filterByUserId).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertEquals(tourList.get(0).getName(), "Tour1");
@@ -143,21 +143,21 @@ public class ProviderTest extends TestEntityManager {
         filterList.add(filterByUserId);
         filterList.add(filterByStatus);
 
-        tourList = provider.readWithValueFilter(selectTourFromUserTour, filterList).data;
+        tourList = provider.readWithValueFilter(selectTourFromSession, filterList).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertEquals(tourList.get(0).getName(), "Tour2");
 
         // READ BY KEY AS COLUMN LIST
 
-        SelectAllFromUserTour selectAllFromUserTour = new SelectAllFromUserTour();
+        SelectAllFromSession selectAllFromSession = new SelectAllFromSession();
         filterList = new ArrayList<IColumnFilter<Session>>();
         filterByUserId  = new FilterByUserId("user1");
         FilterByTourId filterByTourId = new FilterByTourId(pTour1.getId());
         filterList.add(filterByUserId);
         filterList.add(filterByTourId);
 
-        sessionList = provider.readWithValueFilter(selectAllFromUserTour, filterList).data;
+        sessionList = provider.readWithValueFilter(selectAllFromSession, filterList).data;
 
         Assert.assertEquals(sessionList.size(), 1);
         Assert.assertEquals(sessionList.get(0).getId(), pSession1.getId());

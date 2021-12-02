@@ -25,4 +25,9 @@ public class Dto <T> {
     public void addErrorMsg (String error) {
         this.errorMsgList.add(error);
     }
+    public void addErrorMsg (List<String> errorList) {
+        this.errorMsgList.addAll(errorList);
+    }
+
+
 }

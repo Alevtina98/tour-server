@@ -68,11 +68,11 @@ public class Controller implements IController {
         return tourBo;
     }
     private SessionBo convertUserSessionIo(UserSessionIo userSessionIo) {
-        SessionBo sessionBo = new SessionBo();
-         sessionBo.tour = convertTourIo(userSessionIo.tour);
-         sessionBo.dateChange = userSessionIo.dateChange;
-         sessionBo.status = userSessionIo.status;
-        return sessionBo;
+        SessionBo session = new SessionBo();
+         session.tour = convertTourIo(userSessionIo.tour);
+         session.dateChange = userSessionIo.dateChange;
+         session.status = userSessionIo.status;
+        return session;
     }
 
     /*
@@ -93,12 +93,12 @@ public class Controller implements IController {
         }
         return tourIo;
     }
-    private SessionIo convertSessionBo(SessionBo sessionBo) {
+    private SessionIo convertSessionBo(SessionBo session) {
         SessionIo sessionIo = new SessionIo();
-        sessionIo.tour = convertTourBo(sessionBo.tour);
-        sessionIo.id = sessionBo.id;
-        sessionIo.dateChange = sessionBo.dateChange;
-        sessionIo.status = sessionBo.status;
+        sessionIo.tour = convertTourBo(session.tour);
+        sessionIo.id = session.id;
+        sessionIo.dateChange = session.dateChange;
+        sessionIo.status = session.status;
         return null;
     }
 
@@ -114,12 +114,12 @@ public class Controller implements IController {
         TourIo tourIo = convertTourBo(tourBo);
         return new Dto<>(tourIo);
     }
-    private Dto<List<SessionIo>> wrapSessionList(List<SessionBo> sessionBoList) {
-        List<SessionIo> sessionIoList = sessionBoList.stream().map(this::convertSessionBo).collect(Collectors.toList());
+    private Dto<List<SessionIo>> wrapSessionList(List<SessionBo> sessionList) {
+        List<SessionIo> sessionIoList = sessionList.stream().map(this::convertSessionBo).collect(Collectors.toList());
         return new Dto<>(sessionIoList);
     }
-    private Dto<SessionIo> wrapUserSession(SessionBo sessionBo) {
-        SessionIo sessionIo = convertSessionBo(sessionBo);
+    private Dto<SessionIo> wrapUserSession(SessionBo session) {
+        SessionIo sessionIo = convertSessionBo(session);
         return new Dto<>(sessionIo);
     }
 
@@ -155,7 +155,7 @@ public class Controller implements IController {
         Dto<TourIo> result =  wrapTour(tourServiceDto.data);
         if (tourServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при изменении тура");
-            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(tourServiceDto.errorMsgList);
         }
         return result;
     }
@@ -171,7 +171,7 @@ public class Controller implements IController {
         Dto<EmptyIo> result =  new Dto<>(null);
         if (tourServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при удалении тура");
-            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(tourServiceDto.errorMsgList);
         }
         return result;
     }
@@ -187,7 +187,7 @@ public class Controller implements IController {
         Dto<TourIo> result =  wrapTour(tourServiceDto.data);
         if (tourServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при получении тура");
-            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(tourServiceDto.errorMsgList);
         }
         return result;
     }
@@ -203,7 +203,7 @@ public class Controller implements IController {
         Dto<List<TourIo>> result = wrapTourList(tourServiceDto.data);
         if (tourServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при получении списка всех туров");
-            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(tourServiceDto.errorMsgList);
         }
         return result;
     }
@@ -219,7 +219,7 @@ public class Controller implements IController {
         Dto<List<TourIo>> result = wrapTourList(tourServiceDto.data);
         if (tourServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при получении списка общепользовательских туров");
-            tourServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(tourServiceDto.errorMsgList);
         }
         return result;
     }
@@ -239,7 +239,7 @@ public class Controller implements IController {
         Dto<List<TourIo>> result = wrapTourList(userServiceDto.data);
         if (userServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при получении туров из пользовательских сессий с указанным статусом");
-            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(userServiceDto.errorMsgList);
         }
         return result;
     }
@@ -255,7 +255,7 @@ public class Controller implements IController {
         Dto<List<SessionIo>> result = wrapSessionList(userServiceDto.data);
         if (userServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при получении туров из всех пользовательскитх сессий");
-            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(userServiceDto.errorMsgList);
         }
         return result;
     }
@@ -271,7 +271,7 @@ public class Controller implements IController {
         Dto<SessionIo> result = wrapUserSession(userServiceDto.data);
         if (userServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при создании пользовательской сессии");
-            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(userServiceDto.errorMsgList);
         }
         return result;
     }
@@ -287,7 +287,7 @@ public class Controller implements IController {
         Dto<SessionIo> result = wrapUserSession(userServiceDto.data);
         if (userServiceDto.status == Dto.Status.error) {
             result.setError("Controller: Ошибка при изменении пользовательской сессии");
-            userServiceDto.errorMsgList.forEach(result::addErrorMsg);
+            result.addErrorMsg(userServiceDto.errorMsgList);
         }
         return result;
     }

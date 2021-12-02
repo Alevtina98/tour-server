@@ -14,11 +14,11 @@ public class SessionBo {
     public Date dateChange;
     public String status;
 
-    public SessionBo (TourBo tour, String status, Date date) {
+    public SessionBo(TourBo tour, String status, Date date) {
         this.tour = tour;
         this.status = status;
        this.dateChange = date;
     }
-    public SessionBo () {
+    public SessionBo() {
     }
 }

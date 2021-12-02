@@ -53,7 +53,7 @@ public class UserService {
         user.sessionList.add(sessionBo);
         return new Dto<>(session);
     };
-    public Dto<SessionBo> updateSession (String userId, SessionBo sessionBo) {
+    public Dto<SessionBo> updateSession (String userId, SessionBo session) {
         return null;
     };
 }

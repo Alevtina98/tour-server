@@ -1,16 +1,16 @@
 package ru.krista.tour.controller.domains.webApp.user.session.tour;
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.model.data.persistence.entities.Tour;
+import ru.krista.tour.model.data.TourDo;
 
 import java.util.List;
 
 public interface ITourDao {
-    public Dto<TourBo> createTour(Tour tour);
-    public Dto<TourBo> readTour(Long id);
-    public Dto<TourBo> updateTour(Tour tour);
-    public Dto<TourBo> deleteTour (Tour tour);
+    public Dto<TourDo> createTour(TourDo tourDo);
+    public Dto<TourDo> readTour(Long id);
+    public Dto<TourDo> updateTour(TourDo tourDo);
+    public Dto<TourDo> deleteTour (Long id);
 
-    public Dto<List<TourBo>> readAllTours();
-    public Dto<List<TourBo>> readToursFilterByGeneralFocus();
+    public Dto<List<TourDo>> readAllTours();
+    public Dto<List<TourDo>> readToursFilterByGeneralFocus();
 }

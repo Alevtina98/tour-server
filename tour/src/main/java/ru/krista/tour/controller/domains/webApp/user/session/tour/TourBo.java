@@ -1,6 +1,7 @@
 package ru.krista.tour.controller.domains.webApp.user.session.tour;
 
 import ru.krista.tour.controller.domains.webApp.user.session.tour.program.LearningProgramBo;
+import ru.krista.tour.model.data.persistence.entities.Tour;
 
 import java.util.Date;
 

@@ -34,7 +34,7 @@ public class Provider implements IProvider {
     }
 
     @Override
-    public <TEntity>  Dto<TEntity> readById(Class<TEntity> cls, Long id) {
+    public <TEntity>  Dto<TEntity> readById(Class<TEntity> cls, Object id) {
         Dto<TEntity> result =  new Dto<>(null);
         try {
             TEntity entity = entityManager.find(cls, id);
@@ -64,7 +64,7 @@ public class Provider implements IProvider {
 
     @Override
     @Transactional
-    public <TEntity>  Dto<TEntity> delete(Class<TEntity> entityClass, Long id) {
+    public <TEntity>  Dto<TEntity> delete(Class<TEntity> entityClass, Object id) {
         Dto<TEntity> result =  new Dto<>(null);
         try {
             Dto<TEntity> readResult = readById(entityClass, id);
@@ -98,7 +98,7 @@ public class Provider implements IProvider {
     }
 
     @Override
-    public <TFromEntity, TResultItem> Dto<List<TResultItem>> readWithFlagFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFlagFilter<TFromEntity> flagFilter) {
+    public <TFromEntity, TResultItem> Dto<List<TResultItem>> readByFlagFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFlagFilter<TFromEntity> flagFilter) {
         Dto<List<TResultItem>> result =  new Dto<>(null);
         try {
             CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
@@ -116,7 +116,7 @@ public class Provider implements IProvider {
         }
         return result;
     }
-
+    @Override
     public <TFromEntity, TResultItem> Dto<List<TResultItem>> readWithValueFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFilter<TFromEntity> valueFilter) {
         Dto<List<TResultItem>> result =  new Dto<>(null);
         try {

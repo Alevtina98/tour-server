@@ -1,4 +1,4 @@
-package ru.krista.tour.model.data.dao.sessionDao.queryUtils;
+package ru.krista.tour.model.data.dao.userDao.queryUtils;
 
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.queryUtils.ISelectParams;
@@ -6,7 +6,7 @@ import ru.krista.tour.model.data.persistence.queryUtils.ISelectParams;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
-public class SelectAllFromUserTour implements ISelectParams<Session, Session> {
+public class SelectAllFromSession implements ISelectParams<Session, Session> {
     public Class<Session> classFromEntity () {
         return Session.class;
     };
