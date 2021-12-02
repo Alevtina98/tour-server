@@ -16,6 +16,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+
+/*
+ * предоставляет сервису домена Пользователь доступ к персистентным данным
+ * */
+
 public class UserDao implements IUserDao {
     IProvider provider;
 
@@ -40,16 +46,19 @@ public class UserDao implements IUserDao {
         sessionDo.tour = TourDao.convertTourEntity(sessionEntity.getTour());
         return sessionDo;
     }
+
     public static List<SessionDo> convertSessionEntity(List<Session> sessionEntityList) {
         return sessionEntityList.stream().map(UserDao::convertSessionEntity).collect(Collectors.toList());
     }
-    private List<IColumnFilter<Session>> createFilterByUserAndStatus (String userId, String status) {
+
+    private List<IColumnFilter<Session>> createFilterByUserAndStatus(String userId, String status) {
         List<IColumnFilter<Session>> filterList = new ArrayList<>();
         filterList.add(new FilterByUserId(userId));
         filterList.add(new FilterByStatus(status));
         return filterList;
     }
-    private List<IColumnFilter<Session>> createFilterByUserAndTour (String userId, Long tourId) {
+
+    private List<IColumnFilter<Session>> createFilterByUserAndTour(String userId, Long tourId) {
         List<IColumnFilter<Session>> filterList = new ArrayList<>();
         filterList.add(new FilterByUserId(userId));
         filterList.add(new FilterByTourId(tourId));
@@ -117,11 +126,12 @@ public class UserDao implements IUserDao {
         if (providerResult.status == Dto.Status.ok) {
             result.setData(convertSessionEntity(providerResult.data.get(0)));
         } else {
-            result.setError("UserDao: Не удалось прочитать данные о сессии");
+            result.setError("UserDao: Не удалось прочитать данные о сессии пользователя с указанным туром");
             result.addErrorMsg(providerResult.errorMsgList);
         }
         return result;
     }
+
     @Override
     public Dto<List<SessionDo>> readUserSessionListWithTour(String userId, Long tourId) {
         Dto<List<Session>> providerResult = provider.readWithValueFilter(new SelectAllFromSession(), createFilterByUserAndTour(userId, tourId));
@@ -129,20 +139,7 @@ public class UserDao implements IUserDao {
         if (providerResult.status == Dto.Status.ok) {
             result.setData(convertSessionEntity(providerResult.data));
         } else {
-            result.setError("UserDao: Не удалось прочитать данные о сессии");
-            result.addErrorMsg(providerResult.errorMsgList);
-        }
-        return result;
-    }
-
-    @Override
-    public Dto<List<TourDo>> readToursFromAllUserSessions(String userId) {
-        Dto<List<Tour>> providerResult = provider.readWithValueFilter(new SelectTourFromSession(), new FilterByUserId(userId));
-        Dto<List<TourDo>> result = new Dto<>(null);
-        if (providerResult.status == Dto.Status.ok) {
-            result.setData(TourDao.convertTourEntity(providerResult.data));
-        } else {
-            result.setError("UserDao: Не удалось прочитать данные о сессии");
+            result.setError("UserDao: Не удалось прочитать данные обо всех сессиях пользователя с указанным туром");
             result.addErrorMsg(providerResult.errorMsgList);
         }
         return result;
@@ -156,20 +153,33 @@ public class UserDao implements IUserDao {
         if (providerResult.status == Dto.Status.ok) {
             result.setData(convertSessionEntity(providerResult.data));
         } else {
-            result.setError("UserDao: Не удалось прочитать данные о сессиях с указанным статусом");
+            result.setError("UserDao: Не удалось прочитать данные о пользовательских сессиях с указанным статусом");
             result.addErrorMsg(providerResult.errorMsgList);
         }
         return result;
     }
 
     @Override
-    public Dto<List<TourDo>> readUserTourListWithSessionStatus(String userId, String status) {
+    public Dto<List<TourDo>> readTourListFromAllUserSessions(String userId) {
+        Dto<List<Tour>> providerResult = provider.readWithValueFilter(new SelectTourFromSession(), new FilterByUserId(userId));
+        Dto<List<TourDo>> result = new Dto<>(null);
+        if (providerResult.status == Dto.Status.ok) {
+            result.setData(TourDao.convertTourEntity(providerResult.data));
+        } else {
+            result.setError("UserDao: Не удалось прочитать данные о турах из всех пользовательских сессий");
+            result.addErrorMsg(providerResult.errorMsgList);
+        }
+        return result;
+    }
+
+    @Override
+    public Dto<List<TourDo>> readTourListFromUserSessionWithStatus(String userId, String status) {
         Dto<List<Tour>> providerResult = provider.readWithValueFilter(new SelectTourFromSession(), createFilterByUserAndStatus(userId, status));
         Dto<List<TourDo>> result = new Dto<>(null);
         if (providerResult.status == Dto.Status.ok) {
             result.setData(TourDao.convertTourEntity(providerResult.data));
         } else {
-            result.setError("UserDao: Не удалось прочитать данные о турах из сессий с указанным статусом");
+            result.setError("UserDao: Не удалось прочитать данные о турах из пользовательских сессий с указанным статусом");
             result.addErrorMsg(providerResult.errorMsgList);
         }
         return result;

@@ -1,7 +1,6 @@
 package ru.krista.tour.controller.domains.webApp.user;
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.model.data.SessionDo;
 import ru.krista.tour.model.data.TourDo;
 
@@ -22,7 +21,7 @@ public interface IUserDao {
 
     public Dto<List<SessionDo>> readUserSessionListWithStatus(String userId, String status);
 
-    public Dto<List<TourDo>> readUserTourListWithSessionStatus(String userId, String status);
+    public Dto<List<TourDo>> readTourListFromUserSessionWithStatus(String userId, String status);
 
-    public Dto<List<TourDo>> readToursFromAllUserSessions(String userId);
+    public Dto<List<TourDo>> readTourListFromAllUserSessions(String userId);
 }

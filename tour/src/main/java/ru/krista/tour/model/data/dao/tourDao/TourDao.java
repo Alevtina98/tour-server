@@ -11,6 +11,11 @@ import ru.krista.tour.model.data.persistence.entities.Tour;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
+/*
+ * предоставляет сервису домена Тур доступ к персистентным данным
+ * */
+
 public class TourDao implements ITourDao {
     IProvider provider;
 
@@ -43,6 +48,7 @@ public class TourDao implements ITourDao {
         tourDo.formCaption = tourEntity.getFormCaption();
         return tourDo;
     }
+
     public static List<TourDo> convertTourEntity(List<Tour> tourEntityList) {
         return tourEntityList.stream().map(TourDao::convertTourEntity).collect(Collectors.toList());
     }
@@ -98,8 +104,6 @@ public class TourDao implements ITourDao {
         return result;
     }
 
-    ;
-
     public Dto<List<TourDo>> readAllTours() {
         Dto<List<Tour>> providerResult = provider.readAll(Tour.class);
         Dto<List<TourDo>> result = new Dto<>(null);
@@ -123,6 +127,4 @@ public class TourDao implements ITourDao {
         }
         return result;
     }
-
-    ;
 }
