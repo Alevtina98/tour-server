@@ -1,5 +1,6 @@
 package ru.krista.tour.model.data.persistence;
 
+import ru.krista.tour.Dto;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFlagFilter;
@@ -20,76 +21,85 @@ public class Provider implements IProvider {
 
     @Override
     @Transactional
-    public <TEntity> TEntity create(TEntity object) {
+    public <TEntity> Dto<TEntity> create(TEntity entity) {
+        Dto<TEntity> result =  new Dto<>(null);
         try {
-            entityManager.persist(object);
-            return object;
+            entityManager.persist(entity);
+            result.setData(entity);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при сохранении данных");
         }
-
+        return result;
     }
 
     @Override
-    public <T> T readById(Class<T> cls, Long id) {
+    public <TEntity>  Dto<TEntity> readById(Class<TEntity> cls, Long id) {
+        Dto<TEntity> result =  new Dto<>(null);
         try {
-            return entityManager.find(cls, id);
+            TEntity entity = entityManager.find(cls, id);
+            result.setData(entity);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при чтении данных");
         }
+        return result;
     }
 
     @Override
     @Transactional
-    public <TEntity> TEntity update(TEntity object) {
+    public <TEntity>  Dto<TEntity> update(TEntity object) {
+        Dto<TEntity> result =  new Dto<>(null);
         try {
             TEntity entity = entityManager.merge(object);
             entityManager.persist(entity);
-            return entity;
+            result.setData(entity);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при обновлении данных");
         }
+        return result;
 
     }
 
     @Override
     @Transactional
-    public <TEntity> Object delete(Class<TEntity> entityClass, Long id) {
+    public <TEntity>  Dto<TEntity> delete(Class<TEntity> entityClass, Long id) {
+        Dto<TEntity> result =  new Dto<>(null);
         try {
-            // userTransaction.begin();
-            TEntity entity = readById(entityClass, id);
-            if (entity != null) {
-                entityManager.remove(entity);
+            Dto<TEntity> readResult = readById(entityClass, id);
+            if (readResult.status == Dto.Status.ok) {
+                entityManager.remove(readResult.data);
+                entityManager.flush();
+                result.setData(readResult.data);
+            } else {
+                result = readResult;
+                result.addErrorMsg("Provider: Ошибка при удалении данных");
             }
-            entityManager.flush();
-            // userTransaction.commit();
-            return null;
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return e.getMessage();
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при удалении данных");
         }
+        return result;
     }
 
     @Override
-    public <TEntity> List<TEntity> readAll(Class<TEntity> cls) {
-        if (entityManager == null) {
-            System.err.println("entity manager is null");
-            return null;
-        }
+    public <TEntity> Dto<List<TEntity>> readAll(Class<TEntity> cls) {
+        Dto<List<TEntity>> result =  new Dto<>(null);
         try {
             String query = String.format("FROM %s", cls.getName());
-            return (List<TEntity>) entityManager.createQuery(query).getResultList();
+            List<TEntity> entityList = entityManager.createQuery(query).getResultList();
+            result.setData(entityList);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при чтении полного списка данных");
         }
+        return result;
     }
 
     @Override
-    public <TFromEntity, TResultItem> List<TResultItem> readWithFlagFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFlagFilter<TFromEntity> flagFilter) {
+    public <TFromEntity, TResultItem> Dto<List<TResultItem>> readWithFlagFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFlagFilter<TFromEntity> flagFilter) {
+        Dto<List<TResultItem>> result =  new Dto<>(null);
         try {
             CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
             CriteriaQuery<TResultItem> query = criteriaBuilder.createQuery(selectParams.classResult());
@@ -99,15 +109,36 @@ public class Provider implements IProvider {
             }
             query.where(criteriaBuilder.isTrue(flagFilter.rootColumnFlagValue(rootEntity)));
             TypedQuery<TResultItem> tq = entityManager.createQuery(query);
-            return tq.getResultList();
+            result.setData(tq.getResultList());
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанному флагу");
         }
+        return result;
+    }
+
+    public <TFromEntity, TResultItem> Dto<List<TResultItem>> readWithValueFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFilter<TFromEntity> valueFilter) {
+        Dto<List<TResultItem>> result =  new Dto<>(null);
+        try {
+            CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+            CriteriaQuery<TResultItem> query = criteriaBuilder.createQuery(selectParams.classResult());
+            Root<TFromEntity> rootEntity = query.from(selectParams.classFromEntity());
+            if (selectParams.classFromEntity() != selectParams.classResult()) {
+                query.select(selectParams.result(rootEntity));
+            }
+            query.where(criteriaBuilder.and(criteriaBuilder.equal(valueFilter.rootColumnValue(rootEntity), valueFilter.targetColumnValue())));
+            TypedQuery<TResultItem> tq = entityManager.createQuery(query);
+            result.setData(tq.getResultList());
+        } catch (Exception e) {
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанному полю");
+        }
+        return result;
     }
 
     @Override
-    public <TFromEntity, TResultItem> List<TResultItem> readWithValueFilter(ISelectParams<TFromEntity, TResultItem> selectParams, List<IColumnFilter<TFromEntity>> valueFilterList) {
+    public <TFromEntity, TResultItem> Dto<List<TResultItem>> readWithValueFilter(ISelectParams<TFromEntity, TResultItem> selectParams, List<IColumnFilter<TFromEntity>> valueFilterList) {
+        Dto<List<TResultItem>> result =  new Dto<>(null);
         try {
             CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
             CriteriaQuery<TResultItem> query = criteriaBuilder.createQuery(selectParams.classResult());
@@ -123,27 +154,11 @@ public class Provider implements IProvider {
                     )
             );
             TypedQuery<TResultItem> tq = entityManager.createQuery(query);
-            return tq.getResultList();
+            result.setData(tq.getResultList());
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
+            result.setError(e.getMessage());
+            result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанным полям");
         }
-    }
-
-    public <TFromEntity, TResultItem> List<TResultItem> readWithValueFilter(ISelectParams<TFromEntity, TResultItem> selectParams, IColumnFilter<TFromEntity> valueFilter) {
-        try {
-            CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
-            CriteriaQuery<TResultItem> query = criteriaBuilder.createQuery(selectParams.classResult());
-            Root<TFromEntity> rootEntity = query.from(selectParams.classFromEntity());
-            if (selectParams.classFromEntity() != selectParams.classResult()) {
-                query.select(selectParams.result(rootEntity));
-            }
-            query.where(criteriaBuilder.and(criteriaBuilder.equal(valueFilter.rootColumnValue(rootEntity), valueFilter.targetColumnValue())));
-            TypedQuery<TResultItem> tq = entityManager.createQuery(query);
-            return tq.getResultList();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
+        return result;
     }
 }

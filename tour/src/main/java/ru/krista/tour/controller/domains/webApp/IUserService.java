@@ -1,4 +1,4 @@
-package ru.krista.tour.controller.services;
+package ru.krista.tour.controller.domains.webApp;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.UserBo;

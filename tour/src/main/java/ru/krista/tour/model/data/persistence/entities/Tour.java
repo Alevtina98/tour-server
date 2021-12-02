@@ -87,48 +87,31 @@ public class Tour extends RootKey implements Serializable {
         return name;
     }
 
-    public boolean isGeneralUser() {
+    public boolean getIsGeneral() {
         return isGeneralUser;
     }
 
-    @Override
-    public void setId(Long key) {
-        super.setId(key);
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public void setCodeJS(String codeJS) {
-        this.codeJS = codeJS;
-    }
-
-    public void setDateChange(Date dateChange) {
-        this.dateChange = dateChange;
-    }
-
-    public void setDateCreate(Date dateCreate) {
-        this.dateCreate = dateCreate;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-
-    public void setFormCaption(String formCaption) {
-        this.formCaption = formCaption;
-    }
-
-    public void setFormName(String formName) {
-        this.formName = formName;
-    }
-
-    public void setGeneralUser(boolean generalUser) {
-        isGeneralUser = generalUser;
-    }
 
     public void setName(String name) {
         this.name = name;
     }
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+    public void setCode(String code) {
+        this.code = code;
+    }
+    public void setCodeJS(String codeJS) {
+        this.codeJS = codeJS;
+    }
+    public void setGeneralUser(boolean generalUser) {
+        isGeneralUser = generalUser;
+    }
+    public void setFormName(String formName) {
+        this.formName = formName;
+    }
+    public void setFormCaption(String formCaption) {
+        this.formCaption = formCaption;
+    }
+
 }

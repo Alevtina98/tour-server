@@ -3,7 +3,8 @@ package ru.krista.tour.model.data.dao.sessionDao;
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
-import ru.krista.tour.controller.services.IUserDao;
+import ru.krista.tour.controller.domains.webApp.user.IUserDao;
+import ru.krista.tour.controller.domains.webApp.user.session.tour.TourBo;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
@@ -18,26 +19,26 @@ public class UserDao implements IUserDao {
         this.provider = provider;
     }
 
-    public Dto<Session> createUserSession(String userId, SessionBo newSession){
+    public Dto<SessionBo> createUserSession(String userId, SessionBo newSession){
         return null;
     };
-    public Dto<Session> readUserSession(String userId) {
+    public Dto<SessionBo> readUserSession(String userId) {
         return null;
     };
-    public Dto<Session> updateUserSession(String userId, SessionBo editSession){
+    public Dto<SessionBo> updateUserSession(String userId, SessionBo editSession){
         return null;
     };
-    public Dto<Session> deleteUserSession(UserTourKey sessionId){
+    public Dto<SessionBo> deleteUserSession(UserTourKey sessionId){
         return null;
     };
 
-    public Dto<List<Session>> readUserSessionListWithStatus(String userId, SessionService.StatusVariant status){
+    public Dto<List<SessionBo>> readUserSessionListWithStatus(String userId, SessionService.StatusVariant status){
         return null;
     };
-    public Dto<List<Tour>> readUserTourListWithSessionStatus(String userId, SessionService.StatusVariant status){
+    public Dto<List<TourBo>> readUserTourListWithSessionStatus(String userId, SessionService.StatusVariant status){
         return null;
     };
-    public Dto<List<Tour>> readUserTourList(String userId){
+    public Dto<List<TourBo>> readUserTourList(String userId){
         return null;
     };
 }

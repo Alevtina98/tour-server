@@ -1,90 +1,12 @@
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select session_.id, session_.status as status3_0_, session_.tour_id as tour_id5_0_, session_.user_id as user_id4_0_ from public.session session_ where session_.id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into public.session (status, tour_id, user_id, id) values (?, ?, ?, ?)
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update public.session set status=?, tour_id=?, user_id=? where id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from public.session where id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@18460128]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : status
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : tour
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@475646d4]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : userId
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Session)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Session, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Session)
-          - EntityAttributeFetchImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:1>, path=ru.krista.tour.model.data.persistence.entities.Session.tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Session)
-          - SQL table alias mapping - session0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Session [NONE]: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2d272b0d]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : status
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : tour
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c448433]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : userId
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Session)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Session, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Session)
-          - EntityAttributeFetchImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:1>, path=ru.krista.tour.model.data.persistence.entities.Session.tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Session)
-          - SQL table alias mapping - session0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Session [READ]: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity ru.krista.tour.model.data.persistence.entities.Session: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity ru.krista.tour.model.data.persistence.entities.Session: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-INFO main org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1292071f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
 DEBUG main org.hibernate.SQL - 
-    
-    create table public.session (
-       id int8 not null,
-        change_date timestamp,
-        status varchar(255),
-        user_id varchar(255),
-        tour_id int8 not null,
-        primary key (id)
-    )
-DEBUG main org.hibernate.mapping.Table - No alter strings for table : tour
-DEBUG main org.hibernate.SQL - 
-    
-    alter table if exists public.session 
-       add constraint FK6vfsqd0oxsdpa8yalfnff5bqv 
-       foreign key (tour_id) 
-       references public.tour
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-INFO main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named HQL queries
-DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named SQL queries
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@80bfdc6
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: f0a729e2-30dd-44c2-9f4f-6cc33b5df50d (<unnamed>)
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
-DEBUG main org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 194
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 194, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 17:58:34 MSK 2021, id=194, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 17:58:34 MSK 2021, isGeneralUser=false, desc=}
+    insert 
+    into
+        public.tour
+        (code, code_js, change_date, create_date, description, form_caption, form_name, is_general_user, name, id) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 DEBUG main org.hibernate.SQL - 
     insert 
     into
@@ -94,106 +16,798 @@ DEBUG main org.hibernate.SQL -
         (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
 DEBUG main org.hibernate.SQL - 
     select
-        tour0_.id as id1_1_0_,
-        tour0_.code as code2_1_0_,
-        tour0_.code_js as code_js3_1_0_,
-        tour0_.change_date as change_d4_1_0_,
-        tour0_.create_date as create_d5_1_0_,
-        tour0_.description as descript6_1_0_,
-        tour0_.form_caption as form_cap7_1_0_,
-        tour0_.form_name as form_nam8_1_0_,
-        tour0_.is_general_user as is_gener9_1_0_,
-        tour0_.name as name10_1_0_ 
-    from
-        public.tour tour0_ 
-    where
-        tour0_.id=?
-DEBUG main org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.krista.tour.model.data.persistence.entities.Tour#194]
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `code` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`code`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `codeJS` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`codeJS`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `dateChange` : value = 2021-11-30 17:58:34.972
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`dateChange`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `dateCreate` : value = 2021-11-30 17:58:34.972
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`dateCreate`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `desc` : value = 
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`desc`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `formCaption` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`formCaption`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `formName` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`formName`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `isGeneralUser` : value = false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`isGeneralUser`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `name` : value = Test
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`name`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [ru.krista.tour.model.data.persistence.entities.Tour#194]
-DEBUG main org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : ru.krista.tour.model.data.persistence.entities.Tour#194
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.event.internal.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
+        nextval ('public.hibernate_sequence')
+DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 215
+DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 215, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+DEBUG main org.hibernate.SQL - 
+    select
+        nextval ('public.hibernate_sequence')
+DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 216
+DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 216, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+DEBUG main org.hibernate.SQL - 
+    select
+        nextval ('public.hibernate_sequence')
+DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 217
+DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
+DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 217, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
 DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 3 insertions, 0 updates, 0 deletions to 5 objects
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 17:58:35 MSK 2021, id=194, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 17:58:34 MSK 2021, isGeneralUser=false, desc=Tour description}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=217, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#214, status=INTERRUPTED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=215, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#213, status=DELAYED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=216, userId=user2, tour=ru.krista.tour.model.data.persistence.entities.Tour#213, status=INTERRUPTED}
 DEBUG main org.hibernate.SQL - 
-    update
-        public.tour 
-    set
-        code=?,
-        code_js=?,
-        change_date=?,
-        description=?,
-        form_caption=?,
-        form_name=?,
-        is_general_user=?,
-        name=? 
-    where
-        id=?
+    insert 
+    into
+        public.session
+        (status, tour_id, user_id, id) 
+    values
+        (?, ?, ?, ?)
+DEBUG main org.hibernate.SQL - 
+    insert 
+    into
+        public.session
+        (status, tour_id, user_id, id) 
+    values
+        (?, ?, ?, ?)
+DEBUG main org.hibernate.SQL - 
+    insert 
+    into
+        public.session
+        (status, tour_id, user_id, id) 
+    values
+        (?, ?, ?, ?)
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@8a6631b
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: FROM ru.krista.tour.model.data.persistence.entities.Tour
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+                |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+                |  |  |  |  |  \-[IDENT] Node: 'tour'
+                |  |  |  |  \-[IDENT] Node: 'model'
+                |  |  |  \-[IDENT] Node: 'data'
+                |  |  \-[IDENT] Node: 'persistence'
+                |  \-[IDENT] Node: 'entities'
+                \-[IDENT] Node: 'Tour'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Tour (<no alias>) -> tour0_
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} public.tour tour0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Tour): [public.tour]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.tour tour0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.tour)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'tour0_.id as id1_1_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.tour,tableAlias=tour0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Tour}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'tour0_.code as code2_1_, tour0_.code_js as code_js3_1_, tour0_.change_date as change_d4_1_, tour0_.create_date as create_d5_1_, tour0_.description as descript6_1_, tour0_.form_caption as form_cap7_1_, tour0_.form_name as form_nam8_1_, tour0_.is_general_user as is_gener9_1_, tour0_.name as name10_1_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[tour0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'public.tour tour0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.tour,tableAlias=tour0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: FROM ru.krista.tour.model.data.persistence.entities.Tour
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select tour0_.id as id1_1_, tour0_.code as code2_1_, tour0_.code_js as code_js3_1_, tour0_.change_date as change_d4_1_, tour0_.create_date as create_d5_1_, tour0_.description as descript6_1_, tour0_.form_caption as form_cap7_1_, tour0_.form_name as form_nam8_1_, tour0_.is_general_user as is_gener9_1_, tour0_.name as name10_1_ from public.tour tour0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        tour0_.id as id1_1_,
+        tour0_.code as code2_1_,
+        tour0_.code_js as code_js3_1_,
+        tour0_.change_date as change_d4_1_,
+        tour0_.create_date as create_d5_1_,
+        tour0_.description as descript6_1_,
+        tour0_.form_caption as form_cap7_1_,
+        tour0_.form_name as form_nam8_1_,
+        tour0_.is_general_user as is_gener9_1_,
+        tour0_.name as name10_1_ 
+    from
+        public.tour tour0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Tour#213]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Tour#214]
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: FROM ru.krista.tour.model.data.persistence.entities.Session
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    \-[SELECT_FROM] Node: 'SELECT_FROM'
+       \-[FROM] Node: 'FROM'
+          \-[RANGE] Node: 'RANGE'
+             \-[DOT] Node: '.'
+                +-[DOT] Node: '.'
+                |  +-[DOT] Node: '.'
+                |  |  +-[DOT] Node: '.'
+                |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  |  +-[DOT] Node: '.'
+                |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+                |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+                |  |  |  |  |  \-[IDENT] Node: 'tour'
+                |  |  |  |  \-[IDENT] Node: 'model'
+                |  |  |  \-[IDENT] Node: 'data'
+                |  |  \-[IDENT] Node: 'persistence'
+                |  \-[IDENT] Node: 'entities'
+                \-[IDENT] Node: 'Session'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Session (<no alias>) -> session0_
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( FromClause{level=1} public.session session0_ ) )
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - Derived SELECT clause created.
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Session): [public.session]
+    |  +-SelectExpressionImpl
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+    |  \-SqlFragment
+    \-FromClause
+       \-FromElement
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.session session0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.session)
+    +-[SELECT_CLAUSE] SelectClause: '{derived select clause}'
+    |  +-[SELECT_EXPR] SelectExpressionImpl: 'session0_.id as id1_0_' {FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.session,tableAlias=session0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Session}}}
+    |  \-[SQL_TOKEN] SqlFragment: 'session0_.change_date as change_d2_0_, session0_.status as status3_0_, session0_.tour_id as tour_id5_0_, session0_.user_id as user_id4_0_'
+    \-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[], fromElementByTableAlias=[session0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+       \-[FROM_FRAGMENT] FromElement: 'public.session session0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.session,tableAlias=session0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Session}}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: FROM ru.krista.tour.model.data.persistence.entities.Session
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select session0_.id as id1_0_, session0_.change_date as change_d2_0_, session0_.status as status3_0_, session0_.tour_id as tour_id5_0_, session0_.user_id as user_id4_0_ from public.session session0_
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        session0_.id as id1_0_,
+        session0_.change_date as change_d2_0_,
+        session0_.status as status3_0_,
+        session0_.tour_id as tour_id5_0_,
+        session0_.user_id as user_id4_0_ 
+    from
+        public.session session0_
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Session#215]
+DEBUG main org.hibernate.loader.Loader - Result set row: 1
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Session#216]
+DEBUG main org.hibernate.loader.Loader - Result set row: 2
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Session#217]
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.query.criteria.internal.CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Tour as generatedAlias0 where generatedAlias0.isGeneralUser = true
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from ru.krista.tour.model.data.persistence.entities.Tour as generatedAlias0 where generatedAlias0.isGeneralUser = true
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+    |  |     |  |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+    |  |     |  |  |  |  |  |  \-[IDENT] Node: 'tour'
+    |  |     |  |  |  |  |  \-[IDENT] Node: 'model'
+    |  |     |  |  |  |  \-[IDENT] Node: 'data'
+    |  |     |  |  |  \-[IDENT] Node: 'persistence'
+    |  |     |  |  \-[IDENT] Node: 'entities'
+    |  |     |  \-[IDENT] Node: 'Tour'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'isGeneralUser'
+          \-[TRUE] Node: 'true'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Tour (generatedAlias0) -> tour0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> tour0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> tour0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : isGeneralUser -> org.hibernate.type.BooleanType@623e088f
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.isGeneralUser -> tour0_.is_general_user
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} tour0_.id ) ( FromClause{level=1} public.tour tour0_ ) ( where ( = ( tour0_.is_general_user tour0_.id isGeneralUser ) true ) ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Tour): [public.tour]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+          | path: generatedAlias0.isGeneralUser
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+          |  | originalText: generatedAlias0
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: isGeneralUser
+          \-BooleanLiteralNode
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.tour tour0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.tour)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'tour0_.id as id1_1_' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Tour, tableAlias=tour0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'tour0_.code as code2_1_, tour0_.code_js as code_js3_1_, tour0_.change_date as change_d4_1_, tour0_.create_date as create_d5_1_, tour0_.description as descript6_1_, tour0_.form_caption as form_cap7_1_, tour0_.form_name as form_nam8_1_, tour0_.is_general_user as is_gener9_1_, tour0_.name as name10_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[tour0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.tour tour0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=public.tour,tableAlias=tour0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'tour0_.is_general_user' {propertyName=isGeneralUser,dereferenceType=PRIMITIVE,getPropertyPath=isGeneralUser,path=generatedAlias0.isGeneralUser,tableAlias=tour0_,className=ru.krista.tour.model.data.persistence.entities.Tour,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'tour0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Tour, tableAlias=tour0_}
+          |  \-[IDENT] IdentNode: 'isGeneralUser' {originalText=isGeneralUser}
+          \-[TRUE] BooleanLiteralNode: 'true'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0 from ru.krista.tour.model.data.persistence.entities.Tour as generatedAlias0 where generatedAlias0.isGeneralUser = true
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select tour0_.id as id1_1_, tour0_.code as code2_1_, tour0_.code_js as code_js3_1_, tour0_.change_date as change_d4_1_, tour0_.create_date as create_d5_1_, tour0_.description as descript6_1_, tour0_.form_caption as form_cap7_1_, tour0_.form_name as form_nam8_1_, tour0_.is_general_user as is_gener9_1_, tour0_.name as name10_1_ from public.tour tour0_ where tour0_.is_general_user=true
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        tour0_.id as id1_1_,
+        tour0_.code as code2_1_,
+        tour0_.code_js as code_js3_1_,
+        tour0_.change_date as change_d4_1_,
+        tour0_.create_date as create_d5_1_,
+        tour0_.description as descript6_1_,
+        tour0_.form_caption as form_cap7_1_,
+        tour0_.form_name as form_nam8_1_,
+        tour0_.is_general_user as is_gener9_1_,
+        tour0_.name as name10_1_ 
+    from
+        public.tour tour0_ 
+    where
+        tour0_.is_general_user=true
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Tour#213]
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.query.criteria.internal.CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0.tour from Session as generatedAlias0 where generatedAlias0.userId=:param0
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0.tour from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where generatedAlias0.userId=:param0
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+    |  |     |  |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+    |  |     |  |  |  |  |  |  \-[IDENT] Node: 'tour'
+    |  |     |  |  |  |  |  \-[IDENT] Node: 'model'
+    |  |     |  |  |  |  \-[IDENT] Node: 'data'
+    |  |     |  |  |  \-[IDENT] Node: 'persistence'
+    |  |     |  |  \-[IDENT] Node: 'entities'
+    |  |     |  \-[IDENT] Node: 'Session'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[DOT] Node: '.'
+    |        +-[IDENT] Node: 'generatedAlias0'
+    |        \-[IDENT] Node: 'tour'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias0'
+          |  \-[IDENT] Node: 'userId'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'param0'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Session (generatedAlias0) -> session0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : tour -> org.hibernate.type.ManyToOneType(ru.krista.tour.model.data.persistence.entities.Tour)
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - dereferenceEntityJoin() : generating join for tour in ru.krista.tour.model.data.persistence.entities.Session (<no alias>) parent = [ {null} ]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Tour (<no alias>) -> tour1_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromClause - addJoinByPathMap() : generatedAlias0.tour -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.tour,tableAlias=tour1_,origin=public.session session0_,columns={session0_.tour_id,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.tour -> session0_.tour_id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : userId -> org.hibernate.type.StringType@10b9db7b
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.userId -> session0_.user_id
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( session0_.tour_id session0_.id tour ) ) ( FromClause{level=1} ( public.session session0_ public.tour tour1_ ) ) ( where ( = ( session0_.user_id session0_.id userId ) ? ) ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Tour): [public.tour]
+    |  +-DotNode
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+    |  | path: generatedAlias0.tour
+    |  |  +-IdentNode
+    |  |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+    |  |  | originalText: generatedAlias0
+    |  |  \-IdentNode
+    |  |    persister: null
+    |  |    originalText: tour
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    |     \-FromElement
+    \-SqlNode
+       \-BinaryLogicOperatorNode
+          +-DotNode
+          | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          | path: generatedAlias0.userId
+          |  +-IdentNode
+          |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          |  | originalText: generatedAlias0
+          |  \-IdentNode
+          |    persister: null
+          |    originalText: userId
+          \-ParameterNode
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.session session0_]
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [inner join public.tour tour1_ on session0_.tour_id=tour1_.id]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.tour,public.session)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'tour1_.id as id1_1_' {propertyName=tour,dereferenceType=ENTITY,getPropertyPath=tour,path=generatedAlias0.tour,tableAlias=tour1_,className=ru.krista.tour.model.data.persistence.entities.Tour,classAlias=null}
+    |  |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+    |  |  \-[IDENT] IdentNode: 'tour' {originalText=tour}
+    |  \-[SQL_TOKEN] SqlFragment: 'tour1_.code as code2_1_, tour1_.code_js as code_js3_1_, tour1_.change_date as change_d4_1_, tour1_.create_date as create_d5_1_, tour1_.description as descript6_1_, tour1_.form_caption as form_cap7_1_, tour1_.form_name as form_nam8_1_, tour1_.is_general_user as is_gener9_1_, tour1_.name as name10_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[tour1_, session0_], fromElementsByPath=[generatedAlias0.tour], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.session session0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=public.session,tableAlias=session0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Session}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'inner join public.tour tour1_ on session0_.tour_id=tour1_.id' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=ru.krista.tour.model.data.persistence.entities.Session.tour,tableName=public.tour,tableAlias=tour1_,origin=public.session session0_,columns={session0_.tour_id,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'session0_.user_id' {propertyName=userId,dereferenceType=PRIMITIVE,getPropertyPath=userId,path=generatedAlias0.userId,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+          |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+          |  \-[IDENT] IdentNode: 'userId' {originalText=userId}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@10b9db7b}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0.tour from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where generatedAlias0.userId=:param0
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select tour1_.id as id1_1_, tour1_.code as code2_1_, tour1_.code_js as code_js3_1_, tour1_.change_date as change_d4_1_, tour1_.create_date as create_d5_1_, tour1_.description as descript6_1_, tour1_.form_caption as form_cap7_1_, tour1_.form_name as form_nam8_1_, tour1_.is_general_user as is_gener9_1_, tour1_.name as name10_1_ from public.session session0_ inner join public.tour tour1_ on session0_.tour_id=tour1_.id where session0_.user_id=?
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        tour1_.id as id1_1_,
+        tour1_.code as code2_1_,
+        tour1_.code_js as code_js3_1_,
+        tour1_.change_date as change_d4_1_,
+        tour1_.create_date as create_d5_1_,
+        tour1_.description as descript6_1_,
+        tour1_.form_caption as form_cap7_1_,
+        tour1_.form_name as form_nam8_1_,
+        tour1_.is_general_user as is_gener9_1_,
+        tour1_.name as name10_1_ 
+    from
+        public.session session0_ 
+    inner join
+        public.tour tour1_ 
+            on session0_.tour_id=tour1_.id 
+    where
+        session0_.user_id=?
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Tour#213]
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.query.criteria.internal.CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0.tour from Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.status=:param1 )
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0.tour from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.status=:param1 )
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+    |  |     |  |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+    |  |     |  |  |  |  |  |  \-[IDENT] Node: 'tour'
+    |  |     |  |  |  |  |  \-[IDENT] Node: 'model'
+    |  |     |  |  |  |  \-[IDENT] Node: 'data'
+    |  |     |  |  |  \-[IDENT] Node: 'persistence'
+    |  |     |  |  \-[IDENT] Node: 'entities'
+    |  |     |  \-[IDENT] Node: 'Session'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[DOT] Node: '.'
+    |        +-[IDENT] Node: 'generatedAlias0'
+    |        \-[IDENT] Node: 'tour'
+    \-[WHERE] Node: 'where'
+       \-[AND] Node: 'and'
+          +-[EQ] Node: '='
+          |  +-[DOT] Node: '.'
+          |  |  +-[IDENT] Node: 'generatedAlias0'
+          |  |  \-[IDENT] Node: 'userId'
+          |  \-[COLON] Node: ':'
+          |     \-[IDENT] Node: 'param0'
+          \-[EQ] Node: '='
+             +-[DOT] Node: '.'
+             |  +-[IDENT] Node: 'generatedAlias0'
+             |  \-[IDENT] Node: 'status'
+             \-[COLON] Node: ':'
+                \-[IDENT] Node: 'param1'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Session (generatedAlias0) -> session0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : tour -> org.hibernate.type.ManyToOneType(ru.krista.tour.model.data.persistence.entities.Tour)
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - dereferenceEntityJoin() : generating join for tour in ru.krista.tour.model.data.persistence.entities.Session (<no alias>) parent = [ {null} ]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Tour (<no alias>) -> tour1_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromClause - addJoinByPathMap() : generatedAlias0.tour -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=null,tableName=public.tour,tableAlias=tour1_,origin=public.session session0_,columns={session0_.tour_id,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.tour -> session0_.tour_id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : userId -> org.hibernate.type.StringType@10b9db7b
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.userId -> session0_.user_id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : status -> org.hibernate.type.StringType@10b9db7b
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.status -> session0_.status
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} ( session0_.tour_id session0_.id tour ) ) ( FromClause{level=1} ( public.session session0_ public.tour tour1_ ) ) ( where ( and ( = ( session0_.user_id session0_.id userId ) ? ) ( = ( session0_.status session0_.id status ) ? ) ) ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Tour): [public.tour]
+    |  +-DotNode
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Tour)
+    |  | path: generatedAlias0.tour
+    |  |  +-IdentNode
+    |  |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+    |  |  | originalText: generatedAlias0
+    |  |  \-IdentNode
+    |  |    persister: null
+    |  |    originalText: tour
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    |     \-FromElement
+    \-SqlNode
+       \-SqlNode
+          +-BinaryLogicOperatorNode
+          |  +-DotNode
+          |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          |  | path: generatedAlias0.userId
+          |  |  +-IdentNode
+          |  |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          |  |  | originalText: generatedAlias0
+          |  |  \-IdentNode
+          |  |    persister: null
+          |  |    originalText: userId
+          |  \-ParameterNode
+          \-BinaryLogicOperatorNode
+             +-DotNode
+             | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+             | path: generatedAlias0.status
+             |  +-IdentNode
+             |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+             |  | originalText: generatedAlias0
+             |  \-IdentNode
+             |    persister: null
+             |    originalText: status
+             \-ParameterNode
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.session session0_]
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [inner join public.tour tour1_ on session0_.tour_id=tour1_.id]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.tour,public.session)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[DOT] DotNode: 'tour1_.id as id1_1_' {propertyName=tour,dereferenceType=ENTITY,getPropertyPath=tour,path=generatedAlias0.tour,tableAlias=tour1_,className=ru.krista.tour.model.data.persistence.entities.Tour,classAlias=null}
+    |  |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+    |  |  \-[IDENT] IdentNode: 'tour' {originalText=tour}
+    |  \-[SQL_TOKEN] SqlFragment: 'tour1_.code as code2_1_, tour1_.code_js as code_js3_1_, tour1_.change_date as change_d4_1_, tour1_.create_date as create_d5_1_, tour1_.description as descript6_1_, tour1_.form_caption as form_cap7_1_, tour1_.form_name as form_nam8_1_, tour1_.is_general_user as is_gener9_1_, tour1_.name as name10_1_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[tour1_, session0_], fromElementsByPath=[generatedAlias0.tour], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.session session0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=public.session,tableAlias=session0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Session}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'inner join public.tour tour1_ on session0_.tour_id=tour1_.id' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=null,role=ru.krista.tour.model.data.persistence.entities.Session.tour,tableName=public.tour,tableAlias=tour1_,origin=public.session session0_,columns={session0_.tour_id,className=ru.krista.tour.model.data.persistence.entities.Tour}}
+    \-[WHERE] SqlNode: 'where'
+       \-[AND] SqlNode: 'and'
+          +-[EQ] BinaryLogicOperatorNode: '='
+          |  +-[DOT] DotNode: 'session0_.user_id' {propertyName=userId,dereferenceType=PRIMITIVE,getPropertyPath=userId,path=generatedAlias0.userId,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+          |  |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+          |  |  \-[IDENT] IdentNode: 'userId' {originalText=userId}
+          |  \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@10b9db7b}
+          \-[EQ] BinaryLogicOperatorNode: '='
+             +-[DOT] DotNode: 'session0_.status' {propertyName=status,dereferenceType=PRIMITIVE,getPropertyPath=status,path=generatedAlias0.status,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+             |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+             |  \-[IDENT] IdentNode: 'status' {originalText=status}
+             \-[NAMED_PARAM] ParameterNode: '?' {name=param1, expectedType=org.hibernate.type.StringType@10b9db7b}
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0.tour from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.status=:param1 )
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select tour1_.id as id1_1_, tour1_.code as code2_1_, tour1_.code_js as code_js3_1_, tour1_.change_date as change_d4_1_, tour1_.create_date as create_d5_1_, tour1_.description as descript6_1_, tour1_.form_caption as form_cap7_1_, tour1_.form_name as form_nam8_1_, tour1_.is_general_user as is_gener9_1_, tour1_.name as name10_1_ from public.session session0_ inner join public.tour tour1_ on session0_.tour_id=tour1_.id where session0_.user_id=? and session0_.status=?
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        tour1_.id as id1_1_,
+        tour1_.code as code2_1_,
+        tour1_.code_js as code_js3_1_,
+        tour1_.change_date as change_d4_1_,
+        tour1_.create_date as create_d5_1_,
+        tour1_.description as descript6_1_,
+        tour1_.form_caption as form_cap7_1_,
+        tour1_.form_name as form_nam8_1_,
+        tour1_.is_general_user as is_gener9_1_,
+        tour1_.name as name10_1_ 
+    from
+        public.session session0_ 
+    inner join
+        public.tour tour1_ 
+            on session0_.tour_id=tour1_.id 
+    where
+        session0_.user_id=? 
+        and session0_.status=?
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Tour#214]
+DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+DEBUG main org.hibernate.query.criteria.internal.CriteriaQueryImpl - Rendered criteria query -> select generatedAlias0 from Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.tour.id=213L )
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.tour.id=213L )
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  |  +-[IDENT] Node: 'ru'
+    |  |     |  |  |  |  |  |  |  \-[IDENT] Node: 'krista'
+    |  |     |  |  |  |  |  |  \-[IDENT] Node: 'tour'
+    |  |     |  |  |  |  |  \-[IDENT] Node: 'model'
+    |  |     |  |  |  |  \-[IDENT] Node: 'data'
+    |  |     |  |  |  \-[IDENT] Node: 'persistence'
+    |  |     |  |  \-[IDENT] Node: 'entities'
+    |  |     |  \-[IDENT] Node: 'Session'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[AND] Node: 'and'
+          +-[EQ] Node: '='
+          |  +-[DOT] Node: '.'
+          |  |  +-[IDENT] Node: 'generatedAlias0'
+          |  |  \-[IDENT] Node: 'userId'
+          |  \-[COLON] Node: ':'
+          |     \-[IDENT] Node: 'param0'
+          \-[EQ] Node: '='
+             +-[DOT] Node: '.'
+             |  +-[DOT] Node: '.'
+             |  |  +-[IDENT] Node: 'generatedAlias0'
+             |  |  \-[IDENT] Node: 'tour'
+             |  \-[IDENT] Node: 'id'
+             \-[NUM_LONG] Node: '213L'
+
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : ru.krista.tour.model.data.persistence.entities.Session (generatedAlias0) -> session0_
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : userId -> org.hibernate.type.StringType@10b9db7b
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.userId -> session0_.user_id
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> session0_.id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : tour -> org.hibernate.type.ManyToOneType(ru.krista.tour.model.data.persistence.entities.Tour)
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - dereferenceShortcut() : property id in ru.krista.tour.model.data.persistence.entities.Session does not require a join.
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - Unresolved property path is now 'tour.id'
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.tour -> session0_.tour_id
+DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : tour.id -> org.hibernate.type.LongType@52851b44
+DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0.tour.id -> session0_.tour_id
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} session0_.id ) ( FromClause{level=1} public.session session0_ ) ( where ( and ( = ( session0_.user_id session0_.id userId ) ? ) ( = ( session0_.tour_id ( session0_.tour_id session0_.id tour ) id ) 213 ) ) ) )
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Tables referenced from query nodes:
+ \-QueryNode
+    +-SelectClause
+    | referencedTables(entity Session): [public.session]
+    |  +-IdentNode
+    |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+    |  | originalText: generatedAlias0
+    |  \-SqlFragment
+    +-FromClause
+    |  \-FromElement
+    \-SqlNode
+       \-SqlNode
+          +-BinaryLogicOperatorNode
+          |  +-DotNode
+          |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          |  | path: generatedAlias0.userId
+          |  |  +-IdentNode
+          |  |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+          |  |  | originalText: generatedAlias0
+          |  |  \-IdentNode
+          |  |    persister: null
+          |  |    originalText: userId
+          |  \-ParameterNode
+          \-BinaryLogicOperatorNode
+             +-DotNode
+             | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+             | path: generatedAlias0.tour.id
+             |  +-DotNode
+             |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+             |  | path: generatedAlias0.tour
+             |  |  +-IdentNode
+             |  |  | persister: SingleTableEntityPersister(ru.krista.tour.model.data.persistence.entities.Session)
+             |  |  | originalText: generatedAlias0
+             |  |  \-IdentNode
+             |  |    persister: null
+             |  |    originalText: tour
+             |  \-IdentNode
+             |    persister: null
+             |    originalText: id
+             \-LiteralNode
+
+DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [public.session session0_]
+DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (public.session)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'session0_.id as id1_0_' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+    |  \-[SQL_TOKEN] SqlFragment: 'session0_.change_date as change_d2_0_, session0_.status as status3_0_, session0_.tour_id as tour_id5_0_, session0_.user_id as user_id4_0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[generatedAlias0], fromElementByTableAlias=[session0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'public.session session0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=public.session,tableAlias=session0_,origin=null,columns={,className=ru.krista.tour.model.data.persistence.entities.Session}}
+    \-[WHERE] SqlNode: 'where'
+       \-[AND] SqlNode: 'and'
+          +-[EQ] BinaryLogicOperatorNode: '='
+          |  +-[DOT] DotNode: 'session0_.user_id' {propertyName=userId,dereferenceType=PRIMITIVE,getPropertyPath=userId,path=generatedAlias0.userId,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+          |  |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+          |  |  \-[IDENT] IdentNode: 'userId' {originalText=userId}
+          |  \-[NAMED_PARAM] ParameterNode: '?' {name=param0, expectedType=org.hibernate.type.StringType@10b9db7b}
+          \-[EQ] BinaryLogicOperatorNode: '='
+             +-[DOT] DotNode: 'session0_.tour_id' {propertyName=id,dereferenceType=PRIMITIVE,getPropertyPath=tour.id,path=generatedAlias0.tour.id,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+             |  +-[DOT] DotNode: 'session0_.tour_id' {propertyName=id,dereferenceType=UNKNOWN,getPropertyPath=tour.id,path=generatedAlias0.tour,tableAlias=session0_,className=ru.krista.tour.model.data.persistence.entities.Session,classAlias=generatedAlias0}
+             |  |  +-[ALIAS_REF] IdentNode: 'session0_.id' {alias=generatedAlias0, className=ru.krista.tour.model.data.persistence.entities.Session, tableAlias=session0_}
+             |  |  \-[IDENT] IdentNode: 'tour' {originalText=tour}
+             |  \-[IDENT] IdentNode: 'id' {originalText=id}
+             \-[NUM_LONG] LiteralNode: '213'
+
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0 from ru.krista.tour.model.data.persistence.entities.Session as generatedAlias0 where ( generatedAlias0.userId=:param0 ) and ( generatedAlias0.tour.id=213L )
+DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select session0_.id as id1_0_, session0_.change_date as change_d2_0_, session0_.status as status3_0_, session0_.tour_id as tour_id5_0_, session0_.user_id as user_id4_0_ from public.session session0_ where session0_.user_id=? and session0_.tour_id=213
+DEBUG main org.hibernate.hql.internal.ast.ErrorTracker - throwQueryException() : no errors
+DEBUG main org.hibernate.SQL - 
+    select
+        session0_.id as id1_0_,
+        session0_.change_date as change_d2_0_,
+        session0_.status as status3_0_,
+        session0_.tour_id as tour_id5_0_,
+        session0_.user_id as user_id4_0_ 
+    from
+        public.session session0_ 
+    where
+        session0_.user_id=? 
+        and session0_.tour_id=213
+DEBUG main org.hibernate.loader.Loader - Result set row: 0
+DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[ru.krista.tour.model.data.persistence.entities.Session#215]
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 5 objects
 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 17:58:35 MSK 2021, id=194, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 17:58:34 MSK 2021, isGeneralUser=false, desc=Tour description}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=217, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#214, status=INTERRUPTED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=215, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#213, status=DELAYED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=216, userId=user2, tour=ru.krista.tour.model.data.persistence.entities.Tour#213, status=INTERRUPTED}
+DEBUG main org.hibernate.SQL - 
+    delete 
+    from
+        public.session 
+    where
+        id=?
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 4 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=217, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#214, status=INTERRUPTED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=216, userId=user2, tour=ru.krista.tour.model.data.persistence.entities.Tour#213, status=INTERRUPTED}
+DEBUG main org.hibernate.SQL - 
+    delete 
+    from
+        public.session 
+    where
+        id=?
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 3 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=217, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#214, status=INTERRUPTED}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
+DEBUG main org.hibernate.SQL - 
+    delete 
+    from
+        public.session 
+    where
+        id=?
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 2 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=213, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=true, desc=null}
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
 DEBUG main org.hibernate.SQL - 
     delete 
     from
         public.tour 
     where
         id=?
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
+DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Thu Dec 02 14:31:25 MSK 2021, id=214, formCaption=null, codeJS=null, dateCreate=Thu Dec 02 14:31:25 MSK 2021, isGeneralUser=false, desc=null}
 DEBUG main org.hibernate.SQL - 
-    select
-        tour0_.id as id1_1_0_,
-        tour0_.code as code2_1_0_,
-        tour0_.code_js as code_js3_1_0_,
-        tour0_.change_date as change_d4_1_0_,
-        tour0_.create_date as create_d5_1_0_,
-        tour0_.description as descript6_1_0_,
-        tour0_.form_caption as form_cap7_1_0_,
-        tour0_.form_name as form_nam8_1_0_,
-        tour0_.is_general_user as is_gener9_1_0_,
-        tour0_.name as name10_1_0_ 
+    delete 
     from
-        public.tour tour0_ 
+        public.tour 
     where
-        tour0_.id=?
-DEBUG main org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : ru.krista.tour.model.data.persistence.entities.Tour#194
+        id=?
 DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
 DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
 DEBUG main org.hibernate.internal.SessionFactoryImpl - HHH000031: Closing
-DEBUG main org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7ee8130e] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@72805168]
+DEBUG main org.hibernate.type.spi.TypeConfiguration$Scope - Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@6b415f5f] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@1f51431]
 DEBUG main org.hibernate.service.internal.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
 INFO main org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/test]
 DEBUG main org.hibernate.boot.registry.internal.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
@@ -238,121 +852,121 @@ DEBUG main org.hibernate.service.spi.ServiceBinding - Overriding existing servic
 DEBUG main org.hibernate.cache.internal.RegionFactoryInitiator - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
 DEBUG main org.hibernate.cache.internal.RegionFactoryInitiator - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
 INFO main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@2ca26d77
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@2ca26d77
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@2ca26d77
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@13df2a8c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@7de62196
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@35a3d49f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@2462cb01
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@2462cb01
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@2462cb01
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@452e19ca
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@452e19ca
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@452e19ca
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@dc9876b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@dc9876b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@dc9876b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@4bc222e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@4bc222e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4bc222e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@102cec62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@102cec62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@102cec62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@30b6ffe0
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@30b6ffe0
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@30b6ffe0
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@cd1e646
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@cd1e646
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@cd1e646
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@26adfd2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@26adfd2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@2663e964
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@2663e964
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@2205a05d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@2205a05d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@51a9ad5e
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@3fce8fd9
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@37911f88
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@37911f88
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@3fa247d1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@3fa247d1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@295cf707
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@295cf707
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@42b3b079
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@42b3b079
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@589da3f3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@589da3f3
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4c012563
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4c012563
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@20d7d6fb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@20d7d6fb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5d43661b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5d43661b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1c852c0f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@1c852c0f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@766653e6
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@766653e6
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@6b6776cb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6b6776cb
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@26df6e3a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@26df6e3a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@26df6e3a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@52e7a6b2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@27508c5d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@27508c5d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@27508c5d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@704deff2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@a307a8c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@389c4eb1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@389c4eb1
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@78a773fd
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@78a773fd
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@68034211
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@68034211
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@6e15fe2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@6e15fe2
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7cb502c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7cb502c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@12a94400
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@2a225dd7
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@2a225dd7
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@2a225dd7
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@1205bd62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@1205bd62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@1205bd62
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@4032d386
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@3b74ac8
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@2b175c00
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@2b175c00
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@2b175c00
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@6d026701
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@6d026701
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@6d026701
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@4b7dc788
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@df6620a
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@19e7a160
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@19e7a160
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@327af41b
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@3406472c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3406472c
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@b978d10
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@b978d10
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@1bae316d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1672fe87
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@732d0d24
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@5a9f4771
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5a9f4771
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@68d279ec
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@258d79be
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@14f9390f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@6c0d7c83
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@176b75f7
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5965be2d
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@409c54f
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@3e74829
-DEBUG main org.hibernate.boot.internal.BootstrapContextImpl - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@6f7923a5] into BootstrapContext; was [null]
-DEBUG main org.hibernate.boot.internal.BootstrapContextImpl - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@74a6f9c1] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@54eb2b70]
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1199fe66
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration boolean -> org.hibernate.type.BooleanType@1199fe66
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1199fe66
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@73a2e526
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration true_false -> org.hibernate.type.TrueFalseType@68be8808
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration yes_no -> org.hibernate.type.YesNoType@758705fa
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@57abad67
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte -> org.hibernate.type.ByteType@57abad67
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@57abad67
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration character -> org.hibernate.type.CharacterType@2dca0d64
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char -> org.hibernate.type.CharacterType@2dca0d64
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@2dca0d64
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@77b14724
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration short -> org.hibernate.type.ShortType@77b14724
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@77b14724
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration integer -> org.hibernate.type.IntegerType@7b84fcf8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration int -> org.hibernate.type.IntegerType@7b84fcf8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@7b84fcf8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2cc44ad
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration long -> org.hibernate.type.LongType@2cc44ad
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2cc44ad
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@33b1c5c5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration float -> org.hibernate.type.FloatType@33b1c5c5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@33b1c5c5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4535b6d5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration double -> org.hibernate.type.DoubleType@4535b6d5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4535b6d5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@42721fe
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@42721fe
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@28e8dde3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@28e8dde3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration string -> org.hibernate.type.StringType@17a1e4ca
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.String -> org.hibernate.type.StringType@17a1e4ca
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@52066604
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@373ebf74
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration url -> org.hibernate.type.UrlType@5ccbeb64
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.net.URL -> org.hibernate.type.UrlType@5ccbeb64
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Duration -> org.hibernate.type.DurationType@626c44e7
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@626c44e7
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Instant -> org.hibernate.type.InstantType@70a36a66
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@70a36a66
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@64ba3208
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@64ba3208
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@1d131e1b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@1d131e1b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@19648c40
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@19648c40
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@6f152006
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@6f152006
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@4b2a01d4
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@4b2a01d4
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@42f8285e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@42f8285e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration date -> org.hibernate.type.DateType@7a560583
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Date -> org.hibernate.type.DateType@7a560583
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration time -> org.hibernate.type.TimeType@7e5d9a50
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@7e5d9a50
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timestamp -> org.hibernate.type.TimestampType@53142455
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@53142455
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@53142455
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1253e7cb
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar -> org.hibernate.type.CalendarType@8c11eee
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@8c11eee
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@8c11eee
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@4cf8b2dc
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@c2db68f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration locale -> org.hibernate.type.LocaleType@7f6f61c8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@7f6f61c8
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration currency -> org.hibernate.type.CurrencyType@333dd51e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@333dd51e
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration timezone -> org.hibernate.type.TimeZoneType@c055c54
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@c055c54
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration class -> org.hibernate.type.ClassType@3401a114
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@3401a114
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@6bb2d00b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@6bb2d00b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4c5474f5
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration binary -> org.hibernate.type.BinaryType@20b12f8a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration byte[] -> org.hibernate.type.BinaryType@20b12f8a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [B -> org.hibernate.type.BinaryType@20b12f8a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@35390ee3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@35390ee3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@35390ee3
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration row_version -> org.hibernate.type.RowVersionType@13e547a9
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration image -> org.hibernate.type.ImageType@dfddc9a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration characters -> org.hibernate.type.CharArrayType@5f7b97da
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration char[] -> org.hibernate.type.CharArrayType@5f7b97da
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [C -> org.hibernate.type.CharArrayType@5f7b97da
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@52d239ba
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@52d239ba
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@52d239ba
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration text -> org.hibernate.type.TextType@2f05be7f
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration ntext -> org.hibernate.type.NTextType@78365cfa
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration blob -> org.hibernate.type.BlobType@2e9fda69
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@2e9fda69
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@2371aaca
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration clob -> org.hibernate.type.ClobType@2374d36a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@2374d36a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration nclob -> org.hibernate.type.NClobType@6c25e6c4
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6c25e6c4
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@bf1ec20
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4e858e0a
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration serializable -> org.hibernate.type.SerializableType@19553973
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration object -> org.hibernate.type.ObjectType@7096b474
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7096b474
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@3d3ba765
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@25bc0606
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5d1659ea
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@793138bd
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@1951b871
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5c18016b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@33aeca0b
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@43aaf813
+DEBUG main org.hibernate.boot.internal.BootstrapContextImpl - Injecting ScanEnvironment [org.hibernate.jpa.boot.internal.StandardJpaScanEnvironmentImpl@75b25825] into BootstrapContext; was [null]
+DEBUG main org.hibernate.boot.internal.BootstrapContextImpl - Injecting ScanOptions [org.hibernate.boot.archive.scan.internal.StandardScanOptions@18025ced] into BootstrapContext; was [org.hibernate.boot.archive.scan.internal.StandardScanOptions@13cf7d52]
 DEBUG main org.hibernate.boot.internal.BootstrapContextImpl - Injecting JPA temp ClassLoader [null] into BootstrapContext; was [null]
 DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - ClassLoaderAccessImpl#injectTempClassLoader(null) [was null]
 DEBUG main org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
@@ -389,10 +1003,10 @@ DEBUG main org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator - JDB
 INFO main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
 DEBUG main org.hibernate.engine.jdbc.env.spi.IdentifierHelperBuilder - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
 DEBUG main org.hibernate.boot.model.relational.Namespace - Created database namespace [logicalName=Name{catalog=null, schema=public}, physicalName=Name{catalog=null, schema=public}]
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@7fcbe147
-DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@7fcbe147
-DEBUG main org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@7cb502c
-DEBUG main org.hibernate.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@475835b1] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@6326d182]
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@2b50150
+DEBUG main org.hibernate.type.BasicTypeRegistry - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@2b50150
+DEBUG main org.hibernate.type.BasicTypeRegistry - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@6bb2d00b
+DEBUG main org.hibernate.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@23c650a3] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@742d4e15]
 DEBUG main org.hibernate.cfg.AnnotationBinder - Binding entity from annotated class: ru.krista.tour.model.data.persistence.entities.Tour
 DEBUG main org.hibernate.cfg.Ejb3Column - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
 DEBUG main org.hibernate.cfg.annotations.EntityBinder - Import with entity name Tour
@@ -498,379 +1112,3 @@ DEBUG main org.hibernate.internal.SessionFactoryImpl - Building session factory
 DEBUG main org.hibernate.cfg.Settings - SessionFactory name : null
 DEBUG main org.hibernate.cfg.Settings - Automatic flush during beforeCompletion(): enabled
 DEBUG main org.hibernate.cfg.Settings - Automatic session close at end of transaction: disabled
-DEBUG main org.hibernate.cfg.Settings - Statistics: disabled
-DEBUG main org.hibernate.cfg.Settings - Deleted entity synthetic identifier rollback: disabled
-DEBUG main org.hibernate.cfg.Settings - Default entity-mode: pojo
-DEBUG main org.hibernate.cfg.Settings - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
-DEBUG main org.hibernate.cfg.Settings - Allow initialization of lazy state outside session : disabled
-DEBUG main org.hibernate.cfg.Settings - Using BatchFetchStyle : LEGACY
-DEBUG main org.hibernate.cfg.Settings - Default batch fetch size: -1
-DEBUG main org.hibernate.cfg.Settings - Maximum outer join fetch depth: null
-DEBUG main org.hibernate.cfg.Settings - Default null ordering: NONE
-DEBUG main org.hibernate.cfg.Settings - Order SQL updates by primary key: disabled
-DEBUG main org.hibernate.cfg.Settings - Order SQL inserts for batching: disabled
-DEBUG main org.hibernate.cfg.Settings - multi-tenancy strategy : NONE
-DEBUG main org.hibernate.cfg.Settings - JTA Track by Thread: enabled
-DEBUG main org.hibernate.cfg.Settings - Query language substitutions: {}
-DEBUG main org.hibernate.cfg.Settings - Named query checking : enabled
-DEBUG main org.hibernate.cfg.Settings - Second-level cache: disabled
-DEBUG main org.hibernate.cfg.Settings - Second-level query cache: disabled
-DEBUG main org.hibernate.cfg.Settings - Second-level query cache factory: null
-DEBUG main org.hibernate.cfg.Settings - Second-level cache region prefix: null
-DEBUG main org.hibernate.cfg.Settings - Optimize second-level cache for minimal puts: disabled
-DEBUG main org.hibernate.cfg.Settings - Structured second-level cache entries: disabled
-DEBUG main org.hibernate.cfg.Settings - Second-level cache direct-reference entries: disabled
-DEBUG main org.hibernate.cfg.Settings - Automatic eviction of collection cache: disabled
-DEBUG main org.hibernate.cfg.Settings - JDBC batch size: 15
-DEBUG main org.hibernate.cfg.Settings - JDBC batch updates for versioned data: enabled
-DEBUG main org.hibernate.cfg.Settings - Scrollable result sets: enabled
-DEBUG main org.hibernate.cfg.Settings - Wrap result sets: disabled
-DEBUG main org.hibernate.cfg.Settings - JDBC3 getGeneratedKeys(): enabled
-DEBUG main org.hibernate.cfg.Settings - JDBC result set fetch size: null
-DEBUG main org.hibernate.cfg.Settings - Connection release mode: AFTER_TRANSACTION
-DEBUG main org.hibernate.cfg.Settings - Generate SQL with comments: disabled
-DEBUG main org.hibernate.cfg.Settings - JPA compliance - query : disabled
-DEBUG main org.hibernate.cfg.Settings - JPA compliance - closed-handling : disabled
-DEBUG main org.hibernate.cfg.Settings - JPA compliance - lists : disabled
-DEBUG main org.hibernate.cfg.Settings - JPA compliance - transactions : disabled
-INFO main org.hibernate.orm.beans - HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
-DEBUG main org.hibernate.jpa.event.internal.CallbackBuilderLegacyImpl - Adding onUpdate as PreUpdate callback for entity ru.krista.tour.model.data.persistence.entities.Tour
-DEBUG main org.hibernate.jpa.event.internal.CallbackBuilderLegacyImpl - Adding onCreate as PrePersist callback for entity ru.krista.tour.model.data.persistence.entities.Tour
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Session factory constructed with filter configurations : {}
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Instantiating session factory with properties: {sun.desktop=windows, awt.toolkit=sun.awt.windows.WToolkit, hibernate.format_sql=true, java.specification.version=12, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, hibernate.dialect=org.hibernate.dialect.PostgreSQL10Dialect, java.class.path=C:\Users\belyakovaas\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\211.7628.21\lib\idea_rt.jar;C:\Users\belyakovaas\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\211.7628.21\plugins\junit\lib\junit5-rt.jar;C:\Users\belyakovaas\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\211.7628.21\plugins\junit\lib\junit-rt.jar;C:\workspace\github.com\Alevtina98\tour-server\tour\target\test-classes;C:\workspace\github.com\Alevtina98\tour-server\tour\target\classes;C:\Users\belyakovaas\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar;C:\Users\belyakovaas\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar;C:\Users\belyakovaas\.m2\repository\xml-apis\xml-apis\1.3.04\xml-apis-1.3.04.jar;C:\Users\belyakovaas\.m2\repository\javax\javaee-api\7.0\javaee-api-7.0.jar;C:\Users\belyakovaas\.m2\repository\com\sun\mail\javax.mail\1.5.0\javax.mail-1.5.0.jar;C:\Users\belyakovaas\.m2\repository\org\junit\jupiter\junit-jupiter\5.6.2\junit-jupiter-5.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.2\junit-jupiter-api-5.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\belyakovaas\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\belyakovaas\.m2\repository\org\junit\platform\junit-platform-commons\1.6.2\junit-platform-commons-1.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.2\junit-jupiter-params-5.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.2\junit-jupiter-engine-5.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\junit\platform\junit-platform-engine\1.6.2\junit-platform-engine-1.6.2.jar;C:\Users\belyakovaas\.m2\repository\org\postgresql\postgresql\42.2.9\postgresql-42.2.9.jar;C:\Users\belyakovaas\.m2\repository\org\hibernate\hibernate-core\5.4.21.Final\hibernate-core-5.4.21.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\belyakovaas\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\belyakovaas\.m2\repository\org\javassist\javassist\3.24.0-GA\javassist-3.24.0-GA.jar;C:\Users\belyakovaas\.m2\repository\net\bytebuddy\byte-buddy\1.10.10\byte-buddy-1.10.10.jar;C:\Users\belyakovaas\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\jandex\2.1.3.Final\jandex-2.1.3.Final.jar;C:\Users\belyakovaas\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\belyakovaas\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\belyakovaas\.m2\repository\org\dom4j\dom4j\2.1.3\dom4j-2.1.3.jar;C:\Users\belyakovaas\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.0.Final\hibernate-commons-annotations-5.1.0.Final.jar;C:\Users\belyakovaas\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\belyakovaas\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\belyakovaas\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\belyakovaas\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\belyakovaas\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\belyakovaas\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\belyakovaas\.m2\repository\org\slf4j\slf4j-log4j12\1.6.1\slf4j-log4j12-1.6.1.jar;C:\Users\belyakovaas\.m2\repository\org\slf4j\slf4j-api\1.6.1\slf4j-api-1.6.1.jar;C:\Users\belyakovaas\.m2\repository\log4j\log4j\1.2.16\log4j-1.2.16.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\resteasy-jaxrs\3.0.10.Final\resteasy-jaxrs-3.0.10.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\jaxrs-api\3.0.10.Final\jaxrs-api-3.0.10.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.1_spec\1.0.1.Final\jboss-annotations-api_1.1_spec-1.0.1.Final.jar;C:\Users\belyakovaas\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\belyakovaas\.m2\repository\org\apache\httpcomponents\httpclient\4.2.6\httpclient-4.2.6.jar;C:\Users\belyakovaas\.m2\repository\org\apache\httpcomponents\httpcore\4.2.5\httpcore-4.2.5.jar;C:\Users\belyakovaas\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\belyakovaas\.m2\repository\commons-codec\commons-codec\1.6\commons-codec-1.6.jar;C:\Users\belyakovaas\.m2\repository\commons-io\commons-io\2.1\commons-io-2.1.jar;C:\Users\belyakovaas\.m2\repository\net\jcip\jcip-annotations\1.0\jcip-annotations-1.0.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\resteasy-client\3.0.10.Final\resteasy-client-3.0.10.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\resteasy-jackson-provider\3.0.10.Final\resteasy-jackson-provider-3.0.10.Final.jar;C:\Users\belyakovaas\.m2\repository\org\codehaus\jackson\jackson-core-asl\1.9.12\jackson-core-asl-1.9.12.jar;C:\Users\belyakovaas\.m2\repository\org\codehaus\jackson\jackson-mapper-asl\1.9.12\jackson-mapper-asl-1.9.12.jar;C:\Users\belyakovaas\.m2\repository\org\codehaus\jackson\jackson-jaxrs\1.9.12\jackson-jaxrs-1.9.12.jar;C:\Users\belyakovaas\.m2\repository\org\codehaus\jackson\jackson-xc\1.9.12\jackson-xc-1.9.12.jar;C:\Users\belyakovaas\.m2\repository\org\json\json\20190722\json-20190722.jar;C:\Users\belyakovaas\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\belyakovaas\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\resteasy-servlet-initializer\3.0.10.Final\resteasy-servlet-initializer-3.0.10.Final.jar;C:\Users\belyakovaas\.m2\repository\org\jboss\resteasy\async-http-servlet-3.0\3.0.10.Final\async-http-servlet-3.0-3.0.10.Final.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, javax.persistence.jdbc.url=jdbc:postgresql://localhost:5433/test, javax.persistence.jdbc.user=****, java.vm.specification.version=12, os.name=Windows 10, sun.java.launcher=SUN_STANDARD, user.country=RU, local.setting.IS_JTA_TXN_COORD=false, sun.boot.library.path=C:\Program Files\Java\jdk-12.0.1\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 ru.krista.tour.persistence.ProviderTest, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\belyakovaas, user.language=ru, java.specification.vendor=Oracle Corporation, java.version.date=2019-04-16, java.home=C:\Program Files\Java\jdk-12.0.1, file.separator=\, java.vm.compressedOopsMode=Zero based, line.separator=
-, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, javax.persistence.jdbc.driver=org.postgresql.Driver, hibernate.hbm2ddl.auto=update, user.script=, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=12.0.1+12, user.name=belyakovaas, path.separator=;, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:postgresql://localhost:5433/test, file.encoding=UTF-8, hibernate.ejb.persistenceUnitName=tour-test, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, javax.persistence.schema-generation.drop-script-source=META-INF/import.sql, show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\BELYAK~1\AppData\Local\Temp\, java.version=12.0.1, user.dir=C:\workspace\github.com\Alevtina98\tour-server\tour, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.default_schema=public, hibernate.connection.password=****, sun.os.patch.level=, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.registry.StandardServiceRegistryBuilder$1@25c5e994, java.library.path=C:\Program Files\Java\jdk-12.0.1\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\BellSoft\LibericaJDK-8\bin\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\TortoiseHg\;C:\Users\monakhov\Dart\dart-sdk\bin;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\belyakovaas\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-12.0.1\bin;C:\maven\bin;C:\Users\belyakovaas\AppData\Roaming\npm;., java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=12.0.1+12, hibernate.bytecode.use_reflection_optimizer=false, sun.io.unicode.encoding=UnicodeLittle, javax.persistence.jdbc.password=****, java.class.version=56.0}
-DEBUG main org.hibernate.cfg.beanvalidation.TypeSafeActivator - Unable to acquire Bean Validation ValidatorFactory, skipping activation
-DEBUG main org.hibernate.secure.spi.JaccIntegrator - Skipping JACC integration as it was not enabled
-DEBUG main org.hibernate.internal.SessionFactoryImpl - Instantiated session factory
-DEBUG main org.hibernate.type.spi.TypeConfiguration$Scope - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@475835b1] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@34b9fc7d]
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [ru.krista.tour.model.data.persistence.entities.Tour] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.krista.tour.model.data.persistence.entities.Tour
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [ru.krista.tour.model.data.persistence.entities.Tour] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.krista.tour.model.data.persistence.entities.Tour
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [ru.krista.tour.model.data.persistence.entities.Session] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.krista.tour.model.data.persistence.entities.Session
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - Not known whether passed class name [ru.krista.tour.model.data.persistence.entities.Session] is safe
-DEBUG main org.hibernate.boot.internal.ClassLoaderAccessImpl - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : ru.krista.tour.model.data.persistence.entities.Session
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: ru.krista.tour.model.data.persistence.entities.Tour
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from public.tour where id =?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select tour_.id, tour_.code as code2_1_, tour_.code_js as code_js3_1_, tour_.change_date as change_d4_1_, tour_.description as descript6_1_, tour_.form_caption as form_cap7_1_, tour_.form_name as form_nam8_1_, tour_.is_general_user as is_gener9_1_, tour_.name as name10_1_ from public.tour tour_ where tour_.id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into public.tour (code, code_js, change_date, create_date, description, form_caption, form_name, is_general_user, name, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update public.tour set code=?, code_js=?, change_date=?, description=?, form_caption=?, form_name=?, is_general_user=?, name=? where id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from public.tour where id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@81b5db0]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : code
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : codeJS
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreate
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : desc
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : formCaption
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : formName
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isGeneralUser
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Tour)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Tour)
-          - SQL table alias mapping - tour0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_1_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Tour [NONE]: select tour0_.id as id1_1_0_, tour0_.code as code2_1_0_, tour0_.code_js as code_js3_1_0_, tour0_.change_date as change_d4_1_0_, tour0_.create_date as create_d5_1_0_, tour0_.description as descript6_1_0_, tour0_.form_caption as form_cap7_1_0_, tour0_.form_name as form_nam8_1_0_, tour0_.is_general_user as is_gener9_1_0_, tour0_.name as name10_1_0_ from public.tour tour0_ where tour0_.id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@282ffbf5]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : code
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : codeJS
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateCreate
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : desc
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : formCaption
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : formName
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : isGeneralUser
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : name
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Tour)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Tour)
-          - SQL table alias mapping - tour0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_1_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Tour [READ]: select tour0_.id as id1_1_0_, tour0_.code as code2_1_0_, tour0_.code_js as code_js3_1_0_, tour0_.change_date as change_d4_1_0_, tour0_.create_date as create_d5_1_0_, tour0_.description as descript6_1_0_, tour0_.form_caption as form_cap7_1_0_, tour0_.form_name as form_nam8_1_0_, tour0_.is_general_user as is_gener9_1_0_, tour0_.name as name10_1_0_ from public.tour tour0_ where tour0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity ru.krista.tour.model.data.persistence.entities.Tour: select tour0_.id as id1_1_0_, tour0_.code as code2_1_0_, tour0_.code_js as code_js3_1_0_, tour0_.change_date as change_d4_1_0_, tour0_.create_date as create_d5_1_0_, tour0_.description as descript6_1_0_, tour0_.form_caption as form_cap7_1_0_, tour0_.form_name as form_nam8_1_0_, tour0_.is_general_user as is_gener9_1_0_, tour0_.name as name10_1_0_ from public.tour tour0_ where tour0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity ru.krista.tour.model.data.persistence.entities.Tour: select tour0_.id as id1_1_0_, tour0_.code as code2_1_0_, tour0_.code_js as code_js3_1_0_, tour0_.change_date as change_d4_1_0_, tour0_.create_date as create_d5_1_0_, tour0_.description as descript6_1_0_, tour0_.form_caption as form_cap7_1_0_, tour0_.form_name as form_nam8_1_0_, tour0_.is_general_user as is_gener9_1_0_, tour0_.name as name10_1_0_ from public.tour tour0_ where tour0_.id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister - Static SQL for entity: ru.krista.tour.model.data.persistence.entities.Session
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Version select: select id from public.session where id =?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Snapshot select: select session_.id, session_.status as status3_0_, session_.tour_id as tour_id5_0_, session_.user_id as user_id4_0_ from public.session session_ where session_.id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Insert 0: insert into public.session (status, tour_id, user_id, id) values (?, ?, ?, ?)
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Update 0: update public.session set status=?, tour_id=?, user_id=? where id=?
-DEBUG main org.hibernate.persister.entity.AbstractEntityPersister -  Delete 0: delete from public.session where id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@18460128]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : status
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : tour
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@475646d4]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : userId
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Session)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Session, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Session)
-          - EntityAttributeFetchImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:1>, path=ru.krista.tour.model.data.persistence.entities.Session.tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Session)
-          - SQL table alias mapping - session0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Session [NONE]: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2d272b0d]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : dateChange
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : status
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : tour
-DEBUG main org.hibernate.loader.plan.build.internal.spaces.QuerySpacesImpl - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c448433]
-DEBUG main org.hibernate.persister.walking.spi.MetamodelGraphWalker - Visiting attribute path : userId
-DEBUG main org.hibernate.loader.plan.build.internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy - Building LoadPlan...
-DEBUG main org.hibernate.loader.plan.exec.internal.LoadQueryJoinAndFetchProcessor - processing queryspace <gen:0>
-DEBUG main org.hibernate.loader.plan.build.spi.LoadPlanTreePrinter - LoadPlan(entity=ru.krista.tour.model.data.persistence.entities.Session)
-    - Returns
-       - EntityReturnImpl(entity=ru.krista.tour.model.data.persistence.entities.Session, querySpaceUid=<gen:0>, path=ru.krista.tour.model.data.persistence.entities.Session)
-          - EntityAttributeFetchImpl(entity=ru.krista.tour.model.data.persistence.entities.Tour, querySpaceUid=<gen:1>, path=ru.krista.tour.model.data.persistence.entities.Session.tour)
-    - QuerySpaces
-       - EntityQuerySpaceImpl(uid=<gen:0>, entity=ru.krista.tour.model.data.persistence.entities.Session)
-          - SQL table alias mapping - session0_
-          - alias suffix - 0_
-          - suffixed key columns - {id1_0_0_}
-
-DEBUG main org.hibernate.loader.entity.plan.EntityLoader - Static select for entity ru.krista.tour.model.data.persistence.entities.Session [READ]: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_MERGE on entity ru.krista.tour.model.data.persistence.entities.Session: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-DEBUG main org.hibernate.loader.Loader - Static select for action ACTION_REFRESH on entity ru.krista.tour.model.data.persistence.entities.Session: select session0_.id as id1_0_0_, session0_.change_date as change_d2_0_0_, session0_.status as status3_0_0_, session0_.tour_id as tour_id5_0_0_, session0_.user_id as user_id4_0_0_ from public.session session0_ where session0_.id=?
-INFO main org.hibernate.orm.connections.access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1292071f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
-DEBUG main org.hibernate.mapping.Table - No alter strings for table : session
-DEBUG main org.hibernate.mapping.Table - No alter strings for table : tour
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - No JtaPlatform was specified, checking resolver
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformResolverInitiator - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
-DEBUG main org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-INFO main org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named HQL queries
-DEBUG main org.hibernate.query.spi.NamedQueryRepository - Checking 0 named SQL queries
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@4b6e1c0
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Registering SessionFactory: 2e90ebdd-70d2-42db-a612-c9ab42f06072 (<unnamed>)
-DEBUG main org.hibernate.internal.SessionFactoryRegistry - Not binding SessionFactory to JNDI, no JNDI name configured
-DEBUG main org.hibernate.stat.internal.StatisticsInitiator - Statistics initialized [enabled=false]
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 195
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 195, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=195, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=false, desc=}
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.tour
-        (code, code_js, change_date, create_date, description, form_caption, form_name, is_general_user, name, id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.SQL - 
-    select
-        tour0_.id as id1_1_0_,
-        tour0_.code as code2_1_0_,
-        tour0_.code_js as code_js3_1_0_,
-        tour0_.change_date as change_d4_1_0_,
-        tour0_.create_date as create_d5_1_0_,
-        tour0_.description as descript6_1_0_,
-        tour0_.form_caption as form_cap7_1_0_,
-        tour0_.form_name as form_nam8_1_0_,
-        tour0_.is_general_user as is_gener9_1_0_,
-        tour0_.name as name10_1_0_ 
-    from
-        public.tour tour0_ 
-    where
-        tour0_.id=?
-DEBUG main org.hibernate.loader.plan.exec.process.internal.EntityReferenceInitializerImpl - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving attributes for [ru.krista.tour.model.data.persistence.entities.Tour#195]
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `code` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`code`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `codeJS` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`codeJS`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `dateChange` : value = 2021-11-30 18:00:34.824
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`dateChange`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `dateCreate` : value = 2021-11-30 18:00:34.824
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`dateCreate`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `desc` : value = 
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`desc`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `formCaption` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`formCaption`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `formName` : value = null
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`formName`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `isGeneralUser` : value = false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`isGeneralUser`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Processing attribute `name` : value = Test
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Attribute (`name`)  - enhanced for lazy-loading? - false
-DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [ru.krista.tour.model.data.persistence.entities.Tour#195]
-DEBUG main org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : ru.krista.tour.model.data.persistence.entities.Tour#195
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.event.internal.EntityCopyObserverFactoryInitiator - Configured EntityCopyObserver strategy: disallow
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 1 updates, 0 deletions to 1 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=195, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=false, desc=Tour description}
-DEBUG main org.hibernate.SQL - 
-    update
-        public.tour 
-    set
-        code=?,
-        code_js=?,
-        change_date=?,
-        description=?,
-        form_caption=?,
-        form_name=?,
-        is_general_user=?,
-        name=? 
-    where
-        id=?
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 1 deletions to 1 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Test, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=195, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=false, desc=Tour description}
-DEBUG main org.hibernate.SQL - 
-    delete 
-    from
-        public.tour 
-    where
-        id=?
-DEBUG main org.hibernate.SQL - 
-    select
-        tour0_.id as id1_1_0_,
-        tour0_.code as code2_1_0_,
-        tour0_.code_js as code_js3_1_0_,
-        tour0_.change_date as change_d4_1_0_,
-        tour0_.create_date as create_d5_1_0_,
-        tour0_.description as descript6_1_0_,
-        tour0_.form_caption as form_cap7_1_0_,
-        tour0_.form_name as form_nam8_1_0_,
-        tour0_.is_general_user as is_gener9_1_0_,
-        tour0_.name as name10_1_0_ 
-    from
-        public.tour tour0_ 
-    where
-        tour0_.id=?
-DEBUG main org.hibernate.loader.entity.plan.AbstractLoadPlanBasedEntityLoader - Done entity load : ru.krista.tour.model.data.persistence.entities.Tour#195
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 196
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 196, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 197
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 197, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 2 insertions, 0 updates, 0 deletions to 2 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=197, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=false, desc=null}
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=196, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=true, desc=null}
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.tour
-        (code, code_js, change_date, create_date, description, form_caption, form_name, is_general_user, name, id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.tour
-        (code, code_js, change_date, create_date, description, form_caption, form_name, is_general_user, name, id) 
-    values
-        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - begin
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 198
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 198, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 199
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 199, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.SQL - 
-    select
-        nextval ('public.hibernate_sequence')
-DEBUG main org.hibernate.id.enhanced.SequenceStructure - Sequence value obtained: 200
-DEBUG main org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - HHH000387: ResultSet's statement was not registered
-DEBUG main org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 200, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
-DEBUG main org.hibernate.engine.transaction.internal.TransactionImpl - committing
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 3 insertions, 0 updates, 0 deletions to 5 objects
-DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour2, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=197, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=false, desc=null}
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=199, userId=user2, tour=ru.krista.tour.model.data.persistence.entities.Tour#196, status=INTERRUPTED}
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=200, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#197, status=INTERRUPTED}
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Tour{code=null, formName=null, name=Tour1, dateChange=Tue Nov 30 18:00:34 MSK 2021, id=196, formCaption=null, codeJS=null, dateCreate=Tue Nov 30 18:00:34 MSK 2021, isGeneralUser=true, desc=null}
-DEBUG main org.hibernate.internal.util.EntityPrinter - ru.krista.tour.model.data.persistence.entities.Session{dateChange=null, id=198, userId=user1, tour=ru.krista.tour.model.data.persistence.entities.Tour#196, status=DELAYED}
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.session
-        (status, tour_id, user_id, id) 
-    values
-        (?, ?, ?, ?)
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.session
-        (status, tour_id, user_id, id) 
-    values
-        (?, ?, ?, ?)
-DEBUG main org.hibernate.SQL - 
-    insert 
-    into
-        public.session
-        (status, tour_id, user_id, id) 
-    values
-        (?, ?, ?, ?)
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
-DEBUG main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - QueryTranslatorFactory: org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@5a50d9fc

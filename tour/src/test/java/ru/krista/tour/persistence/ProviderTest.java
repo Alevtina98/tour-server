@@ -32,7 +32,7 @@ public class ProviderTest extends TestEntityManager {
         tour.setDesc("");
 
         testEntityManager.getTransaction().begin();
-        Tour createdTour = provider.create(tour);
+        Tour createdTour = provider.create(tour).data;
         testEntityManager.getTransaction().commit();
         testEntityManager.detach(tour);
 
@@ -45,7 +45,7 @@ public class ProviderTest extends TestEntityManager {
 
         // READ
 
-        Tour readingTour = provider.readById(Tour.class, id);
+        Tour readingTour = provider.readById(Tour.class, id).data;
 
         Assert.assertNotNull(readingTour);
 
@@ -53,11 +53,10 @@ public class ProviderTest extends TestEntityManager {
         // UPDATE
 
         String newDesc = "Tour description";
-        tour.setId(id);
         tour.setDesc(newDesc);
 
         testEntityManager.getTransaction().begin();
-        Tour editedTour =  provider.update(tour);
+        Tour editedTour =  provider.update(tour).data;
         testEntityManager.getTransaction().commit();
         testEntityManager.detach(tour);
 
@@ -68,7 +67,7 @@ public class ProviderTest extends TestEntityManager {
 
         testEntityManager.getTransaction().begin();
         provider.delete(Tour.class, id);
-        tour = provider.readById(Tour.class, id);
+        tour = provider.readById(Tour.class, id).data;
         testEntityManager.getTransaction().commit();
 
         Assert.assertNull(tour);
@@ -85,8 +84,8 @@ public class ProviderTest extends TestEntityManager {
         tour2.setGeneralUser(false);
 
         testEntityManager.getTransaction().begin();
-        Tour pTour1 = provider.create(tour1);
-        Tour pTour2 = provider.create(tour2);
+        Tour pTour1 = provider.create(tour1).data;
+        Tour pTour2 = provider.create(tour2).data;
         testEntityManager.getTransaction().commit();
 
         Session session1 = new Session();
@@ -103,15 +102,15 @@ public class ProviderTest extends TestEntityManager {
         session3.setStatus(SessionService.StatusVariant.INTERRUPTED.toString());
 
         testEntityManager.getTransaction().begin();
-        Session pSession1 = provider.create(session1);
-        Session pSession2 = provider.create(session2);
-        Session pSession3 = provider.create(session3);
+        Session pSession1 = provider.create(session1).data;
+        Session pSession2 = provider.create(session2).data;
+        Session pSession3 = provider.create(session3).data;
         testEntityManager.getTransaction().commit();
 
         // READ ALL
 
-        List<Tour> tourList = provider.readAll(Tour.class);
-        List<Session> sessionList = provider.readAll(Session.class);
+        List<Tour> tourList = provider.readAll(Tour.class).data;
+        List<Session> sessionList = provider.readAll(Session.class).data;
 
         Assert.assertEquals(tourList.size(), 2);
         Assert.assertEquals(sessionList.size(), 3);
@@ -121,17 +120,17 @@ public class ProviderTest extends TestEntityManager {
         SelectAllFromTour params = new SelectAllFromTour();
         FilterByGeneral filterByGeneral = new FilterByGeneral();
 
-        tourList = provider.readWithFlagFilter(params, filterByGeneral);
+        tourList = provider.readWithFlagFilter(params, filterByGeneral).data;
 
         Assert.assertEquals(tourList.size(), 1);
-        Assert.assertTrue(tourList.get(0).isGeneralUser());
+        Assert.assertTrue(tourList.get(0).getIsGeneral());
 
         // READ BY COLUMN
 
         SelectTourFromUserTour selectTourFromUserTour = new SelectTourFromUserTour();
         FilterByUserId filterByUserId = new FilterByUserId("user2");
 
-        tourList = provider.readWithValueFilter(selectTourFromUserTour,filterByUserId);
+        tourList = provider.readWithValueFilter(selectTourFromUserTour,filterByUserId).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertEquals(tourList.get(0).getName(), "Tour1");
@@ -144,7 +143,7 @@ public class ProviderTest extends TestEntityManager {
         filterList.add(filterByUserId);
         filterList.add(filterByStatus);
 
-        tourList = provider.readWithValueFilter(selectTourFromUserTour, filterList);
+        tourList = provider.readWithValueFilter(selectTourFromUserTour, filterList).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertEquals(tourList.get(0).getName(), "Tour2");
@@ -158,7 +157,7 @@ public class ProviderTest extends TestEntityManager {
         filterList.add(filterByUserId);
         filterList.add(filterByTourId);
 
-        sessionList = provider.readWithValueFilter(selectAllFromUserTour, filterList);
+        sessionList = provider.readWithValueFilter(selectAllFromUserTour, filterList).data;
 
         Assert.assertEquals(sessionList.size(), 1);
         Assert.assertEquals(sessionList.get(0).getId(), pSession1.getId());

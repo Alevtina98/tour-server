@@ -1,7 +1,6 @@
 package ru.krista.tour.controller.domains.webApp.user.session.tour;
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.controller.services.ITourDao;
 
 import java.util.List;
 

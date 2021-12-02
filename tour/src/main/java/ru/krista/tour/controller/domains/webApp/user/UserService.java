@@ -3,8 +3,6 @@ package ru.krista.tour.controller.domains.webApp.user;
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourBo;
-import ru.krista.tour.controller.services.IUserDao;
-import ru.krista.tour.view.resources.presentations.informationObjects.SessionIo;
 
 import java.util.ArrayList;
 import java.util.List;

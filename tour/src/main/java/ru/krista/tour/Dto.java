@@ -14,10 +14,14 @@ public class Dto <T> {
         this.data = data;
         this.status = Status.ok;
     }
-    public void setError (String error) {
-        this.status = Status.error;
-        this.errorMsgList.add(error);
+    public void setData (T data) {
+        this.data = data;
     }
+    public void setError (String msg) {
+        this.status = Status.error;
+        this.errorMsgList.add(msg);
+    }
+
     public void addErrorMsg (String error) {
         this.errorMsgList.add(error);
     }
