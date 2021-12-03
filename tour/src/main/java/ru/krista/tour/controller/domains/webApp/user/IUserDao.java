@@ -1,19 +1,21 @@
 package ru.krista.tour.controller.domains.webApp.user;
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.model.data.SessionDo;
-import ru.krista.tour.model.data.TourDo;
+import ru.krista.tour.model.data.dataObjects.SessionDo;
+import ru.krista.tour.model.data.dataObjects.TourDo;
 
 import java.util.List;
 
 public interface IUserDao {
-    public Dto<SessionDo> createSession(SessionDo sessionDo);
+    public Dto<SessionDo> createSession(SessionDo userSessionDo,String userId);
 
     public Dto<SessionDo> readSession(Long id);
 
-    public Dto<SessionDo> updateSession(SessionDo sessionDo);
+    public Dto<SessionDo> updateSession(SessionDo sessionDo,String userId);
 
     public Dto<SessionDo> deleteSession(Long id);
+
+    public Dto<List<SessionDo>> readAllUserSessions(String userId);
 
     public Dto<SessionDo> readUserSessionWithTour(String userId, Long tourId);
 

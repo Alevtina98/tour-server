@@ -2,8 +2,9 @@ package ru.krista.tour.model.data.dao.userDao;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.IUserDao;
-import ru.krista.tour.model.data.SessionDo;
-import ru.krista.tour.model.data.TourDo;
+import ru.krista.tour.model.data.dataObjects.SessionDo;
+import ru.krista.tour.model.data.dataObjects.UserSessionDo;
+import ru.krista.tour.model.data.dataObjects.TourDo;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
 import ru.krista.tour.model.data.dao.userDao.queryUtils.*;
@@ -29,21 +30,20 @@ public class UserDao implements IUserDao {
         this.provider = provider;
     }
 
-    public static Session convertSessionDo(SessionDo sessionDo) {
+    public static Session convertSessionDo(SessionDo userSessionDo, String userId) {
         Session sessionEntity = new Session();
-        sessionEntity.setId(sessionDo.id);
-        sessionEntity.setStatus(sessionDo.status);
-        sessionEntity.setUserId(sessionDo.userId);
-        sessionEntity.setTour(TourDao.convertTourDo(sessionDo.tour));
+        sessionEntity.setId(userSessionDo.id);
+        sessionEntity.setStatus(userSessionDo.status);
+        sessionEntity.setUserId(userId);
+        sessionEntity.setTour(TourDao.convertTourDo(userSessionDo.tour));
         return sessionEntity;
     }
-
     public static SessionDo convertSessionEntity(Session sessionEntity) {
         SessionDo sessionDo = new SessionDo();
         sessionDo.id = sessionEntity.getId();
         sessionDo.status = sessionEntity.getStatus();
-        sessionDo.userId = sessionEntity.getUserId();
         sessionDo.tour = TourDao.convertTourEntity(sessionEntity.getTour());
+        sessionDo.dateChange = sessionEntity.getDateChange();
         return sessionDo;
     }
 
@@ -66,8 +66,8 @@ public class UserDao implements IUserDao {
     }
 
     @Override
-    public Dto<SessionDo> createSession(SessionDo sessionDo) {
-        Session sessionEntity = convertSessionDo(sessionDo);
+    public Dto<SessionDo> createSession(SessionDo sessionDo,String userId) {
+        Session sessionEntity = convertSessionDo(sessionDo, userId);
         Dto<Session> providerResult = provider.create(sessionEntity);
         Dto<SessionDo> result = new Dto<>(null);
         if (providerResult.status == Dto.Status.ok) {
@@ -93,8 +93,8 @@ public class UserDao implements IUserDao {
     }
 
     @Override
-    public Dto<SessionDo> updateSession(SessionDo sessionDo) {
-        Session sessionEntity = convertSessionDo(sessionDo);
+    public Dto<SessionDo> updateSession(SessionDo sessionDo,String userId) {
+        Session sessionEntity = convertSessionDo(sessionDo, userId);
         Dto<Session> providerResult = provider.update(sessionEntity);
         Dto<SessionDo> result = new Dto<>(null);
         if (providerResult.status == Dto.Status.ok) {
@@ -114,6 +114,19 @@ public class UserDao implements IUserDao {
             result.setData(convertSessionEntity(providerResult.data));
         } else {
             result.setError("UserDao: Не удалось удалить данные о сессии");
+            result.addErrorMsg(providerResult.errorMsgList);
+        }
+        return result;
+    }
+
+    @Override
+    public Dto<List<SessionDo>> readAllUserSessions(String userId) {
+        Dto<List<Session>> providerResult = provider.readWithValueFilter(new SelectAllFromSession(), new FilterByUserId(userId));
+        Dto<List<SessionDo>> result = new Dto<>(null);
+        if (providerResult.status == Dto.Status.ok) {
+            result.setData(convertSessionEntity(providerResult.data));
+        } else {
+            result.setError("UserDao: Не удалось прочитать данные обо всех сессиях пользователя");
             result.addErrorMsg(providerResult.errorMsgList);
         }
         return result;

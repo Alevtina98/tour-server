@@ -2,7 +2,7 @@ package ru.krista.tour.model.data.dao.tourDao;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.ITourDao;
-import ru.krista.tour.model.data.TourDo;
+import ru.krista.tour.model.data.dataObjects.TourDo;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.FilterByGeneral;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.SelectAllFromTour;
@@ -46,6 +46,8 @@ public class TourDao implements ITourDao {
         tourDo.isGeneralUser = tourEntity.getIsGeneral();
         tourDo.formName = tourEntity.getFormName();
         tourDo.formCaption = tourEntity.getFormCaption();
+        tourDo.dateCreate = tourEntity.getDateCreate();
+        tourDo.dateChange = tourEntity.getDateChange();
         return tourDo;
     }
 

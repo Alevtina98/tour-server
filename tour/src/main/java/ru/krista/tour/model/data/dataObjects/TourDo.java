@@ -1,5 +1,7 @@
-package ru.krista.tour.model.data;
+package ru.krista.tour.model.data.dataObjects;
 
+
+import java.util.Date;
 
 public class TourDo {
     public Long id;
@@ -10,4 +12,7 @@ public class TourDo {
     public String formName;
     public String formCaption;
     public boolean isGeneralUser;
+
+    public Date dateCreate;
+    public Date dateChange;
 }

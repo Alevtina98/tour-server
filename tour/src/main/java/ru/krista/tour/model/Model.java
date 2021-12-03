@@ -1,19 +1,15 @@
 package ru.krista.tour.model;
 
 import ru.krista.tour.controller.domains.IModal;
-import ru.krista.tour.model.data.TourDo;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.dao.tourDao.TourDao;
 import ru.krista.tour.model.data.dao.userDao.UserDao;
 import ru.krista.tour.model.data.persistence.Provider;
-import ru.krista.tour.model.data.persistence.entities.Tour;
 
 import javax.annotation.Resource;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.*;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /*
  ** отвечает за соединение с БД и транзакции

@@ -2,9 +2,12 @@ package ru.krista.tour.controller.domains.webApp.user;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
+import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourBo;
+import ru.krista.tour.controller.domains.webApp.user.session.tour.TourService;
+import ru.krista.tour.model.data.dataObjects.SessionDo;
+import ru.krista.tour.model.data.dataObjects.TourDo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UserService {
@@ -14,24 +17,39 @@ public class UserService {
         this.dao = dao;
     }
 
-    public Dto<List<TourBo>> getToursFromSessionsWithStatus (String userId, String status) {
-        //check status as SessionBo.StatusVariant
-        List<TourBo> tourBoList = new ArrayList<TourBo>() ;
-        return new Dto<>(tourBoList);
+    public Dto<List<TourBo>> getToursFromSessionsWithStatus(String userId, String status) {
+        Dto<List<TourDo>> daoDto = dao.readTourListFromUserSessionWithStatus(userId, status);
+        Dto<List<TourBo>> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("UserService: Не удалось получить список общепользовательских туров");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(TourService.convertTourDo(daoDto.data));
+        return result;
     }
+
     public Dto<List<SessionBo>> getSessionList(String userId) {
-        UserBo user = new UserBo(new ArrayList<>(), userId);
-        return new Dto<>(user.sessionList);
-    };
+        Dto<List<SessionDo>> daoDto = dao.readAllUserSessions(userId);
+        Dto<List<SessionBo>> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("UserService: Не удалось получить список общепользовательских туров");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(SessionService.convertSessionDo(daoDto.data));
+        return result;
+    }
+
     public Dto<List<SessionBo>> getSessionsByTourAnd(UserBo userBo) {
         return new Dto<>(userBo.sessionList);
-    };
-    public Dto<SessionBo> getSession (UserBo userBo, Number tourId) {
+    }
+
+    public Dto<SessionBo> getSession(UserBo userBo, Number tourId) {
         // SessionBo sessionBo = userBo.sessionList;
         // userBo.sessionList.stream().filter(session -> session.tourBo.id.equals(tourId)).collect(Collectors.toList());
         return null;
-    };
-    public Dto<SessionBo> addUserSession(String userId, SessionBo sessionBo) {
+    }
+
+    public Dto<SessionBo> addSession(String userId, SessionBo sessionBo) {
          /* Long tourId = lesson.tour.id;
         List<LessonIo> sameEntity = findUserTour(lesson.getUserId(), tourId);
         if (!sameEntity.isEmpty()) {
@@ -47,13 +65,28 @@ public class UserService {
         }else {
             return response(500);
         }*/
-        UserBo user = new UserBo(new ArrayList<>(), userId);
-        // data from dao
-        SessionBo session = new SessionBo();
-        user.sessionList.add(sessionBo);
-        return new Dto<>(session);
-    };
-    public Dto<SessionBo> updateSession (String userId, SessionBo session) {
-        return null;
-    };
+        SessionDo sessionDo =  SessionService.convertSessionBo(sessionBo);
+        Dto<SessionDo> daoDto = dao.createSession(sessionDo, userId);
+        Dto<SessionBo> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("UserService: Не удалось получить список общепользовательских туров");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(SessionService.convertSessionDo(daoDto.data));
+        return result;
+    }
+
+    public Dto<SessionBo> updateSession(String userId, SessionBo sessionBo) {
+        SessionDo sessionDo =  SessionService.convertSessionBo(sessionBo);
+        Dto<SessionDo> daoDto = dao.updateSession(sessionDo, userId);
+        Dto<SessionBo> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("UserService: Не удалось получить список общепользовательских туров");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(SessionService.convertSessionDo(daoDto.data));
+        return result;
+    }
+
+
 }

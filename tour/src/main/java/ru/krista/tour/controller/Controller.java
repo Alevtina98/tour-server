@@ -4,6 +4,7 @@ import ru.krista.tour.Dto;
 import ru.krista.tour.controller.domains.IModal;
 import ru.krista.tour.controller.domains.webApp.user.UserService;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionBo;
+import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
 import ru.krista.tour.model.Model;
 import ru.krista.tour.view.resources.IController;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourBo;
@@ -71,7 +72,7 @@ public class Controller implements IController {
         SessionBo session = new SessionBo();
          session.tour = convertTourIo(userSessionIo.tour);
          session.dateChange = userSessionIo.dateChange;
-         session.status = userSessionIo.status;
+         session.status = SessionService.StatusVariant.valueOf(userSessionIo.status);
         return session;
     }
 
@@ -98,7 +99,7 @@ public class Controller implements IController {
         sessionIo.tour = convertTourBo(session.tour);
         sessionIo.id = session.id;
         sessionIo.dateChange = session.dateChange;
-        sessionIo.status = session.status;
+        sessionIo.status = session.status.toString();
         return null;
     }
 
@@ -265,7 +266,7 @@ public class Controller implements IController {
 
         openPersistence();
         UserService userService = new UserService(modal.getUserDao());
-        Dto<SessionBo> userServiceDto = userService.addUserSession(info.userId, convertUserSessionIo(info));
+        Dto<SessionBo> userServiceDto = userService.addSession(info.userId, convertUserSessionIo(info));
         closePersistence();
 
         Dto<SessionIo> result = wrapUserSession(userServiceDto.data);
