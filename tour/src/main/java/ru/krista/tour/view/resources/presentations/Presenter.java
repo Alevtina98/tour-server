@@ -3,10 +3,12 @@ package ru.krista.tour.view.resources.presentations;
 import ru.krista.tour.Dto;
 import ru.krista.tour.view.resources.IPresenter;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.ws.rs.core.Response;
 
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON_TYPE;
 
+@ApplicationScoped
 public class Presenter implements IPresenter {
     private Response statusResponse(Integer code, Object data) {
         if (data == null) {
@@ -20,6 +22,8 @@ public class Presenter implements IPresenter {
     private Response okResponse (Object info){
         return statusResponse(200, info);
     }
+
+    @Override
     public <TInformationObject> Response response(Dto<TInformationObject> dto) {
         if (dto.status == Dto.Status.error) {
              return errorResponse(dto.data);

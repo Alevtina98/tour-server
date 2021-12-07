@@ -1,5 +1,6 @@
 package ru.krista.tour.model.data.persistence.entities;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.persistence.Embeddable;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -7,6 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
+@ApplicationScoped
 public class UserTourKey implements Serializable {
     @JoinColumn(referencedColumnName = "user_id")
     @ManyToOne(optional = false)

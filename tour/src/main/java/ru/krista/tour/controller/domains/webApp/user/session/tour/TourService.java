@@ -3,12 +3,16 @@ package ru.krista.tour.controller.domains.webApp.user.session.tour;
 import ru.krista.tour.Dto;
 import ru.krista.tour.model.data.dataObjects.TourDo;
 
+import javax.ws.rs.NotFoundException;
+import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class TourService {
     ITourDao dao;
 
+    private Logger logger = Logger.getLogger("MY LOGGER");
     public TourService(ITourDao dao) {
         this.dao = dao;
     }
@@ -59,12 +63,18 @@ public class TourService {
 
     public Dto<List<TourBo>> getAllTours() {
         Dto<List<TourDo>> daoDto = dao.readAllTours();
+        if (daoDto.data == null) {
+            daoDto.errorMsgList.forEach(msg-> logger.info(msg));
+        }
+        logger.info(daoDto.data.get(0).name);
         Dto<List<TourBo>> result =  new Dto<>(null);
         if (daoDto.status == Dto.Status.error) {
             result.setError("TourService: Не удалось получить список всех туров");
             result.addErrorMsg(daoDto.errorMsgList);
         }
         result.setData(convertTourDo(daoDto.data));
+        logger.info("HELLO");
+        //throw new NotFoundException();
         return result;
     }
 

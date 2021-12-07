@@ -29,6 +29,6 @@ public class TourBo {
         this.desc = "";
         this.dateChange = new Date();
         this.dateCreate = new Date();
-        this.learningProgram = null; //является агрегатором (в будующем код может быть библиотекой?)
+        this.learningProgram = new LearningProgramBo(); //является агрегатором (в будующем код может быть библиотекой?)
     }
 }

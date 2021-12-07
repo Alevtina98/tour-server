@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--        /**
+        * URL: jdbc:postgresql://buildbed.krista.ru:5433/tour
+        *  * USER: sysdba
+        *  * PASS: masterkey
+        *
+        *  * URL: jdbc:postgresql://localhost:5433/TourCreator
+        *  * USER: postgres
+        *  * PASS: postgre
+        **/-->
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence     http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <persistence-unit name="tour-integration" transaction-type="JTA">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <jta-data-source>java:/jdbc/dataaccess</jta-data-source>
+        <validation-mode>NONE</validation-mode>
+        <properties>
+            <property name="krista.module-alias" value="inflatable"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="krista.inflatable.proxied-entity-manager"
+                      value="true"/>
+            <!-- Hibernate -->
+            <property name="hibernate.validator.apply_to_ddl" value="NONE"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.PostgreSQL9Dialect"/>
+        </properties>
+    </persistence-unit>
+
+
+</persistence>
+

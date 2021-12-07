@@ -5,6 +5,7 @@ import org.hibernate.annotations.Proxy;
 import ru.krista.tour.model.data.persistence.entities.RootKey;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -13,6 +14,7 @@ import java.util.Date;
 @Proxy(lazy = true)
 @Table(name = "session")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
+@ApplicationScoped
 public class Session extends RootKey implements Serializable {
    @ManyToOne(optional = false, fetch = FetchType.LAZY)
    @JoinColumn( name="tour_id", referencedColumnName="id")

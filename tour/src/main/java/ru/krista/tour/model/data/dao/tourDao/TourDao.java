@@ -8,6 +8,7 @@ import ru.krista.tour.model.data.dao.tourDao.queryUtils.FilterByGeneral;
 import ru.krista.tour.model.data.dao.tourDao.queryUtils.SelectAllFromTour;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 
+import javax.faces.bean.ApplicationScoped;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +16,7 @@ import java.util.stream.Collectors;
 /*
  * предоставляет сервису домена Тур доступ к персистентным данным
  * */
-
+@ApplicationScoped
 public class TourDao implements ITourDao {
     IProvider provider;
 

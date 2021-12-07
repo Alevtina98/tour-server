@@ -2,6 +2,7 @@ package ru.krista.tour.model.data.persistence.entities;
 
 import org.hibernate.annotations.Proxy;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -9,6 +10,7 @@ import java.util.Date;
 @Entity
 @Proxy(lazy = true)
 @Table(name = "tour")
+@ApplicationScoped
 public class Tour extends RootKey implements Serializable {
     @Column(name = "name")
     private String name;

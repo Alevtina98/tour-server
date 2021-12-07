@@ -1,16 +1,20 @@
 package ru.krista.tour.model.data.persistence;
 
 import ru.krista.tour.Dto;
+import ru.krista.tour.model.data.Model;
 import ru.krista.tour.model.data.dao.IProvider;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFlagFilter;
 import ru.krista.tour.model.data.persistence.queryUtils.ISelectParams;
 
+import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 import javax.transaction.*;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class Provider implements IProvider {
     public EntityManager entityManager;
@@ -91,6 +95,7 @@ public class Provider implements IProvider {
             List<TEntity> entityList = entityManager.createQuery(query).getResultList();
             result.setData(entityList);
         } catch (Exception e) {
+
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении полного списка данных");
         }

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="tour" />
-      <artifact name="tour: exploded" />
+      <artifact name="tour:war" />
+      <artifact name="tour:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -11,21 +11,149 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataObjects/SessionDo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war/tour_war.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto$Status.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/IController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/Controller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/IUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/WebAppBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/IUserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/UserBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/ITourService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/SessionService$StatusVariant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/SessionService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/ITourDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/LearningProgramBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/focus/FocusBo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/IModal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/Model.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/IProvider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/tourDao/TourDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/tourDao/queryUtils/FilterByGeneral.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/tourDao/queryUtils/SelectAllFromTour.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/UserDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromSession.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromSession.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dataObjects/SessionDo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dataObjects/TourDo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dataObjects/UserSessionDo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/Provider.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/entities/RootKey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/entities/Session.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/entities/Tour.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/entities/UserTourKey.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/queryUtils/IColumnFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/queryUtils/IColumnFlagFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/queryUtils/ISelectParams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/View.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Creation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Education.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/IPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/Presenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/EmptyIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/ErrorIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/SessionIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/StatusAndUserIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/TourIdIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/TourIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/UserIdIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/presentations/informationObjects/UserSessionIo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/jboss-web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/activation-1.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/async-http-servlet-3.0-3.0.10.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/javax.mail-1.5.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/jaxrs-api-3.0.10.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-jupiter-5.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-jupiter-api-5.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-jupiter-engine-5.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-jupiter-params-5.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-platform-commons-1.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/junit-platform-engine-1.6.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/resteasy-servlet-initializer-3.0.10.Final.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/serializer-2.7.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/xalan-2.7.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/lib/xml-apis-1.3.04.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/beans.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/IntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/utils/DbTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tour.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/tour__exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc3ec91f-93c5-4b14-a737-beddbdfb2ffb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc3ec91f-93c5-4b14-a737-beddbdfb2ffb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc3ec91f-93c5-4b14-a737-beddbdfb2ffb/storage_v2/_src_/database/consolidation.LA5AyQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bc3ec91f-93c5-4b14-a737-beddbdfb2ffb/storage_v2/_src_/database/consolidation.LA5AyQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bc3ec91f-93c5-4b14-a737-beddbdfb2ffb/storage_v2/_src_/database/consolidation.LA5AyQ/schema/public.abK9xQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T134440.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T134445.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T135440.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T150822.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T150827.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-24T151800.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T115432.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T120611.500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T120834.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T120842.404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T120941.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T121006.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T122554.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T122603.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-25T123510.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-02-26T124818.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134202.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134406.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134431.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134700.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134724.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T134952.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T135029.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T135036.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2021-10-20T135423.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/IUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/IUserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionBo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/SessionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/ITourDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/ITourDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/IModal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourBo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/SessionDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataObjects/UserSessionDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/TourDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dataObjects/TourDo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/program/LearningProgramBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/program/LearningProgramBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/program/focus/FocusBo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/program/focus/FocusBo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/Model.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/TourDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/TourDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/FilterByGeneral.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/FilterByGeneral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/SelectAllFromTour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/queryUtils/SelectAllFromTour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByTourId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/FilterByUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectAllFromSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/queryUtils/SelectTourFromSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Session.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTourKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/UserTourKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Education.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/IController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/TestEntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/utils/EntityManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/tour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/tour.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,17 +300,17 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ntp-hg.krista.ru/Infrastructure/Tools/tour-server" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.15423901" />
-    <property name="rest.client.default.execution.environment" value="dev" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
     <property name="sql.rename.search.for.storage.occurrences" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\main\webapp\WEB-INF" />
       <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\test\resources" />
       <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\view\presentation\rest\jax\presenter\creator" />
       <recent name="C:\workspace\tour-server\tour\src\main\java\ru\krista\tour\controller" />
@@ -335,19 +463,26 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ProviderTest.readListTest">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IntegrationTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="generated-requests#10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#7" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="7" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="generated-requests#8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" runType="Run single request">
+      <method v="2" />
     </configuration>
     <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="LOCAL" value="false" />
@@ -390,10 +525,7 @@
       </RunnerSettings>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="tour" />
-          <artifact name="tour: exploded" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JBossConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
@@ -490,7 +622,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
@@ -499,13 +631,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.IntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProviderTest.crudTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.creationResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
@@ -514,56 +646,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
-      <option name="METHOD_NAME" value="crudTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderTest.readListByColumnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tour" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
-      <option name="METHOD_NAME" value="readListByColumnTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderTest.readListByFilterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tour" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
-      <option name="METHOD_NAME" value="readListByFilterTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProviderTest.readListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tour" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.ProviderTest" />
-      <option name="METHOD_NAME" value="readListTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.IntegrationTest" />
+      <option name="METHOD_NAME" value="creationResources" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -638,7 +722,7 @@
       <deployment>
         <artifact name="tour:war">
           <settings>
-            <option name="CONTEXT_PATH" value="/webapp_war" />
+            <option name="CONTEXT_PATH" value="/tour_war" />
           </settings>
         </artifact>
       </deployment>
@@ -717,26 +801,27 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="tour:war" />
+          <artifact name="tour:war exploded" />
         </option>
       </method>
     </configuration>
     <list>
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
-      <item itemvalue="JUnit.ProviderTest" />
-      <item itemvalue="JUnit.ProviderTest.crudTest" />
-      <item itemvalue="JUnit.ProviderTest.readListTest" />
-      <item itemvalue="JUnit.ProviderTest.readListByColumnTest" />
-      <item itemvalue="JUnit.ProviderTest.readListByFilterTest" />
+      <item itemvalue="JUnit.IntegrationTest" />
       <item itemvalue="Remote JVM Debug.attach" />
       <item itemvalue="Tomcat Server.local" />
+      <item itemvalue="HTTP Request.generated-requests#7" />
+      <item itemvalue="HTTP Request.generated-requests#8" />
+      <item itemvalue="JUnit.IntegrationTest.creationResources" />
+      <item itemvalue="HTTP Request.generated-requests#10" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProviderTest.readListTest" />
-        <item itemvalue="JUnit.ProviderTest" />
-        <item itemvalue="JUnit.ProviderTest.readListByFilterTest" />
-        <item itemvalue="JUnit.ProviderTest.readListByColumnTest" />
-        <item itemvalue="JUnit.ProviderTest.crudTest" />
+        <item itemvalue="JUnit.IntegrationTest" />
+        <item itemvalue="HTTP Request.generated-requests#10" />
+        <item itemvalue="JUnit.IntegrationTest.creationResources" />
+        <item itemvalue="HTTP Request.generated-requests#8" />
+        <item itemvalue="HTTP Request.generated-requests#7" />
       </list>
     </recent_temporary>
   </component>
@@ -864,7 +949,11 @@
       <workItem from="1638274176702" duration="12522000" />
       <workItem from="1638353948527" duration="12950000" />
       <workItem from="1638440709704" duration="14024000" />
-      <workItem from="1638526220835" duration="6226000" />
+      <workItem from="1638526220835" duration="13621000" />
+      <workItem from="1638787841556" duration="5178000" />
+      <workItem from="1638793559215" duration="8316000" />
+      <workItem from="1638874563870" duration="19000" />
+      <workItem from="1638874640032" duration="12755000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -1041,7 +1130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638453621872</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feature: подготовить сервисы доменов">
+      <created>1638534112858</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1638534112858</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1085,7 +1181,8 @@
     <MESSAGE value="feature: добавить конвертацию персистентных данных и доменов (+ Provider ответ в формате Dto)" />
     <MESSAGE value="feature: подготовить объекты доступа к данным для доменных сервисов тура и пользователя" />
     <MESSAGE value="fix: поправить текст сообщений об ошибках" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: поправить текст сообщений об ошибках" />
+    <MESSAGE value="feature: подготовить сервисы доменов" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: подготовить сервисы доменов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1094,8 +1191,22 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="7" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/ITourDao.java</url>
+          <line>13</line>
+          <properties class="ru.krista.tour.controller.domains.webApp.user.session.tour.ITourDao" method="readAllTours">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="java.lang.String" memberName="value" />
+        <PinnedItemInfo parentTag="java.lang.String" memberName="coder" />
+      </pinned-members>
+    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="transaction" language="JAVA" />

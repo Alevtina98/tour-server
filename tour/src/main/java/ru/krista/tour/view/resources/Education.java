@@ -2,20 +2,22 @@ package ru.krista.tour.view.resources;
 
 
 import ru.krista.tour.Dto;
-import ru.krista.tour.view.resources.presentations.Presenter;
+import ru.krista.tour.controller.IController;
 import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
+import javax.annotation.Resource;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/tour/player")
+@Path("/player")
 public class Education {
     @Inject
     IController controller;
     @Inject
-    Presenter presenter;
+    IPresenter presenter;
 
     /**
      * Вход: Связь Пользователь-Тур для добавления в БД

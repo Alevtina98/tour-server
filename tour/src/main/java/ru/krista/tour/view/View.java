@@ -20,4 +20,5 @@ public class View extends Application {
     public Set<Object> getSingletons() {
         return singletons;
     }
+
 }

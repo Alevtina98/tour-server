@@ -13,6 +13,8 @@ import ru.krista.tour.model.data.persistence.entities.Tour;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 
 
+import javax.faces.bean.ApplicationScoped;
+import javax.ws.rs.NotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,7 +24,7 @@ import java.util.stream.Collectors;
 /*
  * предоставляет сервису домена Пользователь доступ к персистентным данным
  * */
-
+@ApplicationScoped
 public class UserDao implements IUserDao {
     IProvider provider;
 
@@ -123,12 +125,12 @@ public class UserDao implements IUserDao {
     public Dto<List<SessionDo>> readAllUserSessions(String userId) {
         Dto<List<Session>> providerResult = provider.readWithValueFilter(new SelectAllFromSession(), new FilterByUserId(userId));
         Dto<List<SessionDo>> result = new Dto<>(null);
-        if (providerResult.status == Dto.Status.ok) {
-            result.setData(convertSessionEntity(providerResult.data));
-        } else {
-            result.setError("UserDao: Не удалось прочитать данные обо всех сессиях пользователя");
-            result.addErrorMsg(providerResult.errorMsgList);
+
+        if (providerResult.status != Dto.Status.ok) {
+            throw new NotFoundException();
         }
+
+        result.setData(convertSessionEntity(providerResult.data));
         return result;
     }
 

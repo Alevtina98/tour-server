@@ -1,15 +1,18 @@
 package ru.krista.tour.view.resources;
 
 import ru.krista.tour.Dto;
+import ru.krista.tour.controller.IController;
 import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
-import javax.inject.Inject;
+import javax.annotation.Resource;
+import javax.enterprise.context.RequestScoped;
 
+import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("/tour/creator")
+@Path("/creation")
 public class Creation {
     @Inject
     IController controller;
@@ -22,6 +25,7 @@ public class Creation {
     @GET
     @Produces("application/json")
     public Response getTourList() {
+        System.out.println("Creation resources!");
         Dto<List<TourIo>> dto = controller.getAllTours();
         return presenter.response(dto);
     }

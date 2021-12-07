@@ -3,9 +3,10 @@ package ru.krista.tour.model.data.dao.userDao.queryUtils;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
-
+@ApplicationScoped
 public class FilterByUserId implements IColumnFilter<Session> {
     public String targetValue;
     public Path<Object> rootColumnValue (Root<Session> rootEntity) {

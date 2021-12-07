@@ -1,5 +1,6 @@
 package ru.krista.tour;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Dto <T> {
@@ -8,7 +9,7 @@ public class Dto <T> {
     }
     public Status status;
     public T data; // information object / ArrayList<Io>
-    public List<String> errorMsgList;
+    public List<String> errorMsgList = new ArrayList<>();
 
     public Dto(T data) {
         this.data = data;
