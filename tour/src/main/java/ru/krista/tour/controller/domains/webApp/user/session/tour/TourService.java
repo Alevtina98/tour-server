@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class TourService {
     ITourDao dao;
 
-    private Logger logger = Logger.getLogger("MY LOGGER");
+
     public TourService(ITourDao dao) {
         this.dao = dao;
     }
@@ -63,17 +63,12 @@ public class TourService {
 
     public Dto<List<TourBo>> getAllTours() {
         Dto<List<TourDo>> daoDto = dao.readAllTours();
-        if (daoDto.data == null) {
-            daoDto.errorMsgList.forEach(msg-> logger.info(msg));
-        }
-        logger.info(daoDto.data.get(0).name);
         Dto<List<TourBo>> result =  new Dto<>(null);
         if (daoDto.status == Dto.Status.error) {
             result.setError("TourService: Не удалось получить список всех туров");
             result.addErrorMsg(daoDto.errorMsgList);
         }
         result.setData(convertTourDo(daoDto.data));
-        logger.info("HELLO");
         //throw new NotFoundException();
         return result;
     }
@@ -112,8 +107,15 @@ public class TourService {
         return result;
     }
 
-    public Dto<Object> deleteTour(Number id) {
-        return null;
+    public Dto<TourBo> deleteTour(Long id) {
+        Dto<TourDo> daoDto = dao.deleteTour(id);
+        Dto<TourBo> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("TourService: Не удалось удалить тур");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(convertTourDo(daoDto.data));
+        return result;
     }
 
 

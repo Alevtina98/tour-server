@@ -10,6 +10,7 @@ import ru.krista.tour.model.data.persistence.entities.Tour;
 
 import javax.faces.bean.ApplicationScoped;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 
@@ -95,12 +96,15 @@ public class TourDao implements ITourDao {
         return result;
     }
 
+
     public Dto<TourDo> deleteTour(Long id) {
         Dto<Tour> providerResult = provider.delete(Tour.class, id);
         Dto<TourDo> result = new Dto<>(null);
         if (providerResult.status == Dto.Status.ok) {
             result.setData(convertTourEntity(providerResult.data));
         } else {
+
+
             result.setError("TourDao: Не удалось удалить данные о туре");
             result.addErrorMsg(providerResult.errorMsgList);
         }

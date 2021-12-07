@@ -3,23 +3,16 @@ package ru.krista.tour.persistence;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSender;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-import org.junit.After;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.krista.tour.persistence.utils.DbTest;
-import ru.krista.tour.view.View;
 
 import static io.restassured.RestAssured.*;
 
 import javax.inject.Named;
-import java.io.File;
 
 
 @Named("integration-test")
@@ -42,7 +35,6 @@ public class IntegrationTest extends DbTest {
     @Before
     public void initRequest() {
         RestAssured.requestSpecification = requestSpec;
-
         //  given().baseUri("http://localhost/rest").port(8080).contentType(ContentType.JSON);
         //RestAssured.responseSpecification = responseSpec;
 

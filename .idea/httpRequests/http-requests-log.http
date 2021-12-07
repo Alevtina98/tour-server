@@ -1,3 +1,45 @@
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+<> 2021-12-07T175045.500.html
+
+###
+
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+<> 2021-12-07T175025.500.html
+
+###
+
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+###
+
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+<> 2021-12-07T174510.500.html
+
+###
+
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+<> 2021-12-07T174314.500.html
+
+###
+
+DELETE http://localhost:8080/tour-server/resources/creation/112
+
+<> 2021-12-07T173813.500.html
+
+###
+
+DELETE http://localhost/tour-server/resources/creation/112
+
+###
+
+DELETE http://localhost/tour-server/resources/creation/{{112}}
+
+###
+
 GET http://localhost:8080/tour-server/resources/creation
 
 ###
@@ -229,50 +271,6 @@ GET http://localhost/creation
 POST http://localhost:8080/tour/api/creator
 
 <> 2021-12-07T142124.404.html
-
-###
-
-POST http://localhost:8080/tour/tour-server/api/creator
-
-<> 2021-12-07T142114.404.html
-
-###
-
-POST http://localhost:8080/tour-server/api/creator
-
-###
-
-POST http://localhost:8080/tour-server/api/player
-
-###
-
-POST http://localhost:8080/player
-
-<> 2021-12-07T142017.404.html
-
-###
-
-POST http://localhost:8080/api/player
-
-<> 2021-12-07T142007.404.html
-
-###
-
-POST http://localhost:8080/api/player
-
-<> 2021-12-07T142004.404.html
-
-###
-
-POST http://localhost:8080/api/player
-
-<> 2021-12-07T142000.404.html
-
-###
-
-GET http://localhost:8080/creation
-
-<> 2021-12-06T163749.404.html
 
 ###
 

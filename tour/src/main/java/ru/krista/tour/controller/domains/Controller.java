@@ -38,10 +38,10 @@ public class Controller implements IController {
     IModal modal;
 
     private void openPersistence() {
-        //modal.openGateway();
+        modal.openGateway();
     }
     private void closePersistence() {
-        //modal.closeGateway();
+        modal.closeGateway();
     }
 
 
@@ -165,7 +165,7 @@ public class Controller implements IController {
 
         openPersistence();
         TourService tourService = new TourService(modal.getTouDao());
-        Dto<Object> tourServiceDto = tourService.deleteTour(info.id);
+        Dto<TourBo> tourServiceDto = tourService.deleteTour(info.id);
         closePersistence();
 
         Dto<EmptyIo> result =  new Dto<>(null);

@@ -6,10 +6,14 @@ import ru.krista.tour.view.resources.IPresenter;
 import javax.faces.bean.ApplicationScoped;
 import javax.ws.rs.core.Response;
 
+import java.util.logging.Logger;
+
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON_TYPE;
 
 @ApplicationScoped
 public class Presenter implements IPresenter {
+    private Logger logger = Logger.getLogger("Presenter LOGGER");
+
     private Response statusResponse(Integer code, Object data) {
         if (data == null) {
             return Response.status(code).build();
@@ -26,6 +30,7 @@ public class Presenter implements IPresenter {
     @Override
     public <TInformationObject> Response response(Dto<TInformationObject> dto) {
         if (dto.status == Dto.Status.error) {
+            dto.errorMsgList.forEach(msg-> logger.info(msg));
              return errorResponse(dto.data);
         }
         return okResponse(dto.data);
