@@ -7,6 +7,7 @@ public class Dto <T> {
     public enum Status {
         ok, error
     }
+
     public Status status;
     public T data; // information object / ArrayList<Io>
     public List<String> errorMsgList = new ArrayList<>();

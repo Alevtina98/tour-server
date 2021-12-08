@@ -792,7 +792,7 @@ false Z
 false Zulu
 false posixrules
 </TimeZones>
-      <StartupTime>1637669932</StartupTime>
+      <StartupTime>1638967578</StartupTime>
     </root>
     <database id="2" parent="1" name="TourCreator">
       <ObjectId>16485</ObjectId>
@@ -820,7 +820,7 @@ false posixrules
 12648||-9223372036854775808|U|G
 12648||10|U|G</Grants>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>44712</IntrospectionStateNumber>
+      <IntrospectionStateNumber>45279</IntrospectionStateNumber>
       <Current>1</Current>
     </database>
     <role id="6" parent="1" name="pg_monitor">
@@ -884,7 +884,7 @@ false posixrules
       <Comment>standard public schema</Comment>
       <StateNumber>352</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>44713</IntrospectionStateNumber>
+      <IntrospectionStateNumber>45280</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="18" parent="5" name="plpgsql">
@@ -983,54 +983,177 @@ false posixrules
       <StateNumber>44530</StateNumber>
       <DataType>bigint|0s</DataType>
     </sequence>
-    <table id="30" parent="17" name="session">
+    <table id="30" parent="17" name="core_job_result">
+      <ObjectId>205454</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>45219</StateNumber>
+    </table>
+    <table id="31" parent="17" name="session">
       <ObjectId>197200</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>44702</StateNumber>
     </table>
-    <table id="31" parent="17" name="tour">
+    <table id="32" parent="17" name="tour">
       <ObjectId>197187</ObjectId>
       <Owner>postgres</Owner>
       <StateNumber>44702</StateNumber>
     </table>
-    <table id="32" parent="17" name="user_tour">
-      <ObjectId>197179</ObjectId>
-      <Owner>postgres</Owner>
-      <StateNumber>44556</StateNumber>
-    </table>
     <column id="33" parent="30" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>45219</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="34" parent="30" name="data_class_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="35" parent="30" name="data_json">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="36" parent="30" name="job_creation_date">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="37" parent="30" name="job_description">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="30" name="job_id">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="39" parent="30" name="job_name">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="40" parent="30" name="object_id">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="30" name="operation_name">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="30" name="sevice_local_name">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="30" name="service_name_space">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="30" name="status">
+      <Position>12</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="30" name="user_name">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>45219</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="46" parent="30" name="core_job_result_pkey">
+      <ObjectId>205460</ObjectId>
+      <StateNumber>45219</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>0</CollationIds>
+      <ClassIds>3124</ClassIds>
+    </index>
+    <index id="47" parent="30" name="idx_job_id">
+      <ObjectId>205462</ObjectId>
+      <StateNumber>45220</StateNumber>
+      <ColNames>job_id</ColNames>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <ClassIds>3126</ClassIds>
+    </index>
+    <index id="48" parent="30" name="idx_object_id">
+      <ObjectId>205464</ObjectId>
+      <StateNumber>45222</StateNumber>
+      <ColNames>object_id</ColNames>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <ClassIds>3126</ClassIds>
+    </index>
+    <index id="49" parent="30" name="idx_user_name">
+      <ObjectId>205463</ObjectId>
+      <StateNumber>45221</StateNumber>
+      <ColNames>user_name</ColNames>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationIds>100</CollationIds>
+      <CollationNames>default</CollationNames>
+      <ClassIds>3126</ClassIds>
+    </index>
+    <key id="50" parent="30" name="core_job_result_pkey">
+      <ObjectId>205461</ObjectId>
+      <StateNumber>45219</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>core_job_result_pkey</UnderlyingIndexName>
+    </key>
+    <column id="51" parent="31" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>44701</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="34" parent="30" name="change_date">
+    <column id="52" parent="31" name="change_date">
       <Position>2</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>44701</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="35" parent="30" name="status">
+    <column id="53" parent="31" name="status">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44701</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="30" name="user_id">
+    <column id="54" parent="31" name="user_id">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44701</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="30" name="tour_id">
+    <column id="55" parent="31" name="tour_id">
       <Position>5</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>44701</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <index id="38" parent="30" name="session_pkey">
+    <index id="56" parent="31" name="session_pkey">
       <ObjectId>197206</ObjectId>
       <StateNumber>44701</StateNumber>
       <ColNames>id</ColNames>
@@ -1040,14 +1163,14 @@ false posixrules
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="39" parent="30" name="session_pkey">
+    <key id="57" parent="31" name="session_pkey">
       <ObjectId>197207</ObjectId>
       <StateNumber>44701</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>session_pkey</UnderlyingIndexName>
     </key>
-    <foreign-key id="40" parent="30" name="fk6vfsqd0oxsdpa8yalfnff5bqv">
+    <foreign-key id="58" parent="31" name="fk6vfsqd0oxsdpa8yalfnff5bqv">
       <ObjectId>197208</ObjectId>
       <StateNumber>44702</StateNumber>
       <ColNames>tour_id</ColNames>
@@ -1057,68 +1180,68 @@ false posixrules
       <RefKeyName>tour_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="41" parent="31" name="id">
+    <column id="59" parent="32" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>44555</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="42" parent="31" name="code">
+    <column id="60" parent="32" name="code">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="31" name="code_js">
+    <column id="61" parent="32" name="code_js">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="44" parent="31" name="change_date">
+    <column id="62" parent="32" name="change_date">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="45" parent="31" name="create_date">
+    <column id="63" parent="32" name="create_date">
       <Position>5</Position>
       <DataType>timestamp|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="46" parent="31" name="description">
+    <column id="64" parent="32" name="description">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="47" parent="31" name="form_caption">
+    <column id="65" parent="32" name="form_caption">
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="48" parent="31" name="form_name">
+    <column id="66" parent="32" name="form_name">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="49" parent="31" name="is_general_user">
+    <column id="67" parent="32" name="is_general_user">
       <Position>9</Position>
       <DataType>boolean|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="50" parent="31" name="name">
+    <column id="68" parent="32" name="name">
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>44555</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="51" parent="31" name="tour_pkey">
+    <index id="69" parent="32" name="tour_pkey">
       <ObjectId>197193</ObjectId>
       <StateNumber>44555</StateNumber>
       <ColNames>id</ColNames>
@@ -1128,71 +1251,12 @@ false posixrules
       <CollationIds>0</CollationIds>
       <ClassIds>3124</ClassIds>
     </index>
-    <key id="52" parent="31" name="tour_pkey">
+    <key id="70" parent="32" name="tour_pkey">
       <ObjectId>197194</ObjectId>
       <StateNumber>44555</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tour_pkey</UnderlyingIndexName>
     </key>
-    <column id="53" parent="32" name="id">
-      <Position>1</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>44554</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <column id="54" parent="32" name="change_date">
-      <Position>2</Position>
-      <DataType>timestamp|0s</DataType>
-      <StateNumber>44554</StateNumber>
-      <TypeId>1114</TypeId>
-    </column>
-    <column id="55" parent="32" name="status">
-      <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>44554</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="56" parent="32" name="user_id">
-      <Position>4</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>44554</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="57" parent="32" name="tour_id">
-      <Position>5</Position>
-      <DataType>bigint|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>44554</StateNumber>
-      <TypeId>20</TypeId>
-    </column>
-    <index id="58" parent="32" name="user_tour_pkey">
-      <ObjectId>197185</ObjectId>
-      <StateNumber>44554</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>0</CollationIds>
-      <ClassIds>3124</ClassIds>
-    </index>
-    <key id="59" parent="32" name="user_tour_pkey">
-      <ObjectId>197186</ObjectId>
-      <StateNumber>44554</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>user_tour_pkey</UnderlyingIndexName>
-    </key>
-    <foreign-key id="60" parent="32" name="fk6ika70x4u8oubdb4lgixupvv0">
-      <ObjectId>197195</ObjectId>
-      <StateNumber>44556</StateNumber>
-      <ColNames>tour_id</ColNames>
-      <RefTableId>197187</RefTableId>
-      <RefColPositions>1</RefColPositions>
-      <RefTableName>tour</RefTableName>
-      <RefKeyName>tour_pkey</RefKeyName>
-      <RefColNames>id</RefColNames>
-    </foreign-key>
   </database-model>
 </dataSource>

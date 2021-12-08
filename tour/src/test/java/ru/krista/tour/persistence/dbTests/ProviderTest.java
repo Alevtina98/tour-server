@@ -1,4 +1,4 @@
-package ru.krista.tour.persistence;
+package ru.krista.tour.persistence.dbTests;
 
 import org.junit.*;
 import ru.krista.tour.controller.domains.webApp.user.session.SessionService;
@@ -8,14 +8,14 @@ import ru.krista.tour.model.data.dao.userDao.queryUtils.*;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
-import ru.krista.tour.persistence.utils.DbTest;
+import ru.krista.tour.persistence.persistence.TestData;
 
 import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
 @Named("test")
-public class ProviderTest extends DbTest {
+public class ProviderTest extends TestData {
 
     @Test
     public void crudTest() {
@@ -26,15 +26,15 @@ public class ProviderTest extends DbTest {
         tour.setName("Test");
         tour.setDesc("");
 
-        testEntityManager.getTransaction().begin();
+        entityManager.getTransaction().begin();
         Tour createdTour = provider.create(tour).data;
-        testEntityManager.getTransaction().commit();
-        testEntityManager.detach(tour);
+        entityManager.getTransaction().commit();
+        entityManager.detach(tour);
 
         Assert.assertNotNull(createdTour);
         Assert.assertNotNull(createdTour.getDateCreate());
         Assert.assertNotNull(createdTour.getDateChange());
-        Assert.assertEquals(createdTour.getDateChange(),createdTour.getDateCreate());
+        Assert.assertEquals(createdTour.getDateChange(), createdTour.getDateCreate());
 
 
         // READ
@@ -49,26 +49,29 @@ public class ProviderTest extends DbTest {
         String newDesc = "Tour description";
         tour.setDesc(newDesc);
 
-        testEntityManager.getTransaction().begin();
-        Tour editedTour =  provider.update(tour).data;
-        testEntityManager.getTransaction().commit();
-        testEntityManager.detach(tour);
+        entityManager.getTransaction().begin();
+        Tour editedTour = provider.update(tour).data;
+        entityManager.getTransaction().commit();
+        entityManager.detach(tour);
 
         Assert.assertEquals(editedTour.getDesc(), newDesc);
-        Assert.assertNotEquals(editedTour.getDateChange(),editedTour.getDateCreate());
+        Assert.assertNotEquals(editedTour.getDateChange(), editedTour.getDateCreate());
 
         // DELETE
 
-        testEntityManager.getTransaction().begin();
+        entityManager.getTransaction().begin();
         provider.delete(Tour.class, id);
         tour = provider.readById(Tour.class, id).data;
-        testEntityManager.getTransaction().commit();
+        entityManager.getTransaction().commit();
 
         Assert.assertNull(tour);
     }
 
     @Test
     public void readListTest() {
+
+
+
         // READ ALL
 
         List<Tour> tourList = provider.readAll(Tour.class).data;
@@ -92,7 +95,7 @@ public class ProviderTest extends DbTest {
         SelectTourFromSession selectTourFromSession = new SelectTourFromSession();
         FilterByUserId filterByUserId = new FilterByUserId("user2");
 
-        tourList = provider.readWithValueFilter(selectTourFromSession,filterByUserId).data;
+        tourList = provider.readWithValueFilter(selectTourFromSession, filterByUserId).data;
 
         Assert.assertEquals(tourList.size(), 1);
         Assert.assertEquals(tourList.get(0).getName(), "Tour1");
@@ -100,7 +103,7 @@ public class ProviderTest extends DbTest {
         // READ BY COLUMN LIST
 
         List<IColumnFilter<Session>> filterList = new ArrayList<IColumnFilter<Session>>();
-        filterByUserId  = new FilterByUserId("user1");
+        filterByUserId = new FilterByUserId("user1");
         FilterByStatus filterByStatus = new FilterByStatus(SessionService.StatusVariant.INTERRUPTED.toString());
         filterList.add(filterByUserId);
         filterList.add(filterByStatus);
@@ -114,7 +117,7 @@ public class ProviderTest extends DbTest {
 
         SelectAllFromSession selectAllFromSession = new SelectAllFromSession();
         filterList = new ArrayList<IColumnFilter<Session>>();
-        filterByUserId  = new FilterByUserId("user1");
+        filterByUserId = new FilterByUserId("user1");
         FilterByTourId filterByTourId = new FilterByTourId(pTour1.getId());
         filterList.add(filterByUserId);
         filterList.add(filterByTourId);
@@ -123,6 +126,10 @@ public class ProviderTest extends DbTest {
 
         Assert.assertEquals(sessionList.size(), 1);
         Assert.assertEquals(sessionList.get(0).getId(), pSession1.getId());
+
+
+
+
 
     }
 }

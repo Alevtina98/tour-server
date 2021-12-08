@@ -11,29 +11,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/indegrationTests/RestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09cdd962-6988-485c-bdb0-8ca23e720309.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09cdd962-6988-485c-bdb0-8ca23e720309.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/09cdd962-6988-485c-bdb0-8ca23e720309/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/09cdd962-6988-485c-bdb0-8ca23e720309/storage_v2/_src_/database/test.kkQ2AA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war/tour_war.war" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war/tour_war.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto$Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/Dto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourBo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourBo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/LearningProgramBo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/LearningProgramBo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/focus/FocusBo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/controller/domains/webApp/user/session/tour/program/focus/FocusBo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/Model.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/tourDao/TourDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/tourDao/TourDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/dao/userDao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/model/data/persistence/Provider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/View.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Creation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Creation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Education.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/classes/ru/krista/tour/view/resources/Education.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/tour_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/TourDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/tourDao/TourDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/IntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/IntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/Dto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/IntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/ProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/dbTests/ProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/utils/DbTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/persistence/InitData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/utils/EntityManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/java/ru/krista/tour/persistence/persistence/TestPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/test/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +170,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../servers/consolidation" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -213,11 +203,11 @@
       <recent name="ru.krista.rest" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.krista.tour.persistence.indegrationTests" />
+      <recent name="ru.krista.tour.persistence.utils" />
       <recent name="ru.krista.tour.view.resources.presentations.informationObjects" />
       <recent name="ru.krista.tour.model.data.dao.userDao.queryUtils" />
       <recent name="ru.krista.tour.model.data.dao.tourDao.queryUtils" />
-      <recent name="ru.krista.tour.view.presentation.rest.jax.clients.creator" />
-      <recent name="ru.krista.tour.controller.Tour" />
     </key>
   </component>
   <component name="RestClientSettings">
@@ -343,26 +333,19 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.local">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.RestTest.creationResources">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="generated-requests#10" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="10" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests#15" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="15" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="generated-requests#8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http" index="8" runType="Run single request">
-      <method v="2" />
     </configuration>
     <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="LOCAL" value="false" />
@@ -502,31 +485,78 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTest.creationResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
+          <option name="PATTERN" value="ru.krista.tour.persistence.utils.integrationTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.IntegrationTest" />
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence.utils.integrationTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.utils.integrationTests.IntegrationTest" />
+      <option name="METHOD_NAME" value="creationResources" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.persistence.dbTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence.dbTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.dbTests.ProviderTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTest.creationResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProviderTest.crudTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tour" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.krista.tour.persistence.*" />
+          <option name="PATTERN" value="ru.krista.tour.persistence.dbTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence" />
-      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.IntegrationTest" />
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence.dbTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.dbTests.ProviderTest" />
+      <option name="METHOD_NAME" value="crudTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.persistence.indegrationTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence.indegrationTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.indegrationTests.RestTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RestTest.creationResources" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tour" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.krista.tour.persistence.dbTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.krista.tour.persistence.indegrationTests" />
+      <option name="MAIN_CLASS_NAME" value="ru.krista.tour.persistence.indegrationTests.RestTest" />
       <option name="METHOD_NAME" value="creationResources" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -687,21 +717,21 @@
     </configuration>
     <list>
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
-      <item itemvalue="JUnit.IntegrationTest" />
+      <item itemvalue="JUnit.IntegrationTest.creationResources" />
+      <item itemvalue="JUnit.RestTest.creationResources" />
+      <item itemvalue="JUnit.RestTest" />
+      <item itemvalue="JUnit.ProviderTest" />
+      <item itemvalue="JUnit.ProviderTest.crudTest" />
       <item itemvalue="Remote JVM Debug.attach" />
       <item itemvalue="Tomcat Server.local" />
-      <item itemvalue="HTTP Request.generated-requests#8" />
-      <item itemvalue="JUnit.IntegrationTest.creationResources" />
-      <item itemvalue="HTTP Request.generated-requests#10" />
-      <item itemvalue="HTTP Request.generated-requests#15" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.generated-requests#15" />
-        <item itemvalue="JUnit.IntegrationTest" />
-        <item itemvalue="HTTP Request.generated-requests#10" />
+        <item itemvalue="JUnit.RestTest.creationResources" />
+        <item itemvalue="JUnit.RestTest" />
+        <item itemvalue="JUnit.ProviderTest" />
+        <item itemvalue="JUnit.ProviderTest.crudTest" />
         <item itemvalue="JUnit.IntegrationTest.creationResources" />
-        <item itemvalue="HTTP Request.generated-requests#8" />
       </list>
     </recent_temporary>
   </component>
@@ -833,7 +863,9 @@
       <workItem from="1638787841556" duration="5178000" />
       <workItem from="1638793559215" duration="8316000" />
       <workItem from="1638874563870" duration="19000" />
-      <workItem from="1638874640032" duration="13904000" />
+      <workItem from="1638874640032" duration="14043000" />
+      <workItem from="1638956874775" duration="9482000" />
+      <workItem from="1638967935303" duration="6481000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -1024,7 +1056,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638887645218</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix: добавить удаление тура">
+      <created>1638888720017</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1638888720017</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1044,7 +1083,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: обрабатывать клиентские запросы на userTour api" />
     <MESSAGE value="feat: добавить получение общепользовательских туров" />
     <MESSAGE value="feat: добавить получение общепользовательских туров (+refactor)" />
     <MESSAGE value="feat: добавить получение настроек через persistence" />
@@ -1069,7 +1107,8 @@
     <MESSAGE value="fix: поправить текст сообщений об ошибках" />
     <MESSAGE value="feature: подготовить сервисы доменов" />
     <MESSAGE value="fix: вынести из конструктора передачу entityManager, добавить файл для @Inject" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: вынести из конструктора передачу entityManager, добавить файл для @Inject" />
+    <MESSAGE value="fix: добавить удаление тура" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: добавить удаление тура" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

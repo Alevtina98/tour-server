@@ -1,6 +1,5 @@
-package ru.krista.tour.persistence.utils;
+package ru.krista.tour.persistence.persistence;
 
-import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 import javax.inject.Named;
@@ -10,11 +9,11 @@ import javax.persistence.Persistence;
 import java.util.HashMap;
 import java.util.Map;
 
-@Named("test")
-public class EntityManagerTest {
+@Named("test-persistence")
+public class TestEntityManager {
     // entity manager, управляемый приложением
-    public static EntityManager testEntityManager;
-    protected static EntityManagerFactory factory;
+    public static EntityManager entityManager;
+    public static EntityManagerFactory factory;
 
     @BeforeClass
     public static void createEntityManagerFactory() {
@@ -23,14 +22,14 @@ public class EntityManagerTest {
         connectionProperties.put("javax.persistence.jdbc.user", "postgres");
         connectionProperties.put("javax.persistence.jdbc.password", "postgre");
         connectionProperties.put("hibernate.default_schema", "public");
-        factory = Persistence.createEntityManagerFactory("tour-test", connectionProperties);
-        testEntityManager = factory.createEntityManager();
+        factory = javax.persistence.Persistence.createEntityManagerFactory( "test-data-source", connectionProperties);
+        entityManager = factory.createEntityManager();
     }
 
-    @AfterClass
+    /*@AfterClass
     public static void closeEntityManagerFactory() {
         factory.close();
-    }
+    }*/
 
     /*
     @Before

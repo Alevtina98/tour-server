@@ -21,13 +21,13 @@ import java.util.logging.Logger;
 @ApplicationScoped
 public class Model implements IModal {
     // entity manager, управляемый контейнером
-    @PersistenceContext(name = "tour-integration")
+    @PersistenceContext(name = "integration-data-source")
     public EntityManager entityManager;
+
     @Inject
     public UserTransaction userTransaction;
 
     IProvider provider;
-
 
 
     @PostConstruct
@@ -70,7 +70,6 @@ public class Model implements IModal {
     public TourDao getTouDao() {
         return new TourDao(provider);
     }
-
 
 
 }

@@ -1,4 +1,4 @@
-package ru.krista.tour.persistence.utils;
+package ru.krista.tour.persistence.persistence;
 
 import org.junit.After;
 import org.junit.Before;
@@ -8,9 +8,11 @@ import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 
 import javax.inject.Named;
+import javax.ws.rs.NotFoundException;
 
-@Named("db-test")
-public class DbTest extends EntityManagerTest {
+@Named("init-data")
+public class TestData extends TestEntityManager {
+
     protected Provider provider;
 
     protected Tour pTour1;
@@ -20,8 +22,12 @@ public class DbTest extends EntityManagerTest {
     protected Session pSession3;
 
     @Before
-    public void init() {
-        provider = new Provider(testEntityManager);
+    public void initDb() {
+        if (entityManager == null) {
+            throw new NotFoundException();
+        }
+
+        provider = new Provider(entityManager);
 
         Tour tour1 = new Tour();
         tour1.setName("Tour1");
@@ -30,10 +36,10 @@ public class DbTest extends EntityManagerTest {
         tour2.setName("Tour2");
         tour2.setGeneralUser(false);
 
-        testEntityManager.getTransaction().begin();
+        entityManager.getTransaction().begin();
         pTour1 = provider.create(tour1).data;
         pTour2 = provider.create(tour2).data;
-        testEntityManager.getTransaction().commit();
+        entityManager.getTransaction().commit();
 
         Session session1 = new Session();
         session1.setUserId("user1");
@@ -48,20 +54,21 @@ public class DbTest extends EntityManagerTest {
         session3.setTour(pTour2);
         session3.setStatus(SessionService.StatusVariant.INTERRUPTED.toString());
 
-        testEntityManager.getTransaction().begin();
+        entityManager.getTransaction().begin();
         pSession1 = provider.create(session1).data;
         pSession2 = provider.create(session2).data;
         pSession3 = provider.create(session3).data;
-        testEntityManager.getTransaction().commit();
+        entityManager.getTransaction().commit();
     }
+
     @After
     public void clearDb() {
-        testEntityManager.getTransaction().begin();
+        entityManager.getTransaction().begin();
         provider.delete(Session.class, pSession1.getId());
         provider.delete(Session.class, pSession2.getId());
         provider.delete(Session.class, pSession3.getId());
         provider.delete(Tour.class, pTour1.getId());
         provider.delete(Tour.class, pTour2.getId());
-        testEntityManager.getTransaction().commit();
+        entityManager.getTransaction().commit();
     }
 }
