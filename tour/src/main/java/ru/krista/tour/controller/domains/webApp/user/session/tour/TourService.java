@@ -19,6 +19,7 @@ public class TourService {
 
     public static TourDo convertTourBo(TourBo tourBo) {
         TourDo tourDo = new TourDo();
+        tourDo.id = tourBo.id;
         tourDo.name = getCompliantName(tourBo.name);
         tourDo.desc = tourBo.desc;
         tourDo.codeXml = tourBo.learningProgram.codeXml;
@@ -34,6 +35,8 @@ public class TourService {
         tourBo.id = tourDo.id;
         tourBo.name = tourDo.name;
         tourBo.desc = tourDo.desc;
+        tourBo.dateCreate = tourDo.dateCreate;
+        tourBo.dateChange = tourDo.dateChange;
         tourBo.learningProgram.codeXml = tourDo.codeXml;
         tourBo.learningProgram.codeJs = tourDo.codeJs;
         tourBo.learningProgram.focus.isGeneralUser = tourDo.isGeneralUser;
@@ -57,6 +60,7 @@ public class TourService {
             result.setError("TourService: Не удалось создать тур");
             result.addErrorMsg(daoDto.errorMsgList);
         }
+        System.out.println(daoDto.data);
         result.setData(convertTourDo(daoDto.data));
         return result;
     }

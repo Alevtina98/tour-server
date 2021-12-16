@@ -18,7 +18,6 @@ PASS: postgre
 
     <persistence-unit name="test-data-source" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-        <jta-data-source>java:/jdbc/dataaccess</jta-data-source>
 
         <class>ru.krista.tour.model.data.persistence.entities.Tour</class>
         <class>ru.krista.tour.model.data.persistence.entities.Session</class>

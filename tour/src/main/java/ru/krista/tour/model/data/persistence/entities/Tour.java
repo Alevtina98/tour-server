@@ -1,6 +1,8 @@
 package ru.krista.tour.model.data.persistence.entities;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Proxy;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.persistence.*;
@@ -19,17 +21,19 @@ public class Tour extends RootKey implements Serializable {
     private String desc;
 
     @Column(name = "code")
+    @Lob
     private String code;
 
     @Column(name = "code_js" )
+    @Lob
     private String codeJS;
 
     @Column(name = "create_date", updatable = false)
-   // @CreationTimestamp
+    @CreationTimestamp
     private Date dateCreate;
 
     @Column(name = "change_date")
-    //@UpdateTimestamp
+    @UpdateTimestamp
     private Date dateChange;
 
     @Column(name = "form_name")
@@ -42,7 +46,7 @@ public class Tour extends RootKey implements Serializable {
     private boolean isGeneralUser;
 
 
-    @PrePersist
+  /*  @PrePersist
     protected void onCreate() {
         dateCreate = new Date();
         dateChange = new Date();
@@ -50,8 +54,10 @@ public class Tour extends RootKey implements Serializable {
 
     @PreUpdate
     protected void onUpdate() {
+
         dateChange = new Date();
-    }
+    }*/
+
     @Override
     public Long getId() {
         return super.getId();

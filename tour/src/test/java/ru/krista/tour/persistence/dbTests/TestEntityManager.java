@@ -1,4 +1,4 @@
-package ru.krista.tour.persistence.persistence;
+package ru.krista.tour.persistence.dbTests;
 
 import org.junit.BeforeClass;
 

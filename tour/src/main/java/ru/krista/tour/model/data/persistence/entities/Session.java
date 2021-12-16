@@ -1,7 +1,9 @@
 package ru.krista.tour.model.data.persistence.entities;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.Proxy;
+import org.hibernate.annotations.UpdateTimestamp;
 import ru.krista.tour.model.data.persistence.entities.RootKey;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 
@@ -25,10 +27,18 @@ public class Session extends RootKey implements Serializable {
     @Column(name= "status")
     private String status;
 
-    @Column(name= "change_date",insertable = false, updatable = false)
-    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name= "change_date")
     private Date dateChange;
 
+    @PrePersist
+    protected void onPersist() {
+        dateChange = new Date();
+    }
+    @PreUpdate
+    protected void onUpdate() {
+
+        dateChange = new Date();
+    }
     public Session(String user, Tour tour, String status){
         this.userId = user;
         this.tour = tour;

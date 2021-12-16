@@ -12,13 +12,14 @@ public class SessionBo {
     public Long id;
     public TourBo tour;
     public Date dateChange;
-    public SessionService.StatusVariant status;
+    public String status;
 
-    public SessionBo(TourBo tour, SessionService.StatusVariant status, Date date) {
+    public SessionBo(TourBo tour, String status, Date date) {
         this.tour = tour;
         this.status = status;
        this.dateChange = date;
     }
     public SessionBo() {
+        this.status = SessionService.StatusVariant.APPOINTED.getTitle();
     }
 }

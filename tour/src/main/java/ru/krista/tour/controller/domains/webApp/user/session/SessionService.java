@@ -3,6 +3,8 @@ package ru.krista.tour.controller.domains.webApp.user.session;
 import ru.krista.tour.controller.domains.webApp.user.session.tour.TourService;
 import ru.krista.tour.model.data.dataObjects.SessionDo;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,22 +25,38 @@ public class SessionService {
             return title;
         }
     }
+
+    public static boolean isInEnum(String value) {
+        StatusVariant[] list = StatusVariant.class.getEnumConstants();
+        return Arrays.stream(list).anyMatch(e -> {
+            String name = e.title;
+            return name.equals(value);
+        });
+    }
+
     public static SessionDo convertSessionBo(SessionBo sessionBo) {
         SessionDo sessionDo = new SessionDo();
         sessionDo.id = sessionBo.id;
-        sessionDo.status = sessionBo.status.toString();
         sessionDo.dateChange = sessionBo.dateChange;
         sessionDo.tour = TourService.convertTourBo(sessionBo.tour);
-        return sessionDo;
+        sessionDo.status = sessionBo.status;
+        if (isInEnum(sessionDo.status)) {
+            return sessionDo;
+        }
+        return null;
     }
 
     public static SessionBo convertSessionDo(SessionDo sessionDo) {
         SessionBo sessionBo = new SessionBo();
         sessionBo.id = sessionDo.id;
-        sessionBo.status = SessionService.StatusVariant.valueOf(sessionDo.status);
         sessionBo.dateChange = sessionDo.dateChange;
+        sessionBo.status = sessionDo.status;
         sessionBo.tour = TourService.convertTourDo(sessionDo.tour);
-        return sessionBo;
+        if (isInEnum(sessionBo.status)) {
+            return sessionBo;
+        }
+        return null;
+
     }
 
     public static List<SessionBo> convertSessionDo(List<SessionDo> sessionDoList) {

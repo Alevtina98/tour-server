@@ -127,9 +127,10 @@ public class UserDao implements IUserDao {
         Dto<List<SessionDo>> result = new Dto<>(null);
 
         if (providerResult.status != Dto.Status.ok) {
-            throw new NotFoundException();
+            result.setError("UserDao: Не удалось прочитать данные обо всех сессиях");
+            result.addErrorMsg(providerResult.errorMsgList);
+            return result;
         }
-
         result.setData(convertSessionEntity(providerResult.data));
         return result;
     }

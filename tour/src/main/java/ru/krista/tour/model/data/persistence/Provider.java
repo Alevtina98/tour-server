@@ -13,6 +13,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.*;
 import javax.transaction.*;
+import javax.ws.rs.NotFoundException;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -32,7 +33,6 @@ public class Provider implements IProvider {
             result.setData(entity);
         } catch (Exception e) {
             result.setError(e.getMessage());
-            result.addErrorMsg("Provider: Ошибка при сохранении данных");
         }
         return result;
     }
@@ -46,6 +46,8 @@ public class Provider implements IProvider {
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении данных");
+           // throw new NotFoundException();
+
         }
         return result;
     }
@@ -61,6 +63,8 @@ public class Provider implements IProvider {
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при обновлении данных");
+            //throw new NotFoundException();
+
         }
         return result;
 
@@ -79,10 +83,14 @@ public class Provider implements IProvider {
             } else {
                 result = readResult;
                 result.addErrorMsg("Provider: Ошибка при удалении данных");
+                //throw new NotFoundException();
+
             }
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при удалении данных");
+            //throw new NotFoundException();
+
         }
         return result;
     }
@@ -98,6 +106,8 @@ public class Provider implements IProvider {
 
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении полного списка данных");
+            //throw new NotFoundException();
+
         }
         return result;
     }
@@ -118,6 +128,8 @@ public class Provider implements IProvider {
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанному флагу");
+           // throw new NotFoundException();
+
         }
         return result;
     }
@@ -137,6 +149,8 @@ public class Provider implements IProvider {
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанному полю");
+            //throw new NotFoundException();
+
         }
         return result;
     }
@@ -163,6 +177,8 @@ public class Provider implements IProvider {
         } catch (Exception e) {
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении списка данных, отфильтрованных по указанным полям");
+           // throw new NotFoundException();
+
         }
         return result;
     }

@@ -5,8 +5,6 @@ import ru.krista.tour.Dto;
 import ru.krista.tour.controller.IController;
 import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
-import javax.annotation.Resource;
-import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
@@ -26,7 +24,7 @@ public class Education {
     @POST
     @Consumes("application/json")
     @Produces("application/json")
-    public Response getNewLesson(UserSessionIo informationObject) {
+    public Response getNewLesson(NewUserSessionIo informationObject) {
         Dto<SessionIo> dto = controller.createUserSession(informationObject);
         return presenter.response(dto);
     }

@@ -8,7 +8,6 @@ import ru.krista.tour.model.data.dao.userDao.queryUtils.*;
 import ru.krista.tour.model.data.persistence.entities.Session;
 import ru.krista.tour.model.data.persistence.entities.Tour;
 import ru.krista.tour.model.data.persistence.queryUtils.IColumnFilter;
-import ru.krista.tour.persistence.persistence.TestData;
 
 import javax.inject.Named;
 import java.util.ArrayList;

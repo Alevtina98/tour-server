@@ -40,24 +40,18 @@ public class Model implements IModal {
     public void openGateway() {
         try {
             userTransaction.begin();
-        } catch (SystemException e) {
+        } catch (SystemException | NotSupportedException e) {
             e.printStackTrace();
-        } catch (NotSupportedException e) {
-            e.printStackTrace();
+            //throw new NullPointerException();
         }
     }
 
     public void closeGateway() {
         try {
             userTransaction.commit();
-        } catch (HeuristicRollbackException e) {
+        } catch (HeuristicRollbackException | SystemException | HeuristicMixedException | RollbackException e) {
             e.printStackTrace();
-        } catch (SystemException e) {
-            e.printStackTrace();
-        } catch (HeuristicMixedException e) {
-            e.printStackTrace();
-        } catch (RollbackException e) {
-            e.printStackTrace();
+           // throw new NullPointerException();
         }
     }
 

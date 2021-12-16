@@ -2,6 +2,7 @@ package ru.krista.tour.view.resources.presentations;
 
 import ru.krista.tour.Dto;
 import ru.krista.tour.view.resources.IPresenter;
+import ru.krista.tour.view.resources.presentations.informationObjects.ErrorIo;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.ws.rs.core.Response;
@@ -31,7 +32,8 @@ public class Presenter implements IPresenter {
     public <TInformationObject> Response response(Dto<TInformationObject> dto) {
         if (dto.status == Dto.Status.error) {
             dto.errorMsgList.forEach(msg-> logger.info(msg));
-             return errorResponse(dto.data);
+            // return errorResponse(null);
+            return errorResponse(new ErrorIo(dto.errorMsgList));
         }
         return okResponse(dto.data);
     }
