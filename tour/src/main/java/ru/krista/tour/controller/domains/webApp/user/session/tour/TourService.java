@@ -64,6 +64,16 @@ public class TourService {
         result.setData(convertTourDo(daoDto.data));
         return result;
     }
+    public Dto<TourBo> changeTour(TourBo tourBo) {
+        Dto<TourDo> daoDto = dao.updateTour(convertTourBo(tourBo));
+        Dto<TourBo> result =  new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("TourService: Не удалось изменить тур");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(convertTourDo(daoDto.data));
+        return result;
+    }
 
     public Dto<List<TourBo>> getAllTours() {
         Dto<List<TourDo>> daoDto = dao.readAllTours();
@@ -100,16 +110,7 @@ public class TourService {
     }
 
 
-    public Dto<TourBo> changeTour(TourBo tourBo) {
-        Dto<TourDo> daoDto = dao.updateTour(convertTourBo(tourBo));
-        Dto<TourBo> result =  new Dto<>(null);
-        if (daoDto.status == Dto.Status.error) {
-            result.setError("TourService: Не удалось изменить тур");
-            result.addErrorMsg(daoDto.errorMsgList);
-        }
-        result.setData(convertTourDo(daoDto.data));
-        return result;
-    }
+
 
     public Dto<TourBo> deleteTour(Long id) {
         Dto<TourDo> daoDto = dao.deleteTour(id);

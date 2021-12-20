@@ -48,7 +48,7 @@ public class Creation {
     @POST
     @Consumes("application/json")
     @Produces("application/json")
-    public Response getInsertedTour(TourIo informationObject) {
+    public Response getInsertedTour(NewTourIo informationObject) {
         Dto<TourIo> dto = controller.createTour(informationObject);
         return presenter.response(dto);
     }

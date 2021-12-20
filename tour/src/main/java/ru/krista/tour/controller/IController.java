@@ -14,7 +14,7 @@ public interface IController {
     public Dto<List<TourIo>> getToursWithGeneralFocus();
     public Dto<List<TourIo>> getAllTours();
     public Dto<TourIo> getTour (TourIdIo info);
-    public Dto<TourIo> createTour(TourIo info);
+    public Dto<TourIo> createTour(NewTourIo info);
     public Dto<TourIo> changeTour(TourIo info);
     public Dto<EmptyIo> deleteTour (TourIdIo info);
 }

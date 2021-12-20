@@ -14,6 +14,7 @@ import ru.krista.tour.controller.domains.webApp.user.session.tour.program.focus.
 import ru.krista.tour.controller.domains.webApp.user.session.tour.program.focus.target.TargetBo;
 import ru.krista.tour.view.resources.presentations.informationObjects.*;
 
+import javax.enterprise.inject.New;
 import javax.faces.bean.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
@@ -43,42 +44,52 @@ public class Controller implements IController {
     private void closePersistence() {
         modal.closeGateway();
     }
+    private void errorClosePersistence() {
+        modal.errorCloseGateway();
+    }
 
 
     /*
      * Перенесение данных из информационных объектов в домены
      * */
-    private TargetBo convertTargetIo(TourIo tourIo) {
+    private TargetBo convertTargetIo(NewTourIo tourIo) {
         return new TargetBo(tourIo.formName, tourIo.formCaption);
     }
 
-    private FocusBo convertFocusIo(TourIo tourIo) {
+    private FocusBo convertFocusIo(NewTourIo tourIo) {
         return new FocusBo(tourIo.isGeneralUser, convertTargetIo(tourIo));
     }
 
-    private LearningProgramBo convertLearningProgramIo(TourIo tourIo) {
+    private LearningProgramBo convertLearningProgramIo(NewTourIo tourIo) {
         return new LearningProgramBo(tourIo.code, tourIo.codeJS, convertFocusIo(tourIo));
     }
 
-    private TourBo convertTourIo(TourIo tourIo) {
+    private TourBo convertTemplateTourIo(NewTourIo tourIo) {
         TourBo tourBo = new TourBo();
-        tourBo.id = tourIo.id;
         tourBo.name = tourIo.name;
         tourBo.desc = tourIo.desc;
         tourBo.learningProgram = convertLearningProgramIo(tourIo);
         return tourBo;
     }
 
-    private SessionBo convertNewUserSessionIo(NewUserSessionIo newUserSessionIo) {
+    private TourBo convertTourIo(TourIo tourIo) {
+        TourBo tourBo = convertTemplateTourIo(tourIo);
+        tourBo.id = tourIo.id;
+        tourBo.dateCreate = tourIo.dateCreate;
+        tourBo.dateChange = tourIo.dateChange;
+        return tourBo;
+    }
+
+    private SessionBo convertTemplateUserSessionIo(NewUserSessionIo newUserSessionIo) {
         SessionBo session = new SessionBo();
         session.status = newUserSessionIo.status;
         return session;
     }
+
     private SessionBo convertUserSessionIo(UserSessionIo userSessionIo) {
-            SessionBo session = new SessionBo();
-            session.id = userSessionIo.id;
-            session.status = userSessionIo.status;
-            return session;
+        SessionBo session = convertTemplateUserSessionIo(userSessionIo);
+        session.id = userSessionIo.id;
+        return session;
     }
 
 
@@ -136,25 +147,29 @@ public class Controller implements IController {
         return new Dto<>(sessionIo);
     }
 
-
     /*
      * Работа с сервисом, отвечающим за туры
      * */
 
     @Override
-    public Dto<TourIo> createTour(TourIo info) {
+    public Dto<TourIo> createTour(NewTourIo info) {
 
         openPersistence();
         TourService tourService = new TourService(modal.getTouDao());
-        Dto<TourBo> tourServiceDto = tourService.createTour(convertTourIo(info));
-        closePersistence();
-
-        Dto<TourIo> result = wrapTour(tourServiceDto.data);
+        Dto<TourBo> tourServiceDto = tourService.createTour(convertTemplateTourIo(info));
         if (tourServiceDto.status == Dto.Status.error) {
+            errorClosePersistence();
+            Dto<TourIo> result = new Dto<>(null);
             result.setError("Controller: Ошибка при создании тура");
             result.addErrorMsg(tourServiceDto.errorMsgList);
+            return result;
         }
-        return result;
+
+        openPersistence();
+        tourServiceDto = tourService.getTour(tourServiceDto.data.id);
+        closePersistence();
+
+        return  wrapTour(tourServiceDto.data);
     }
 
     @Override
@@ -163,14 +178,19 @@ public class Controller implements IController {
         openPersistence();
         TourService tourService = new TourService(modal.getTouDao());
         Dto<TourBo> tourServiceDto = tourService.changeTour(convertTourIo(info));
-        closePersistence();
-
-        Dto<TourIo> result = wrapTour(tourServiceDto.data);
         if (tourServiceDto.status == Dto.Status.error) {
+            errorClosePersistence();
+            Dto<TourIo> result = new Dto<>(null);
             result.setError("Controller: Ошибка при изменении тура");
             result.addErrorMsg(tourServiceDto.errorMsgList);
         }
-        return result;
+        closePersistence();
+
+        openPersistence();
+        tourServiceDto = tourService.getTour(tourServiceDto.data.id);
+        closePersistence();
+
+        return  wrapTour(tourServiceDto.data);
     }
 
     @Override
@@ -276,26 +296,31 @@ public class Controller implements IController {
     @Override
     public Dto<SessionIo> createUserSession(NewUserSessionIo info) {
 
-        SessionBo session = convertNewUserSessionIo(info);
+        SessionBo session = convertTemplateUserSessionIo(info);
         Dto<SessionIo> result = new Dto<>(null);
 
         openPersistence();
         UserService userService = new UserService(modal.getUserDao());
         TourService tourService = new TourService(modal.getTouDao());
         session.tour = tourService.getTour(info.tourId).data;
-        if (session.tour == null)  {
+        if (session.tour == null) {
             closePersistence();
             result.setError("Controller: Не найден тур для создаваемой сессии");
             return result;
         }
         Dto<SessionBo> userServiceDto = userService.addSession(info.userId, session);
-        closePersistence();
-
         if (userServiceDto.status == Dto.Status.error) {
+            errorClosePersistence();
             result.setError("Controller: Ошибка при создании пользовательской сессии");
             result.addErrorMsg(userServiceDto.errorMsgList);
             return result;
         }
+        closePersistence();
+
+        openPersistence();
+        userServiceDto = userService.getSession(info.userId, userServiceDto.data.tour.id);
+        closePersistence();
+
         result.setData(convertSessionBo(userServiceDto.data));
         return result;
     }
@@ -311,19 +336,25 @@ public class Controller implements IController {
         UserService userService = new UserService(modal.getUserDao());
         TourService tourService = new TourService(modal.getTouDao());
         session.tour = tourService.getTour(info.tourId).data;
-        if (session.tour == null)  {
+        if (session.tour == null) {
             closePersistence();
             result.setError("Controller: Не найден тур для изеняемой сессии");
             return result;
         }
         Dto<SessionBo> userServiceDto = userService.updateSession(info.userId, session);
-        closePersistence();
 
         if (userServiceDto.status == Dto.Status.error) {
+            errorClosePersistence();
             result.setError("Controller: Ошибка при изменении пользовательской сессии");
             result.addErrorMsg(userServiceDto.errorMsgList);
             return result;
         }
+        closePersistence();
+
+        openPersistence();
+        userServiceDto = userService.getSession(info.userId, userServiceDto.data.tour.id);
+        closePersistence();
+
         result.setData(convertSessionBo(userServiceDto.data));
         return result;
     }

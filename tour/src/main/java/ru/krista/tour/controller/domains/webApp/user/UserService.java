@@ -33,21 +33,22 @@ public class UserService {
         Dto<List<SessionDo>> daoDto = dao.readAllUserSessions(userId);
         Dto<List<SessionBo>> result = new Dto<>(null);
         if (daoDto.status == Dto.Status.error) {
-            result.setError("UserService: Не удалось получить список общепользовательских туров");
+            result.setError("UserService: Не удалось получить список сессий");
             result.addErrorMsg(daoDto.errorMsgList);
         }
         result.setData(SessionService.convertSessionDo(daoDto.data));
         return result;
     }
 
-    public Dto<List<SessionBo>> getSessionsByTourAnd(UserBo userBo) {
-        return new Dto<>(userBo.sessionList);
-    }
-
-    public Dto<SessionBo> getSession(UserBo userBo, Number tourId) {
-        // SessionBo sessionBo = userBo.sessionList;
-        // userBo.sessionList.stream().filter(session -> session.tourBo.id.equals(tourId)).collect(Collectors.toList());
-        return null;
+    public Dto<SessionBo> getSession(String userId, Long tourId) {
+        Dto<SessionDo> daoDto = dao.readUserSessionWithTour(userId, tourId);
+        Dto<SessionBo> result = new Dto<>(null);
+        if (daoDto.status == Dto.Status.error) {
+            result.setError("UserService: Не удалось получить суссию");
+            result.addErrorMsg(daoDto.errorMsgList);
+        }
+        result.setData(SessionService.convertSessionDo(daoDto.data));
+        return result;
     }
 
     public Dto<SessionBo> addSession(String userId, SessionBo sessionBo) {

@@ -45,7 +45,14 @@ public class Model implements IModal {
             //throw new NullPointerException();
         }
     }
-
+    public void errorCloseGateway() {
+        try {
+            userTransaction.rollback();
+        } catch (SystemException e) {
+            e.printStackTrace();
+            // throw new NullPointerException();
+        }
+    }
     public void closeGateway() {
         try {
             userTransaction.commit();

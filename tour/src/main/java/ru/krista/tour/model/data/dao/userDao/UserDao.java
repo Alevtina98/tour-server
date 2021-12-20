@@ -140,7 +140,8 @@ public class UserDao implements IUserDao {
         Dto<List<Session>> providerResult = provider.readWithValueFilter(new SelectAllFromSession(), createFilterByUserAndTour(userId, tourId));
         Dto<SessionDo> result = new Dto<>(null);
         if (providerResult.status == Dto.Status.ok) {
-            result.setData(convertSessionEntity(providerResult.data.get(0)));
+            Session session = providerResult.data.get(0);
+            result.setData(convertSessionEntity(session));
         } else {
             result.setError("UserDao: Не удалось прочитать данные о сессии пользователя с указанным туром");
             result.addErrorMsg(providerResult.errorMsgList);
