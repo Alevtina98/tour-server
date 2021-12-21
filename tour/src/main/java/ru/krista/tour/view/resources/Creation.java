@@ -25,7 +25,6 @@ public class Creation {
     @GET
     @Produces("application/json")
     public Response getTourList() {
-        System.out.println("Creation resources!");
         Dto<List<TourIo>> dto = controller.getAllTours();
         return presenter.response(dto);
     }

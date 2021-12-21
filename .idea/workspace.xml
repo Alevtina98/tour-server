@@ -10,19 +10,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/NewTourIo.java" afterDir="false" />
+    <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="fix: вынести получение измененных данных в отдельную транзакцию">
       <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/IController.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/IController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/webApp/user/session/tour/TourService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/IModal.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/IModal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/entities/Tour.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/Creation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/TourIo.java" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/view/resources/presentations/informationObjects/TourIo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/test.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/tour/test.log.1" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,30 +329,32 @@
     </option>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss 16.2.1.krista23">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="creator#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="creator#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="creator#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" index="4" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="player#5 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/player.http" index="5" runType="Run single request">
+    <configuration name="creator#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" index="5" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="player#5" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/player.http" index="5" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="player#6 (1)" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/player.http" index="6" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="player#6" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/player.http" index="6" runType="Run single request">
+    <configuration name="player#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/player.http" index="3" runType="Run single request">
       <method v="2" />
     </configuration>
     <configuration name="JBoss 16.2.1.krista23" type="JBossConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="JBoss 16.2.1.krista23" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
@@ -649,22 +646,22 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="HTTP Request.player#5" />
-      <item itemvalue="HTTP Request.player#6" />
       <item itemvalue="JBoss/WildFly Server.JBoss 16.2.1.krista23" />
       <item itemvalue="Remote JVM Debug.attach" />
       <item itemvalue="Tomcat Server.local" />
+      <item itemvalue="HTTP Request.creator#1" />
+      <item itemvalue="HTTP Request.creator#3" />
       <item itemvalue="HTTP Request.creator#4" />
-      <item itemvalue="HTTP Request.player#5 (1)" />
-      <item itemvalue="HTTP Request.player#6 (1)" />
+      <item itemvalue="HTTP Request.player#3" />
+      <item itemvalue="HTTP Request.creator#5" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.player#5 (1)" />
-        <item itemvalue="HTTP Request.player#6 (1)" />
+        <item itemvalue="HTTP Request.creator#1" />
+        <item itemvalue="HTTP Request.creator#3" />
         <item itemvalue="HTTP Request.creator#4" />
-        <item itemvalue="HTTP Request.player#6" />
-        <item itemvalue="HTTP Request.player#5" />
+        <item itemvalue="HTTP Request.creator#5" />
+        <item itemvalue="HTTP Request.player#3" />
       </list>
     </recent_temporary>
   </component>
@@ -807,7 +804,8 @@
       <workItem from="1639653825925" duration="10965000" />
       <workItem from="1639744900019" duration="1538000" />
       <workItem from="1639749326101" duration="1244000" />
-      <workItem from="1639998965347" duration="8413000" />
+      <workItem from="1639998965347" duration="8668000" />
+      <workItem from="1640089118740" duration="13499000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -1019,7 +1017,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639665377432</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fix: вынести получение измененных данных в отдельную транзакцию">
+      <created>1640007643394</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1640007643394</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1039,7 +1044,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="feat: добавить получение настроек через persistence" />
     <MESSAGE value="refactor: завершение изменений, позволяющих запускать сервлет tour.war в контейнере приложения Кристы (consolidation)" />
     <MESSAGE value="refactor: удалить дистрибутив" />
     <MESSAGE value="refactor: удалить лишние файлы" />
@@ -1064,15 +1068,21 @@
     <MESSAGE value="fix: добавить удаление тура" />
     <MESSAGE value="refactor: попробовать тестировать с консолидацией и передумать" />
     <MESSAGE value="fix: провести интеграционное тестирование, исправить ошибки, добавить проверки" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: провести интеграционное тестирование, исправить ошибки, добавить проверки" />
+    <MESSAGE value="fix: вынести получение измененных данных в отдельную транзакцию" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: вынести получение измененных данных в отдельную транзакцию" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/dao/userDao/UserDao.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/controller/domains/Controller.java</url>
+          <line>169</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/model/data/persistence/Provider.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="71" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

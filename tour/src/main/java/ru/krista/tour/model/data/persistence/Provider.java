@@ -38,6 +38,7 @@ public class Provider implements IProvider {
     }
 
     @Override
+    @Transactional
     public <TEntity>  Dto<TEntity> readById(Class<TEntity> cls, Object id) {
         Dto<TEntity> result =  new Dto<>(null);
         try {
@@ -99,11 +100,14 @@ public class Provider implements IProvider {
     public <TEntity> Dto<List<TEntity>> readAll(Class<TEntity> cls) {
         Dto<List<TEntity>> result =  new Dto<>(null);
         try {
-            String query = String.format("FROM %s", cls.getName());
-            List<TEntity> entityList = entityManager.createQuery(query).getResultList();
-            result.setData(entityList);
+            CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+            CriteriaQuery<TEntity> query = criteriaBuilder.createQuery(cls);
+            Root<TEntity> rootEntity = query.from(cls);
+            query.select(rootEntity);
+            TypedQuery<TEntity> tq = entityManager.createQuery(query);
+            List<TEntity> list = tq.getResultList();
+            result.setData(list);
         } catch (Exception e) {
-
             result.setError(e.getMessage());
             result.addErrorMsg("Provider: Ошибка при чтении полного списка данных");
             //throw new NotFoundException();

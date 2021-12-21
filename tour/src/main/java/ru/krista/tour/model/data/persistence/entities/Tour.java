@@ -20,12 +20,12 @@ public class Tour extends RootKey implements Serializable {
     @Column(name = "description")
     private String desc;
 
-    @Column(name = "code")
     @Lob
+    @Column(name = "code")
     private String code;
 
-    @Column(name = "code_js" )
     @Lob
+    @Column(name = "code_js")
     private String codeJS;
 
     @Column(name = "create_date", updatable = false)

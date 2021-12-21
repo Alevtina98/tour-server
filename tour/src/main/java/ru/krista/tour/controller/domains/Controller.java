@@ -61,7 +61,7 @@ public class Controller implements IController {
     }
 
     private LearningProgramBo convertLearningProgramIo(NewTourIo tourIo) {
-        return new LearningProgramBo(tourIo.code, tourIo.codeJS, convertFocusIo(tourIo));
+        return new LearningProgramBo(tourIo.codeJS, tourIo.code, convertFocusIo(tourIo));
     }
 
     private TourBo convertTemplateTourIo(NewTourIo tourIo) {
@@ -164,6 +164,7 @@ public class Controller implements IController {
             result.addErrorMsg(tourServiceDto.errorMsgList);
             return result;
         }
+        closePersistence();
 
         openPersistence();
         tourServiceDto = tourService.getTour(tourServiceDto.data.id);
