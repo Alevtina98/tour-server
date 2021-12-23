@@ -5,7 +5,7 @@
     <groupId>ru.krista.tour</groupId>
     <artifactId>tour-server</artifactId>
     <packaging>pom</packaging>
-    <version>2.0.3</version>
+    <version> 2.0.4-SNAPSHOT</version>
 
     <modules>
         <module>tour</module>
@@ -30,7 +30,7 @@
     </distributionManagement>
     <scm>
         <connection>scm:git:https://github.com/Alevtina98/tour-server</connection>
-        <tag>tour-server-2.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
     <dependencyManagement>
         <dependencies>
