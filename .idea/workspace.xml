@@ -11,10 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour-server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/release.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml.releaseBackup" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,6 +124,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="20f3ed8e590a7f92d5d2071931089cbe3a0b0257" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -1029,7 +1035,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640103014340</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="fix: правки для релиза">
+      <created>1640263891190</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1640263891190</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1049,7 +1062,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: удалить дистрибутив" />
     <MESSAGE value="refactor: удалить лишние файлы" />
     <MESSAGE value="refactor: добавить версию" />
     <MESSAGE value="fix: maven" />
@@ -1074,7 +1086,8 @@
     <MESSAGE value="fix: провести интеграционное тестирование, исправить ошибки, добавить проверки" />
     <MESSAGE value="fix: вынести получение измененных данных в отдельную транзакцию" />
     <MESSAGE value="fix: поправить получение списка из БД" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: поправить получение списка из БД" />
+    <MESSAGE value="fix: правки для релиза" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: правки для релиза" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
