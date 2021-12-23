@@ -11,9 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tour/release.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour-server.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/release.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,6 +326,17 @@
     </option>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss 16.2.1.krista23">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="creator#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -790,7 +802,8 @@
       <workItem from="1639998965347" duration="8668000" />
       <workItem from="1640089118740" duration="13568000" />
       <workItem from="1640164859280" duration="449000" />
-      <workItem from="1640166078526" duration="828000" />
+      <workItem from="1640166076728" duration="595000" />
+      <workItem from="1640257968888" duration="3756000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
