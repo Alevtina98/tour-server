@@ -11,11 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml.releaseBackup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/pom.xml.releaseBackup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml.releaseBackup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/tour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/tour.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +169,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ntp-hg.krista.ru/consolidation/consolidation" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -332,17 +333,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JBoss/WildFly Server.JBoss 16.2.1.krista23">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="creator#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/apiTests/creator.http" runType="Run single request">
       <method v="2" />
     </configuration>
@@ -810,6 +800,9 @@
       <workItem from="1640164859280" duration="449000" />
       <workItem from="1640166076728" duration="595000" />
       <workItem from="1640257968888" duration="3756000" />
+      <workItem from="1640331692101" duration="3944000" />
+      <workItem from="1640346039117" duration="1583000" />
+      <workItem from="1640597436970" duration="324000" />
     </task>
     <task id="LOCAL-00001" summary="feat: обращаться к БД с турами и связями с пользователями через ORM-провайдера (Hibernate)">
       <created>1601563850684</created>
@@ -1049,7 +1042,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640263944634</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="fix: убрать лишнее из pom">
+      <created>1640264742087</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1640264742087</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1069,7 +1069,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: удалить лишние файлы" />
     <MESSAGE value="refactor: добавить версию" />
     <MESSAGE value="fix: maven" />
     <MESSAGE value="feature: добавить файлы для тестирования" />
@@ -1094,7 +1093,8 @@
     <MESSAGE value="fix: вынести получение измененных данных в отдельную транзакцию" />
     <MESSAGE value="fix: поправить получение списка из БД" />
     <MESSAGE value="fix: правки для релиза" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: правки для релиза" />
+    <MESSAGE value="fix: убрать лишнее из pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: убрать лишнее из pom" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
