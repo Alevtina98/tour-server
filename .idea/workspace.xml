@@ -11,9 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml.releaseBackup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tour/pom.xml.releaseBackup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" afterPath="$PROJECT_DIR$/release.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1047,7 +1046,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640264742087</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="перед релизом">
+      <created>1642767839717</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1642767839717</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1073,7 +1079,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="refactor: добавить версию" />
     <MESSAGE value="fix: maven" />
     <MESSAGE value="feature: добавить файлы для тестирования" />
     <MESSAGE value="feature: настроить среду для тестирования" />
@@ -1098,7 +1103,8 @@
     <MESSAGE value="fix: поправить получение списка из БД" />
     <MESSAGE value="fix: правки для релиза" />
     <MESSAGE value="fix: убрать лишнее из pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: убрать лишнее из pom" />
+    <MESSAGE value="перед релизом" />
+    <option name="LAST_COMMIT_MESSAGE" value="перед релизом" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
