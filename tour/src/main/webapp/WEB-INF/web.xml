@@ -8,16 +8,16 @@
     <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
-    <display-name>tour-server</display-name>
+    <display-name>tour</display-name>
     <servlet-mapping>
         <servlet-name>resteasy-servlet</servlet-name>
         <!--Prefix for endpoint-->
-        <url-pattern>/resources/*</url-pattern>
+        <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
     <context-param>
         <param-name>resteasy.servlet.mapping.prefix</param-name>
         <!--Prefix for the endpoints-->
-        <param-value>/resources</param-value>
+        <param-value>/rest</param-value>
     </context-param>
 
     <context-param>

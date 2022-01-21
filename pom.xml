@@ -222,12 +222,6 @@
                     <getRevisionOnlyOnce>true</getRevisionOnlyOnce>
                 </configuration>
             </plugin>
-
-         <plugin>
-                <groupId>ru.krista.consolidation.updater.ci</groupId>
-                <artifactId>us-client-maven-plugin</artifactId>
-                <version>${us-client-version}</version>
-            </plugin>
         </plugins>
     </build>
 </project>

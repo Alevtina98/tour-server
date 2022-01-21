@@ -11,12 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9565b24e-e9f1-4837-8f7d-551126248960" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tour/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/refactor___.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/refactor___.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml.releaseBackup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/release.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/pom.xml.releaseBackup" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tour/tour.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/tour.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/jboss-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/jboss-web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/tour/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +131,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -169,7 +170,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/tour/src/main/java/ru/krista/tour/provider" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ntp-hg.krista.ru/consolidation/consolidation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tour/src/main/resources/META-INF" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -179,11 +180,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\workspace\github.com\Alevtina98\tour-server\tour\src\main\resources\META-INF" />
       <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\test" />
       <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\main\resources" />
       <recent name="C:\workspace\github.com\Alevtina98\tour-server\docker" />
       <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\main\webapp\WEB-INF" />
-      <recent name="C:\workspace\github.com\Alevtina98\tour-server\tour\src\test\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\belyakovaas\AppData\Roaming\JetBrains\IntelliJIdea2021.1\scratches\resourcesApi" />
@@ -1060,7 +1061,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="94" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
